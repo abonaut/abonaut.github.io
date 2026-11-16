@@ -1,0 +1,495 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-16",
+  "exchangeRates": {
+    "date": "2026-11-08",
+    "ratesToCHF": {
+      "EUR": "0.914",
+      "USD": "0.820"
+    }
+  },
+  "groups": [
+    { "id": "video", "name": "Video-Streaming", "alternatives": false, "redundantIfMultiple": false },
+    { "id": "music", "name": "Musik-Streaming", "alternatives": true, "redundantIfMultiple": true },
+    { "id": "mobile", "name": "Handy-Abo", "alternatives": true, "redundantIfMultiple": false },
+    { "id": "internet", "name": "Internet zu Hause", "alternatives": true, "redundantIfMultiple": true },
+    { "id": "cloud", "name": "Cloud-Speicher", "alternatives": true, "redundantIfMultiple": true },
+    { "id": "ai", "name": "KI-Assistent", "alternatives": false, "redundantIfMultiple": true },
+    { "id": "fitness", "name": "Fitnessstudio", "alternatives": true, "redundantIfMultiple": true },
+    { "id": "news", "name": "Zeitung", "alternatives": false, "redundantIfMultiple": false },
+    { "id": "oev", "name": "ÖV-Abo", "alternatives": false, "redundantIfMultiple": false },
+    { "id": "gaming", "name": "Gaming", "alternatives": false, "redundantIfMultiple": false }
+  ],
+  "providers": [
+    {
+      "id": "netflix",
+      "name": "Netflix",
+      "category": "streaming",
+      "group": "video",
+      "url": "https://www.netflix.com/ch-de/",
+      "searchTerms": ["netflix"],
+      "popular": true,
+      "plans": [
+        { "id": "netflix-standard", "name": "Standard", "price": "20.90", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "standard", "priceCheckedOn": null },
+        { "id": "netflix-premium", "name": "Premium", "price": "27.90", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "premium", "priceCheckedOn": null }
+      ]
+    },
+    {
+      "id": "disney-plus",
+      "name": "Disney+",
+      "category": "streaming",
+      "group": "video",
+      "url": "https://www.disneyplus.com/de-ch",
+      "searchTerms": ["disney+", "disney plus", "disneyplus"],
+      "popular": true,
+      "plans": [
+        { "id": "disney-standard-month", "name": "Standard", "price": "12.90", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "standard", "priceCheckedOn": null },
+        { "id": "disney-standard-year", "name": "Standard, Jahresabo", "price": "129.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "tier": "standard", "priceCheckedOn": null },
+        { "id": "disney-premium-month", "name": "Premium", "price": "16.90", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "premium", "priceCheckedOn": null },
+        { "id": "disney-premium-year", "name": "Premium, Jahresabo", "price": "169.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "tier": "premium", "priceCheckedOn": null }
+      ]
+    },
+    {
+      "id": "apple-tv",
+      "name": "Apple TV",
+      "category": "streaming",
+      "group": "video",
+      "url": "https://tv.apple.com/ch",
+      "searchTerms": ["apple tv"],
+      "popular": true,
+      "plans": [
+        { "id": "apple-tv-month", "name": "Monatsabo", "title": "Apple TV", "price": "12.00", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "priceCheckedOn": null }
+      ]
+    },
+    {
+      "id": "paramount-plus",
+      "name": "Paramount+",
+      "category": "streaming",
+      "group": "video",
+      "url": "https://www.paramountplus.com/ch/",
+      "searchTerms": ["paramount+", "paramount plus", "paramount"],
+      "plans": [
+        { "id": "paramount-month", "name": "Monatsabo", "title": "Paramount+", "price": "9.90", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "priceCheckedOn": null }
+      ]
+    },
+    {
+      "id": "spotify",
+      "name": "Spotify",
+      "category": "music",
+      "group": "music",
+      "url": "https://www.spotify.com/ch-de/premium/",
+      "searchTerms": ["spotify"],
+      "popular": true,
+      "plans": [
+        { "id": "spotify-individual", "name": "Premium Individual", "price": "13.95", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "individual", "priceCheckedOn": null },
+        { "id": "spotify-duo", "name": "Premium Duo", "price": "18.95", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "duo", "maxPersons": 2, "priceCheckedOn": null },
+        { "id": "spotify-family", "name": "Premium Family", "price": "22.95", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "family", "maxPersons": 6, "priceCheckedOn": null },
+        { "id": "spotify-student", "name": "Premium Student", "price": "6.95", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "student", "priceCheckedOn": null }
+      ]
+    },
+    {
+      "id": "apple-music",
+      "name": "Apple Music",
+      "category": "music",
+      "group": "music",
+      "url": "https://www.apple.com/ch-de/apple-music/",
+      "searchTerms": ["apple music"],
+      "popular": true,
+      "plans": [
+        { "id": "apple-music-individual", "name": "Einzelperson", "price": "10.95", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "individual", "priceCheckedOn": null },
+        { "id": "apple-music-family", "name": "Familie", "price": "16.95", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "family", "maxPersons": 6, "priceCheckedOn": null },
+        { "id": "apple-music-student", "name": "Studierende", "price": "5.95", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "student", "priceCheckedOn": null }
+      ]
+    },
+    {
+      "id": "youtube-premium",
+      "name": "YouTube Premium",
+      "category": "music",
+      "group": "music",
+      "url": "https://www.youtube.com/premium",
+      "searchTerms": ["youtube premium", "youtube music"],
+      "plans": [
+        { "id": "youtube-music-premium", "name": "Music Premium", "title": "YouTube Music Premium", "price": "13.90", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "individual", "priceCheckedOn": null },
+        { "id": "youtube-premium-individual", "name": "Premium", "title": "YouTube Premium", "price": "17.90", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "video-individual", "priceCheckedOn": null }
+      ]
+    },
+    {
+      "id": "deezer",
+      "name": "Deezer",
+      "category": "music",
+      "group": "music",
+      "url": "https://www.deezer.com/ch/offers",
+      "searchTerms": ["deezer"],
+      "plans": [
+        { "id": "deezer-premium", "name": "Premium", "price": "13.95", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "individual", "priceCheckedOn": null }
+      ]
+    },
+    {
+      "id": "swisscom-mobile",
+      "name": "Swisscom",
+      "category": "mobileInternet",
+      "group": "mobile",
+      "url": "https://www.swisscom.ch/de/privatkunden/mobile.html",
+      "searchTerms": ["swisscom", "blue mobile"],
+      "popular": true,
+      "plans": [
+        { "id": "swisscom-blue-mobile-s", "name": "blue Mobile S", "price": "55.00", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "priceCheckedOn": null },
+        { "id": "swisscom-blue-mobile-m", "name": "blue Mobile M", "price": "70.00", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "priceCheckedOn": null }
+      ]
+    },
+    {
+      "id": "sunrise-mobile",
+      "name": "Sunrise",
+      "category": "mobileInternet",
+      "group": "mobile",
+      "url": "https://www.sunrise.ch/de/mobile",
+      "searchTerms": ["sunrise", "up mobile"],
+      "popular": true,
+      "plans": [
+        { "id": "sunrise-up-mobile-s", "name": "Up Mobile S", "price": "50.00", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "priceCheckedOn": null },
+        { "id": "sunrise-up-mobile-m", "name": "Up Mobile M", "price": "65.00", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "priceCheckedOn": null }
+      ]
+    },
+    {
+      "id": "salt-mobile",
+      "name": "Salt",
+      "category": "mobileInternet",
+      "group": "mobile",
+      "url": "https://www.salt.ch/de/mobile",
+      "searchTerms": ["salt"],
+      "popular": true,
+      "plans": [
+        { "id": "salt-swiss", "name": "Salt Swiss", "title": "Salt Swiss", "price": "49.95", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "priceCheckedOn": null }
+      ]
+    },
+    {
+      "id": "wingo",
+      "name": "Wingo",
+      "category": "mobileInternet",
+      "group": "mobile",
+      "url": "https://www.wingo.ch/de/mobile",
+      "searchTerms": ["wingo"],
+      "plans": [
+        { "id": "wingo-swiss", "name": "Wingo Swiss", "title": "Wingo Swiss", "price": "29.95", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "priceCheckedOn": null }
+      ]
+    },
+    {
+      "id": "yallo",
+      "name": "Yallo",
+      "category": "mobileInternet",
+      "group": "mobile",
+      "url": "https://www.yallo.ch/de/mobile",
+      "searchTerms": ["yallo"],
+      "plans": [
+        { "id": "yallo-swiss", "name": "Yallo Swiss", "title": "Yallo Swiss", "price": "29.00", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "priceCheckedOn": null }
+      ]
+    },
+    {
+      "id": "m-budget-mobile",
+      "name": "M-Budget Mobile",
+      "category": "mobileInternet",
+      "group": "mobile",
+      "url": "https://www.m-budget-mobile.ch",
+      "searchTerms": ["m-budget", "mbudget"],
+      "plans": [
+        { "id": "m-budget-maxi-one", "name": "Maxi One", "title": "M-Budget Mobile Maxi One", "price": "29.80", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "priceCheckedOn": null }
+      ]
+    },
+    {
+      "id": "swisscom-internet",
+      "name": "Swisscom Internet",
+      "category": "mobileInternet",
+      "group": "internet",
+      "url": "https://www.swisscom.ch/de/privatkunden/internet.html",
+      "searchTerms": ["swisscom internet", "blue internet", "swisscom home"],
+      "plans": [
+        { "id": "swisscom-blue-internet-s", "name": "blue Internet S", "title": "Swisscom blue Internet S", "price": "54.90", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "priceCheckedOn": null }
+      ]
+    },
+    {
+      "id": "sunrise-internet",
+      "name": "Sunrise Internet",
+      "category": "mobileInternet",
+      "group": "internet",
+      "url": "https://www.sunrise.ch/de/internet",
+      "searchTerms": ["sunrise internet", "up internet", "sunrise home"],
+      "plans": [
+        { "id": "sunrise-up-internet-s", "name": "Up Internet S", "title": "Sunrise Up Internet S", "price": "49.90", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "priceCheckedOn": null }
+      ]
+    },
+    {
+      "id": "salt-home",
+      "name": "Salt Home",
+      "category": "mobileInternet",
+      "group": "internet",
+      "url": "https://www.salt.ch/de/home",
+      "searchTerms": ["salt home", "salt fiber"],
+      "plans": [
+        { "id": "salt-home-fiber", "name": "Fiber", "title": "Salt Home Fiber", "price": "49.95", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "priceCheckedOn": null }
+      ]
+    },
+    {
+      "id": "wingo-internet",
+      "name": "Wingo Internet",
+      "category": "mobileInternet",
+      "group": "internet",
+      "url": "https://www.wingo.ch/de/internet",
+      "searchTerms": ["wingo internet", "wingo home"],
+      "plans": [
+        { "id": "wingo-internet-home", "name": "Internet", "title": "Wingo Internet", "price": "39.95", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "priceCheckedOn": null }
+      ]
+    },
+    {
+      "id": "init7",
+      "name": "Init7",
+      "category": "mobileInternet",
+      "group": "internet",
+      "url": "https://www.init7.net/de/internet/fiber7/",
+      "searchTerms": ["init7", "fiber7"],
+      "plans": [
+        { "id": "init7-fiber7", "name": "Fiber7", "title": "Init7 Fiber7", "price": "777.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "priceCheckedOn": null }
+      ]
+    },
+    {
+      "id": "icloud",
+      "name": "iCloud+",
+      "category": "cloud",
+      "group": "cloud",
+      "url": "https://www.apple.com/ch-de/icloud/",
+      "searchTerms": ["icloud"],
+      "popular": true,
+      "plans": [
+        { "id": "icloud-50gb", "name": "50 GB", "title": "iCloud+ 50 GB", "price": "1.00", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "50gb", "priceCheckedOn": null },
+        { "id": "icloud-200gb", "name": "200 GB", "title": "iCloud+ 200 GB", "price": "3.00", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "200gb", "maxPersons": 6, "priceCheckedOn": null },
+        { "id": "icloud-2tb", "name": "2 TB", "title": "iCloud+ 2 TB", "price": "10.00", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "2tb", "maxPersons": 6, "priceCheckedOn": null }
+      ]
+    },
+    {
+      "id": "google-one",
+      "name": "Google One",
+      "category": "cloud",
+      "group": "cloud",
+      "url": "https://one.google.com/about/plans",
+      "searchTerms": ["google one", "google drive"],
+      "plans": [
+        { "id": "google-one-100gb-month", "name": "100 GB", "title": "Google One 100 GB", "price": "2.00", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "100gb", "maxPersons": 6, "priceCheckedOn": null },
+        { "id": "google-one-100gb-year", "name": "100 GB, Jahresabo", "title": "Google One 100 GB", "price": "20.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "tier": "100gb", "maxPersons": 6, "priceCheckedOn": null },
+        { "id": "google-one-2tb-month", "name": "2 TB", "title": "Google One 2 TB", "price": "10.00", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "2tb", "maxPersons": 6, "priceCheckedOn": null },
+        { "id": "google-one-2tb-year", "name": "2 TB, Jahresabo", "title": "Google One 2 TB", "price": "100.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "tier": "2tb", "maxPersons": 6, "priceCheckedOn": null }
+      ]
+    },
+    {
+      "id": "proton",
+      "name": "Proton",
+      "category": "cloud",
+      "group": "cloud",
+      "url": "https://proton.me/de/pricing",
+      "searchTerms": ["proton"],
+      "plans": [
+        { "id": "proton-drive-plus-month", "name": "Drive Plus 200 GB", "title": "Proton Drive Plus", "price": "4.99", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "200gb", "priceCheckedOn": null },
+        { "id": "proton-drive-plus-year", "name": "Drive Plus 200 GB, Jahresabo", "title": "Proton Drive Plus", "price": "47.88", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "tier": "200gb", "priceCheckedOn": null }
+      ]
+    },
+    {
+      "id": "dropbox",
+      "name": "Dropbox",
+      "category": "cloud",
+      "group": "cloud",
+      "url": "https://www.dropbox.com/plans",
+      "searchTerms": ["dropbox"],
+      "plans": [
+        { "id": "dropbox-plus-month", "name": "Plus 2 TB", "title": "Dropbox Plus", "price": "11.99", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "2tb", "priceCheckedOn": null },
+        { "id": "dropbox-plus-year", "name": "Plus 2 TB, Jahresabo", "title": "Dropbox Plus", "price": "119.88", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "tier": "2tb", "priceCheckedOn": null }
+      ]
+    },
+    {
+      "id": "microsoft-365",
+      "name": "Microsoft 365",
+      "category": "software",
+      "url": "https://www.microsoft.com/de-ch/microsoft-365",
+      "searchTerms": ["microsoft 365", "office 365", "m365"],
+      "popular": true,
+      "plans": [
+        { "id": "m365-single-month", "name": "Single", "price": "10.00", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "single", "priceCheckedOn": null },
+        { "id": "m365-single-year", "name": "Single, Jahresabo", "title": "Microsoft 365 Single", "price": "99.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "tier": "single", "priceCheckedOn": null },
+        { "id": "m365-family-month", "name": "Family", "price": "13.00", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "family", "maxPersons": 6, "priceCheckedOn": null },
+        { "id": "m365-family-year", "name": "Family, Jahresabo", "title": "Microsoft 365 Family", "price": "129.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "tier": "family", "maxPersons": 6, "priceCheckedOn": null }
+      ]
+    },
+    {
+      "id": "adobe-creative-cloud",
+      "name": "Adobe Creative Cloud",
+      "category": "software",
+      "url": "https://www.adobe.com/ch_de/creativecloud/plans.html",
+      "searchTerms": ["adobe", "creative cloud", "lightroom", "photoshop"],
+      "plans": [
+        { "id": "adobe-photo", "name": "Fotografie", "title": "Adobe Fotografie-Abo", "price": "12.90", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "photo", "priceCheckedOn": null },
+        { "id": "adobe-all-apps", "name": "Alle Apps", "title": "Adobe Creative Cloud Alle Apps", "price": "79.90", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "all", "priceCheckedOn": null }
+      ]
+    },
+    {
+      "id": "1password",
+      "name": "1Password",
+      "category": "software",
+      "url": "https://1password.com/de/pricing",
+      "searchTerms": ["1password"],
+      "plans": [
+        { "id": "1password-individual", "name": "Einzelperson", "title": "1Password", "price": "35.88", "currency": "USD", "interval": { "unit": "year", "count": 1 }, "tier": "individual", "priceCheckedOn": null },
+        { "id": "1password-family", "name": "Familie", "title": "1Password Familie", "price": "59.88", "currency": "USD", "interval": { "unit": "year", "count": 1 }, "tier": "family", "maxPersons": 5, "priceCheckedOn": null }
+      ]
+    },
+    {
+      "id": "chatgpt",
+      "name": "ChatGPT",
+      "category": "software",
+      "group": "ai",
+      "url": "https://chatgpt.com/pricing",
+      "searchTerms": ["chatgpt", "openai"],
+      "plans": [
+        { "id": "chatgpt-plus", "name": "Plus", "title": "ChatGPT Plus", "price": "20.00", "currency": "USD", "interval": { "unit": "month", "count": 1 }, "tier": "plus", "priceCheckedOn": null }
+      ]
+    },
+    {
+      "id": "claude",
+      "name": "Claude",
+      "category": "software",
+      "group": "ai",
+      "url": "https://claude.com/pricing",
+      "searchTerms": ["claude", "anthropic"],
+      "plans": [
+        { "id": "claude-pro-month", "name": "Pro", "title": "Claude Pro", "price": "20.00", "currency": "USD", "interval": { "unit": "month", "count": 1 }, "tier": "pro", "priceCheckedOn": null },
+        { "id": "claude-pro-year", "name": "Pro, Jahresabo", "title": "Claude Pro", "price": "200.00", "currency": "USD", "interval": { "unit": "year", "count": 1 }, "tier": "pro", "priceCheckedOn": null }
+      ]
+    },
+    {
+      "id": "activ-fitness",
+      "name": "Activ Fitness",
+      "category": "fitness",
+      "group": "fitness",
+      "url": "https://www.activfitness.ch",
+      "searchTerms": ["activ fitness"],
+      "plans": [
+        { "id": "activ-fitness-year", "name": "Jahresabo", "title": "Activ Fitness", "price": "790.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "priceCheckedOn": null }
+      ]
+    },
+    {
+      "id": "basefit",
+      "name": "Basefit",
+      "category": "fitness",
+      "group": "fitness",
+      "url": "https://www.basefit.ch",
+      "searchTerms": ["basefit"],
+      "plans": [
+        { "id": "basefit-month", "name": "Monatsabo", "title": "Basefit", "price": "59.90", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "priceCheckedOn": null },
+        { "id": "basefit-year", "name": "Jahresabo", "title": "Basefit", "price": "599.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "priceCheckedOn": null }
+      ]
+    },
+    {
+      "id": "update-fitness",
+      "name": "Update Fitness",
+      "category": "fitness",
+      "group": "fitness",
+      "url": "https://www.update-fitness.ch",
+      "searchTerms": ["update fitness"],
+      "plans": [
+        { "id": "update-fitness-year", "name": "Jahresabo", "title": "Update Fitness", "price": "590.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "priceCheckedOn": null }
+      ]
+    },
+    {
+      "id": "fitnesspark",
+      "name": "Fitnesspark",
+      "category": "fitness",
+      "group": "fitness",
+      "url": "https://www.fitnesspark.ch",
+      "searchTerms": ["fitnesspark"],
+      "plans": [
+        { "id": "fitnesspark-year", "name": "Jahresabo", "title": "Fitnesspark", "price": "1090.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "priceCheckedOn": null }
+      ]
+    },
+    {
+      "id": "republik",
+      "name": "Republik",
+      "category": "news",
+      "group": "news",
+      "url": "https://www.republik.ch/angebote",
+      "searchTerms": ["republik"],
+      "plans": [
+        { "id": "republik-month", "name": "Monatsabo", "title": "Republik", "price": "22.00", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "priceCheckedOn": null },
+        { "id": "republik-year", "name": "Jahresmitgliedschaft", "title": "Republik", "price": "240.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "priceCheckedOn": null }
+      ]
+    },
+    {
+      "id": "nzz",
+      "name": "NZZ",
+      "category": "news",
+      "group": "news",
+      "url": "https://abo.nzz.ch",
+      "searchTerms": ["nzz", "neue zürcher zeitung"],
+      "plans": [
+        { "id": "nzz-digital-month", "name": "Digital", "title": "NZZ Digital", "price": "25.00", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "priceCheckedOn": null },
+        { "id": "nzz-digital-year", "name": "Digital, Jahresabo", "title": "NZZ Digital", "price": "249.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "priceCheckedOn": null }
+      ]
+    },
+    {
+      "id": "tages-anzeiger",
+      "name": "Tages-Anzeiger",
+      "category": "news",
+      "group": "news",
+      "url": "https://abo.tagesanzeiger.ch",
+      "searchTerms": ["tages-anzeiger", "tagesanzeiger"],
+      "plans": [
+        { "id": "tagi-digital-month", "name": "Digital", "title": "Tages-Anzeiger Digital", "price": "22.00", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "priceCheckedOn": null },
+        { "id": "tagi-digital-year", "name": "Digital, Jahresabo", "title": "Tages-Anzeiger Digital", "price": "220.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "priceCheckedOn": null }
+      ]
+    },
+    {
+      "id": "sbb",
+      "name": "SBB",
+      "category": "mobility",
+      "group": "oev",
+      "url": "https://www.sbb.ch/de/billette-angebote/abos.html",
+      "searchTerms": ["sbb", "halbtax", "generalabo", "ga 2. klasse", "ga 1. klasse"],
+      "popular": true,
+      "plans": [
+        { "id": "sbb-halbtax", "name": "Halbtax", "title": "Halbtax", "price": "190.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "tier": "halbtax", "priceCheckedOn": null },
+        { "id": "sbb-ga-2", "name": "GA 2. Klasse", "title": "GA 2. Klasse", "price": "3995.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "tier": "ga2", "priceCheckedOn": null }
+      ]
+    },
+    {
+      "id": "playstation-plus",
+      "name": "PlayStation Plus",
+      "category": "gaming",
+      "group": "gaming",
+      "url": "https://www.playstation.com/de-ch/ps-plus/",
+      "searchTerms": ["playstation plus", "ps plus"],
+      "plans": [
+        { "id": "ps-plus-essential-month", "name": "Essential", "title": "PlayStation Plus Essential", "price": "8.95", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "essential", "priceCheckedOn": null },
+        { "id": "ps-plus-essential-year", "name": "Essential, Jahresabo", "title": "PlayStation Plus Essential", "price": "71.95", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "tier": "essential", "priceCheckedOn": null }
+      ]
+    },
+    {
+      "id": "xbox-game-pass",
+      "name": "Xbox Game Pass",
+      "category": "gaming",
+      "group": "gaming",
+      "url": "https://www.xbox.com/de-CH/xbox-game-pass",
+      "searchTerms": ["game pass", "xbox"],
+      "plans": [
+        { "id": "game-pass-ultimate", "name": "Ultimate", "title": "Xbox Game Pass Ultimate", "price": "26.90", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "priceCheckedOn": null }
+      ]
+    },
+    {
+      "id": "nintendo-switch-online",
+      "name": "Nintendo Switch Online",
+      "category": "gaming",
+      "group": "gaming",
+      "url": "https://www.nintendo.com/de-ch/Nintendo-Switch-Online/",
+      "searchTerms": ["nintendo switch online", "switch online"],
+      "plans": [
+        { "id": "nso-individual-month", "name": "Einzelmitgliedschaft, 1 Monat", "title": "Nintendo Switch Online", "price": "4.90", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "individual", "priceCheckedOn": null },
+        { "id": "nso-individual-year", "name": "Einzelmitgliedschaft, 12 Monate", "title": "Nintendo Switch Online", "price": "21.90", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "tier": "individual", "priceCheckedOn": null },
+        { "id": "nso-family-year", "name": "Familienmitgliedschaft, 12 Monate", "title": "Nintendo Switch Online Familie", "price": "39.90", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "tier": "family", "maxPersons": 8, "priceCheckedOn": null }
+      ]
+    }
+  ]
+}
