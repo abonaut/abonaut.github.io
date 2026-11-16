@@ -62,9 +62,13 @@ def validate(catalog):
             issues.append(f"{pid}: unbekannte Kategorie {provider.get('category')}")
         if provider.get("group") is not None and provider["group"] not in group_ids:
             issues.append(f"{pid}: unbekannte Gruppe {provider['group']}")
-        url = provider.get("url")
-        if url is not None and urlparse(url).scheme != "https":
-            issues.append(f"{pid}: URL muss mit https beginnen")
+        for key in ("url", "priceSource"):
+            value = provider.get(key)
+            if value is not None and urlparse(value).scheme != "https":
+                issues.append(f"{pid}: {key} muss mit https beginnen")
+        checked_plans = [plan for plan in provider.get("plans", []) if plan.get("priceCheckedOn")]
+        if checked_plans and not provider.get("priceSource"):
+            issues.append(f"{pid}: geprüfte Preise brauchen eine priceSource")
         terms = provider.get("searchTerms", [])
         if not terms:
             issues.append(f"{pid}: keine Suchbegriffe")
@@ -114,8 +118,11 @@ def main():
 
     providers = catalog["providers"]
     plans = sum(len(p["plans"]) for p in providers)
-    unchecked = sum(1 for p in providers for plan in p["plans"] if plan.get("priceCheckedOn") is None)
-    print(f"OK: {len(providers)} Anbieter, {plans} Pläne, davon {unchecked} noch ungeprüft.")
+    unchecked = [f"{p['name']} {plan['name']}" for p in providers for plan in p["plans"] if not plan.get("priceCheckedOn")]
+    print(f"OK: {len(providers)} Anbieter, {plans} Pläne, davon {plans - len(unchecked)} geprüft, {len(unchecked)} ungeprüft.")
+    if "--list-unchecked" in sys.argv:
+        for name in unchecked:
+            print(f"  ungeprüft: {name}")
 
 
 if __name__ == "__main__":
