@@ -5,7 +5,8 @@
 * `catalog/v1.json`: Anbieterkatalog mit Preisen und Wechselkursen. Die App lädt ihn von
   `https://aron5601.github.io/subsy-web/catalog/v1.json` (höchstens alle 12 Stunden) und
   hat eine mitgelieferte Kopie als Fallback.
-* `index.html`: Startseite. Datenschutzerklärung und Support-Seite kommen dazu.
+* `index.html`, `datenschutz.html`, `support.html`: Startseite, Datenschutz und Hilfe auf Deutsch. Übersetzungen in
+  `fr/`, `it/` und `en/` (gleiche Dateinamen). Bei Änderungen alle vier Sprachen nachführen.
 * `tools/validate_catalog.py`: prüft den Katalog. Läuft auch automatisch bei jedem Push (GitHub Actions).
 * `tools/update_rates.py`: holt die Wechselkurse der EZB, läuft jeden Samstag automatisch.
 * `logos/v1.json`: Logo-Paket für die App (siehe unten).
@@ -61,6 +62,7 @@ und Anbieter des Abos. Der längste Begriff gewinnt ("coop mobile" vor "coop").
 |---|---|
 | `groups` | Gruppen vergleichbarer Dienste. `alternatives`: Anbieter sind austauschbar (Vorschlag "Günstigere Alternative"). `redundantIfMultiple`: mehrere Abos dieser Gruppe sind meistens doppelt. |
 | `providers[].category` | Kategorie in der App: `streaming`, `music`, `mobileInternet`, `software`, `cloud`, `fitness`, `mobility`, `news`, `gaming`, `other` |
+| `providers[].summaryI18n`, `groups[].nameI18n` | Übersetzungen für `fr`, `it`, `en` (fehlt eine, zeigt die App Deutsch) |
 | `providers[].summary` | kurze Beschreibung für den Tab «Entdecken», höchstens 60 Zeichen |
 | `providers[].partnerURL` | Partnerlink (Affiliate, https). Ist er gesetzt, öffnet «Entdecken» ihn statt `url` und kennzeichnet ihn als Werbung. Erst eintragen, wenn das Partnerprogramm bestätigt ist. |
 | `providers[].priceSource` | Seite, auf der die geprüften Preise stehen (Pflicht, sobald ein Plan geprüft ist) |

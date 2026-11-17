@@ -68,6 +68,12 @@ def validate(catalog):
             issues.append(f"{pid}: unbekannte Kategorie {provider.get('category')}")
         if provider.get("group") is not None and provider["group"] not in group_ids:
             issues.append(f"{pid}: unbekannte Gruppe {provider['group']}")
+        for key in ("summaryI18n",):
+            translations = provider.get(key)
+            if translations is not None and (not isinstance(translations, dict)
+                                             or not set(translations) <= {"fr", "it", "en"}
+                                             or not all(isinstance(v, str) and 0 < len(v) <= 70 for v in translations.values())):
+                issues.append(f"{pid}: {key} braucht Texte für fr, it oder en (höchstens 70 Zeichen)")
         summary = provider.get("summary")
         if summary is not None and (not isinstance(summary, str) or not 0 < len(summary) <= 60):
             issues.append(f"{pid}: summary muss Text mit höchstens 60 Zeichen sein")
