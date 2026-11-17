@@ -7,7 +7,10 @@ Gibt alle Probleme aus und endet mit Fehlercode 1, wenn etwas nicht stimmt.
 Die App selbst ist robust (ungültige Pläne werden ignoriert, ein kaputter Katalog
 ersetzt den alten nicht), aber so fallen Tippfehler sofort auf.
 """
+import base64
+import hashlib
 import json
+import os
 import re
 import sys
 from urllib.parse import urlparse
@@ -20,6 +23,9 @@ UNITS = {"day", "week", "month", "year"}
 DATE = re.compile(r"^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])$")
 PRICE = re.compile(r"^\d+(\.\d{1,2})?$")
 RATE = re.compile(r"^\d+(\.\d+)?$")
+LOGO_VERSION = re.compile(r"^[a-z0-9-]{4,64}$")
+LOGO_PATH = re.compile(r"^logos/[a-z0-9._-]+\.json$")
+SITE_ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
 
 
 def validate(catalog):
@@ -97,6 +103,43 @@ def validate(catalog):
             persons = plan.get("maxPersons")
             if persons is not None and (not isinstance(persons, int) or persons < 1):
                 issues.append(f"{plid}: maxPersons muss eine ganze Zahl ab 1 sein")
+    issues += validate_logos(catalog, seen)
+    return issues
+
+
+def validate_logos(catalog, ids):
+    """Der Block logos und das Paket daneben: gültige Version, Pfad, nur bekannte Anbieter, PNG-Daten."""
+    logos = catalog.get("logos")
+    if logos is None:
+        return []
+    issues = []
+    version = str(logos.get("version", ""))
+    path = str(logos.get("path", ""))
+    if not LOGO_VERSION.match(version):
+        issues.append("logos.version ungültig")
+    if not LOGO_PATH.match(path):
+        issues.append("logos.path muss wie logos/v1.json aussehen")
+        return issues
+    package_file = os.path.join(SITE_ROOT, path)
+    if not os.path.isfile(package_file):
+        return issues + [f"Logo-Paket fehlt: {path}"]
+    with open(package_file, encoding="utf-8") as file:
+        text = file.read()
+    if hashlib.sha256(text.encode("utf-8")).hexdigest()[:12] != version:
+        issues.append("logos.version passt nicht zum Paket (tools/build_logos.py ausführen)")
+    package = json.loads(text)
+    if package.get("schemaVersion") != 1:
+        issues.append("Logo-Paket: schemaVersion muss 1 sein")
+    for identifier, data in package.get("logos", {}).items():
+        if identifier not in ids:
+            issues.append(f"Logo für unbekannten Anbieter: {identifier}")
+        try:
+            png = base64.b64decode(data, validate=True)
+        except ValueError:
+            issues.append(f"Logo {identifier}: kein gültiges Base64")
+            continue
+        if not png.startswith(b"\x89PNG") or len(png) > 80_000:
+            issues.append(f"Logo {identifier}: kein PNG oder grösser als 80 KB")
     return issues
 
 

@@ -1,12 +1,16 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-16",
+  "updatedAt": "2026-11-17",
   "exchangeRates": {
     "date": "2026-11-16",
     "ratesToCHF": {
       "EUR": "0.9244",
       "USD": "0.8393"
     }
+  },
+  "logos": {
+    "version": "4332bcda1f73",
+    "path": "logos/v1.json"
   },
   "groups": [
     { "id": "video", "name": "Video-Streaming", "alternatives": false, "redundantIfMultiple": false },

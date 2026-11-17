@@ -8,6 +8,7 @@
 * `index.html`: Startseite. Datenschutzerklärung und Support-Seite kommen dazu.
 * `tools/validate_catalog.py`: prüft den Katalog. Läuft auch automatisch bei jedem Push (GitHub Actions).
 * `tools/update_rates.py`: holt die Wechselkurse der EZB, läuft jeden Samstag automatisch.
+* `logos/v1.json`: Logo-Paket für die App (siehe unten).
 
 ## Preise anpassen
 
@@ -26,6 +27,25 @@ automatisch mit den Referenzkursen der Europäischen Zentralbank aktualisiert (G
 `.github/workflows/rates.yml`, Skript `tools/update_rates.py`). Von Hand auslösen: auf github.com
 unter *Actions → Wechselkurse aktualisieren → Run workflow*. Springt ein Kurs um mehr als 25 %,
 übernimmt das Skript ihn nicht und die Action schlägt fehl (GitHub schickt dann eine E-Mail).
+
+## Logos
+
+Die App zeigt für Anbieter aus dem Katalog das Logo statt des Monogramms. Alle Logos stecken in einem Paket
+(`logos/v1.json`, PNG als Base64, höchstens 180 x 180 Pixel). Die App lädt immer das ganze Paket, so erfährt
+niemand, welche Abos jemand hat. Im Katalog steht unter `logos` die Version (Prüfsumme) und der Pfad. Ändert
+sich die Version, lädt die App das Paket neu. Logos lassen sich in der App abschalten.
+
+* Quellen: `logos/src/` (Originaldateien) und `logos/sources.json` (welche Datei zu welchem Anbieter, woher sie stammt,
+  optional `padding` für Logos ohne eigenen Rand).
+* Neue Logos suchen: `python3 -I tools/fetch_logos.py <Ordner>` lädt das App-Symbol von den Websites der Anbieter.
+  Passende Datei nach `logos/src/` kopieren und in `logos/sources.json` eintragen.
+* Paket bauen (auf einem Mac): `python3 -I tools/build_logos.py`. Das Skript trägt die neue Version im Katalog ein
+  und setzt `updatedAt` auf heute.
+* Logo entfernen (zum Beispiel auf Wunsch eines Anbieters): Eintrag aus `logos/sources.json` löschen, Paket bauen,
+  committen. Ein App-Update ist nicht nötig.
+* Bewusst ohne Logo: Apple TV, Apple Music und iCloud+ (Apple erlaubt Dritten das Apple-Logo nicht).
+  Ohne gutes Logo bisher: Sunrise, Init7, Basefit (heisst inzwischen PureGym).
+* Die Logos sind Marken der jeweiligen Anbieter. Sie zeigen nur, um welchen Dienst es geht.
 
 ## Felder
 
