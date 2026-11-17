@@ -107,6 +107,10 @@ def validate(catalog):
             if interval.get("unit") not in UNITS or not isinstance(interval.get("count"), int) or interval["count"] < 1:
                 issues.append(f"{plid}: Intervall ungültig")
             checked = plan.get("priceCheckedOn")
+            for key in ("nameI18n", "titleI18n"):
+                translations = plan.get(key)
+                if translations is not None and (not isinstance(translations, dict) or not set(translations) <= {"fr", "it", "en"}):
+                    issues.append(f"{plid}: {key} braucht Texte für fr, it oder en")
             if checked is not None and not DATE.match(str(checked)):
                 issues.append(f"{plid}: priceCheckedOn muss null oder JJJJ-MM-TT sein")
             persons = plan.get("maxPersons")

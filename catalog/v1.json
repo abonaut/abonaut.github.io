@@ -37,7 +37,7 @@
       "searchTerms": ["netflix"],
       "popular": true,
       "plans": [
-        { "id": "netflix-basic", "name": "Basis", "price": "14.90", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "basic", "priceCheckedOn": "2026-11-16" },
+        { "id": "netflix-basic", "name": "Basis", "price": "14.90", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "basic", "priceCheckedOn": "2026-11-16", "nameI18n": {"fr": "Basique", "it": "Base", "en": "Basic"} },
         { "id": "netflix-standard", "name": "Standard", "price": "22.90", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "standard", "priceCheckedOn": "2026-11-16" },
         { "id": "netflix-premium", "name": "Premium", "price": "29.90", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "premium", "priceCheckedOn": "2026-11-16" }
       ]
@@ -53,11 +53,11 @@
       "searchTerms": ["disney+", "disney plus", "disneyplus"],
       "popular": true,
       "plans": [
-        { "id": "disney-ads-month", "name": "Standard mit Werbung", "price": "9.90", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "ads", "priceCheckedOn": null },
+        { "id": "disney-ads-month", "name": "Standard mit Werbung", "price": "9.90", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "ads", "priceCheckedOn": null, "nameI18n": {"fr": "Standard avec pub", "it": "Standard con pubblicità", "en": "Standard with ads"} },
         { "id": "disney-standard-month", "name": "Standard", "price": "16.90", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "standard", "priceCheckedOn": null },
-        { "id": "disney-standard-year", "name": "Standard, Jahresabo", "price": "169.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "tier": "standard", "priceCheckedOn": null },
+        { "id": "disney-standard-year", "name": "Standard, Jahresabo", "price": "169.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "tier": "standard", "priceCheckedOn": null, "nameI18n": {"fr": "Standard, annuel", "it": "Standard, annuale", "en": "Standard, yearly"} },
         { "id": "disney-premium-month", "name": "Premium", "price": "23.40", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "premium", "priceCheckedOn": null },
-        { "id": "disney-premium-year", "name": "Premium, Jahresabo", "price": "234.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "tier": "premium", "priceCheckedOn": null }
+        { "id": "disney-premium-year", "name": "Premium, Jahresabo", "price": "234.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "tier": "premium", "priceCheckedOn": null, "nameI18n": {"fr": "Premium, annuel", "it": "Premium, annuale", "en": "Premium, yearly"} }
       ]
     },
     {
@@ -72,7 +72,7 @@
       "searchTerms": ["apple tv"],
       "popular": true,
       "plans": [
-        { "id": "apple-tv-month", "name": "Monatsabo", "title": "Apple TV", "price": "10.90", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "priceCheckedOn": "2026-11-16" }
+        { "id": "apple-tv-month", "name": "Monatsabo", "title": "Apple TV", "price": "10.90", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "priceCheckedOn": "2026-11-16", "nameI18n": {"fr": "Mensuel", "it": "Mensile", "en": "Monthly"} }
       ]
     },
     {
@@ -86,12 +86,12 @@
       "priceSource": "https://www.internet-offer.ch/de/paramount-plus-schweiz-preise-angebote",
       "searchTerms": ["paramount+", "paramount plus", "paramount"],
       "plans": [
-        { "id": "paramount-basic-month", "name": "Basis mit Werbung", "price": "7.90", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "basic", "priceCheckedOn": "2026-11-16" },
-        { "id": "paramount-basic-year", "name": "Basis mit Werbung, Jahresabo", "price": "71.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "tier": "basic", "priceCheckedOn": "2026-11-16" },
+        { "id": "paramount-basic-month", "name": "Basis mit Werbung", "price": "7.90", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "basic", "priceCheckedOn": "2026-11-16", "nameI18n": {"fr": "Basique avec pub", "it": "Base con pubblicità", "en": "Basic with ads"} },
+        { "id": "paramount-basic-year", "name": "Basis mit Werbung, Jahresabo", "price": "71.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "tier": "basic", "priceCheckedOn": "2026-11-16", "nameI18n": {"fr": "Basique avec pub, annuel", "it": "Base con pubblicità, annuale", "en": "Basic with ads, yearly"} },
         { "id": "paramount-month", "name": "Standard", "price": "12.00", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "standard", "priceCheckedOn": "2026-11-16" },
-        { "id": "paramount-standard-year", "name": "Standard, Jahresabo", "price": "120.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "tier": "standard", "priceCheckedOn": "2026-11-16" },
+        { "id": "paramount-standard-year", "name": "Standard, Jahresabo", "price": "120.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "tier": "standard", "priceCheckedOn": "2026-11-16", "nameI18n": {"fr": "Standard, annuel", "it": "Standard, annuale", "en": "Standard, yearly"} },
         { "id": "paramount-premium-month", "name": "Premium", "price": "17.90", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "premium", "priceCheckedOn": "2026-11-16" },
-        { "id": "paramount-premium-year", "name": "Premium, Jahresabo", "price": "161.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "tier": "premium", "priceCheckedOn": "2026-11-16" }
+        { "id": "paramount-premium-year", "name": "Premium, Jahresabo", "price": "161.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "tier": "premium", "priceCheckedOn": "2026-11-16", "nameI18n": {"fr": "Premium, annuel", "it": "Premium, annuale", "en": "Premium, yearly"} }
       ]
     },
     {
@@ -124,9 +124,9 @@
       "searchTerms": ["apple music"],
       "popular": true,
       "plans": [
-        { "id": "apple-music-individual", "name": "Einzelperson", "price": "14.90", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "individual", "priceCheckedOn": "2026-11-16" },
-        { "id": "apple-music-family", "name": "Familie", "price": "24.90", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "family", "maxPersons": 6, "priceCheckedOn": "2026-11-16" },
-        { "id": "apple-music-student", "name": "Studierende", "price": "8.90", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "student", "priceCheckedOn": "2026-11-16" }
+        { "id": "apple-music-individual", "name": "Einzelperson", "price": "14.90", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "individual", "priceCheckedOn": "2026-11-16", "nameI18n": {"fr": "Individuel", "it": "Individuale", "en": "Individual"} },
+        { "id": "apple-music-family", "name": "Familie", "price": "24.90", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "family", "maxPersons": 6, "priceCheckedOn": "2026-11-16", "nameI18n": {"fr": "Famille", "it": "Famiglia", "en": "Family"} },
+        { "id": "apple-music-student", "name": "Studierende", "price": "8.90", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "student", "priceCheckedOn": "2026-11-16", "nameI18n": {"fr": "Étudiants", "it": "Studenti", "en": "Students"} }
       ]
     },
     {
@@ -155,7 +155,7 @@
       "searchTerms": ["deezer"],
       "plans": [
         { "id": "deezer-premium", "name": "Premium", "price": "14.95", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "individual", "priceCheckedOn": "2026-11-16" },
-        { "id": "deezer-family", "name": "Familie", "price": "22.95", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "family", "maxPersons": 6, "priceCheckedOn": "2026-11-16" }
+        { "id": "deezer-family", "name": "Familie", "price": "22.95", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "family", "maxPersons": 6, "priceCheckedOn": "2026-11-16", "nameI18n": {"fr": "Famille", "it": "Famiglia", "en": "Family"} }
       ]
     },
     {
@@ -342,9 +342,9 @@
       "searchTerms": ["google one", "google drive"],
       "plans": [
         { "id": "google-one-100gb-month", "name": "100 GB", "title": "Google One 100 GB", "price": "2.00", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "100gb", "maxPersons": 6, "priceCheckedOn": null },
-        { "id": "google-one-100gb-year", "name": "100 GB, Jahresabo", "title": "Google One 100 GB", "price": "24.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "tier": "100gb", "maxPersons": 6, "priceCheckedOn": null },
+        { "id": "google-one-100gb-year", "name": "100 GB, Jahresabo", "title": "Google One 100 GB", "price": "24.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "tier": "100gb", "maxPersons": 6, "priceCheckedOn": null, "nameI18n": {"fr": "100 GB, annuel", "it": "100 GB, annuale", "en": "100 GB, yearly"} },
         { "id": "google-one-2tb-month", "name": "2 TB", "title": "Google One 2 TB", "price": "10.00", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "2tb", "maxPersons": 6, "priceCheckedOn": null },
-        { "id": "google-one-2tb-year", "name": "2 TB, Jahresabo", "title": "Google One 2 TB", "price": "120.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "tier": "2tb", "maxPersons": 6, "priceCheckedOn": null }
+        { "id": "google-one-2tb-year", "name": "2 TB, Jahresabo", "title": "Google One 2 TB", "price": "120.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "tier": "2tb", "maxPersons": 6, "priceCheckedOn": null, "nameI18n": {"fr": "2 TB, annuel", "it": "2 TB, annuale", "en": "2 TB, yearly"} }
       ]
     },
     {
@@ -358,7 +358,7 @@
       "searchTerms": ["proton"],
       "plans": [
         { "id": "proton-drive-plus-month", "name": "Drive Plus 200 GB", "title": "Proton Drive Plus", "price": "4.99", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "200gb", "priceCheckedOn": null },
-        { "id": "proton-drive-plus-year", "name": "Drive Plus 200 GB, Jahresabo", "title": "Proton Drive Plus", "price": "47.88", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "tier": "200gb", "priceCheckedOn": null }
+        { "id": "proton-drive-plus-year", "name": "Drive Plus 200 GB, Jahresabo", "title": "Proton Drive Plus", "price": "47.88", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "tier": "200gb", "priceCheckedOn": null, "nameI18n": {"fr": "Drive Plus 200 GB, annuel", "it": "Drive Plus 200 GB, annuale", "en": "Drive Plus 200 GB, yearly"} }
       ]
     },
     {
@@ -372,7 +372,7 @@
       "searchTerms": ["dropbox"],
       "plans": [
         { "id": "dropbox-plus-month", "name": "Plus 2 TB", "title": "Dropbox Plus", "price": "11.99", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "2tb", "priceCheckedOn": null },
-        { "id": "dropbox-plus-year", "name": "Plus 2 TB, Jahresabo", "title": "Dropbox Plus", "price": "119.88", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "tier": "2tb", "priceCheckedOn": null }
+        { "id": "dropbox-plus-year", "name": "Plus 2 TB, Jahresabo", "title": "Dropbox Plus", "price": "119.88", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "tier": "2tb", "priceCheckedOn": null, "nameI18n": {"fr": "Plus 2 TB, annuel", "it": "Plus 2 TB, annuale", "en": "Plus 2 TB, yearly"} }
       ]
     },
     {
@@ -387,9 +387,9 @@
       "popular": true,
       "plans": [
         { "id": "m365-single-month", "name": "Single", "price": "9.95", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "single", "priceCheckedOn": "2026-11-16" },
-        { "id": "m365-single-year", "name": "Single, Jahresabo", "title": "Microsoft 365 Single", "price": "99.95", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "tier": "single", "priceCheckedOn": "2026-11-16" },
+        { "id": "m365-single-year", "name": "Single, Jahresabo", "title": "Microsoft 365 Single", "price": "99.95", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "tier": "single", "priceCheckedOn": "2026-11-16", "nameI18n": {"fr": "Single, annuel", "it": "Single, annuale", "en": "Single, yearly"} },
         { "id": "m365-family-month", "name": "Family", "price": "13.95", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "family", "maxPersons": 6, "priceCheckedOn": "2026-11-16" },
-        { "id": "m365-family-year", "name": "Family, Jahresabo", "title": "Microsoft 365 Family", "price": "139.95", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "tier": "family", "maxPersons": 6, "priceCheckedOn": "2026-11-16" }
+        { "id": "m365-family-year", "name": "Family, Jahresabo", "title": "Microsoft 365 Family", "price": "139.95", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "tier": "family", "maxPersons": 6, "priceCheckedOn": "2026-11-16", "nameI18n": {"fr": "Family, annuel", "it": "Family, annuale", "en": "Family, yearly"} }
       ]
     },
     {
@@ -401,8 +401,8 @@
       "url": "https://www.adobe.com/ch_de/creativecloud/plans.html",
       "searchTerms": ["adobe", "creative cloud", "lightroom", "photoshop"],
       "plans": [
-        { "id": "adobe-photo", "name": "Fotografie", "title": "Adobe Fotografie-Abo", "price": "12.90", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "photo", "priceCheckedOn": null },
-        { "id": "adobe-all-apps", "name": "Alle Apps", "title": "Adobe Creative Cloud Alle Apps", "price": "79.90", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "all", "priceCheckedOn": null }
+        { "id": "adobe-photo", "name": "Fotografie", "title": "Adobe Fotografie-Abo", "price": "12.90", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "photo", "priceCheckedOn": null, "nameI18n": {"fr": "Photographie", "it": "Fotografia", "en": "Photography"}, "titleI18n": {"fr": "Adobe Photographie", "it": "Adobe Fotografia", "en": "Adobe Photography plan"} },
+        { "id": "adobe-all-apps", "name": "Alle Apps", "title": "Adobe Creative Cloud Alle Apps", "price": "79.90", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "all", "priceCheckedOn": null, "nameI18n": {"fr": "Toutes les apps", "it": "Tutte le app", "en": "All Apps"}, "titleI18n": {"fr": "Adobe Creative Cloud Toutes les apps", "it": "Adobe Creative Cloud Tutte le app", "en": "Adobe Creative Cloud All Apps"} }
       ]
     },
     {
@@ -415,8 +415,8 @@
       "priceSource": "https://1password.com/pricing/password-manager",
       "searchTerms": ["1password"],
       "plans": [
-        { "id": "1password-individual", "name": "Einzelperson", "title": "1Password", "price": "47.88", "currency": "USD", "interval": { "unit": "year", "count": 1 }, "tier": "individual", "priceCheckedOn": "2026-11-16" },
-        { "id": "1password-family", "name": "Familie", "title": "1Password Familie", "price": "71.88", "currency": "USD", "interval": { "unit": "year", "count": 1 }, "tier": "family", "maxPersons": 5, "priceCheckedOn": "2026-11-16" }
+        { "id": "1password-individual", "name": "Einzelperson", "title": "1Password", "price": "47.88", "currency": "USD", "interval": { "unit": "year", "count": 1 }, "tier": "individual", "priceCheckedOn": "2026-11-16", "nameI18n": {"fr": "Individuel", "it": "Individuale", "en": "Individual"} },
+        { "id": "1password-family", "name": "Familie", "title": "1Password Familie", "price": "71.88", "currency": "USD", "interval": { "unit": "year", "count": 1 }, "tier": "family", "maxPersons": 5, "priceCheckedOn": "2026-11-16", "nameI18n": {"fr": "Famille", "it": "Famiglia", "en": "Family"}, "titleI18n": {"fr": "1Password Famille", "it": "1Password Famiglia", "en": "1Password Family"} }
       ]
     },
     {
@@ -444,7 +444,7 @@
       "searchTerms": ["claude", "anthropic"],
       "plans": [
         { "id": "claude-pro-month", "name": "Pro", "title": "Claude Pro", "price": "20.00", "currency": "USD", "interval": { "unit": "month", "count": 1 }, "tier": "pro", "priceCheckedOn": "2026-11-16" },
-        { "id": "claude-pro-year", "name": "Pro, Jahresabo", "title": "Claude Pro", "price": "200.00", "currency": "USD", "interval": { "unit": "year", "count": 1 }, "tier": "pro", "priceCheckedOn": "2026-11-16" }
+        { "id": "claude-pro-year", "name": "Pro, Jahresabo", "title": "Claude Pro", "price": "200.00", "currency": "USD", "interval": { "unit": "year", "count": 1 }, "tier": "pro", "priceCheckedOn": "2026-11-16", "nameI18n": {"fr": "Pro, annuel", "it": "Pro, annuale", "en": "Pro, yearly"} }
       ]
     },
     {
@@ -457,7 +457,7 @@
       "url": "https://www.activfitness.ch",
       "searchTerms": ["activ fitness"],
       "plans": [
-        { "id": "activ-fitness-year", "name": "Jahresabo", "title": "Activ Fitness", "price": "790.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "priceCheckedOn": null }
+        { "id": "activ-fitness-year", "name": "Jahresabo", "title": "Activ Fitness", "price": "790.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "priceCheckedOn": null, "nameI18n": {"fr": "Annuel", "it": "Annuale", "en": "Yearly"} }
       ]
     },
     {
@@ -470,8 +470,8 @@
       "url": "https://www.basefit.ch",
       "searchTerms": ["basefit"],
       "plans": [
-        { "id": "basefit-month", "name": "Monatsabo", "title": "Basefit", "price": "59.90", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "priceCheckedOn": null },
-        { "id": "basefit-year", "name": "Jahresabo", "title": "Basefit", "price": "599.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "priceCheckedOn": null }
+        { "id": "basefit-month", "name": "Monatsabo", "title": "Basefit", "price": "59.90", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "priceCheckedOn": null, "nameI18n": {"fr": "Mensuel", "it": "Mensile", "en": "Monthly"} },
+        { "id": "basefit-year", "name": "Jahresabo", "title": "Basefit", "price": "599.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "priceCheckedOn": null, "nameI18n": {"fr": "Annuel", "it": "Annuale", "en": "Yearly"} }
       ]
     },
     {
@@ -484,7 +484,7 @@
       "url": "https://www.update-fitness.ch",
       "searchTerms": ["update fitness"],
       "plans": [
-        { "id": "update-fitness-year", "name": "Jahresabo", "title": "Update Fitness", "price": "590.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "priceCheckedOn": null }
+        { "id": "update-fitness-year", "name": "Jahresabo", "title": "Update Fitness", "price": "590.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "priceCheckedOn": null, "nameI18n": {"fr": "Annuel", "it": "Annuale", "en": "Yearly"} }
       ]
     },
     {
@@ -497,7 +497,7 @@
       "url": "https://www.fitnesspark.ch",
       "searchTerms": ["fitnesspark"],
       "plans": [
-        { "id": "fitnesspark-year", "name": "Jahresabo", "title": "Fitnesspark", "price": "1090.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "priceCheckedOn": null }
+        { "id": "fitnesspark-year", "name": "Jahresabo", "title": "Fitnesspark", "price": "1090.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "priceCheckedOn": null, "nameI18n": {"fr": "Annuel", "it": "Annuale", "en": "Yearly"} }
       ]
     },
     {
@@ -511,8 +511,8 @@
       "priceSource": "https://shop.republik.ch/",
       "searchTerms": ["republik"],
       "plans": [
-        { "id": "republik-month", "name": "Monatsabo", "title": "Republik", "price": "22.00", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "priceCheckedOn": "2026-11-16" },
-        { "id": "republik-year", "name": "Jahresmitgliedschaft", "title": "Republik", "price": "240.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "priceCheckedOn": "2026-11-16" }
+        { "id": "republik-month", "name": "Monatsabo", "title": "Republik", "price": "22.00", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "priceCheckedOn": "2026-11-16", "nameI18n": {"fr": "Mensuel", "it": "Mensile", "en": "Monthly"} },
+        { "id": "republik-year", "name": "Jahresmitgliedschaft", "title": "Republik", "price": "240.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "priceCheckedOn": "2026-11-16", "nameI18n": {"fr": "Abonnement annuel", "it": "Abbonamento annuale", "en": "Annual membership"} }
       ]
     },
     {
@@ -526,7 +526,7 @@
       "searchTerms": ["nzz", "neue zürcher zeitung"],
       "plans": [
         { "id": "nzz-digital-month", "name": "Digital", "title": "NZZ Digital", "price": "25.00", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "priceCheckedOn": null },
-        { "id": "nzz-digital-year", "name": "Digital, Jahresabo", "title": "NZZ Digital", "price": "249.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "priceCheckedOn": null }
+        { "id": "nzz-digital-year", "name": "Digital, Jahresabo", "title": "NZZ Digital", "price": "249.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "priceCheckedOn": null, "nameI18n": {"fr": "Digital, annuel", "it": "Digital, annuale", "en": "Digital, yearly"} }
       ]
     },
     {
@@ -540,7 +540,7 @@
       "searchTerms": ["tages-anzeiger", "tagesanzeiger"],
       "plans": [
         { "id": "tagi-digital-month", "name": "Digital", "title": "Tages-Anzeiger Digital", "price": "24.00", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "priceCheckedOn": null },
-        { "id": "tagi-digital-year", "name": "Digital, Jahresabo", "title": "Tages-Anzeiger Digital", "price": "220.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "priceCheckedOn": null }
+        { "id": "tagi-digital-year", "name": "Digital, Jahresabo", "title": "Tages-Anzeiger Digital", "price": "220.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "priceCheckedOn": null, "nameI18n": {"fr": "Digital, annuel", "it": "Digital, annuale", "en": "Digital, yearly"} }
       ]
     },
     {
@@ -555,8 +555,8 @@
       "searchTerms": ["sbb", "halbtax", "generalabo", "ga 2. klasse", "ga 1. klasse"],
       "popular": true,
       "plans": [
-        { "id": "sbb-halbtax", "name": "Halbtax", "title": "Halbtax", "price": "190.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "tier": "halbtax", "priceCheckedOn": "2026-11-16" },
-        { "id": "sbb-ga-2", "name": "GA 2. Klasse", "title": "GA 2. Klasse", "price": "3995.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "tier": "ga2", "priceCheckedOn": "2026-11-16" }
+        { "id": "sbb-halbtax", "name": "Halbtax", "title": "Halbtax", "price": "190.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "tier": "halbtax", "priceCheckedOn": "2026-11-16", "nameI18n": {"fr": "Demi-tarif", "it": "Metà-prezzo", "en": "Half Fare travelcard"}, "titleI18n": {"fr": "Demi-tarif", "it": "Metà-prezzo", "en": "Half Fare travelcard"} },
+        { "id": "sbb-ga-2", "name": "GA 2. Klasse", "title": "GA 2. Klasse", "price": "3995.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "tier": "ga2", "priceCheckedOn": "2026-11-16", "nameI18n": {"fr": "AG 2e classe", "it": "AG 2a classe", "en": "GA travelcard 2nd class"}, "titleI18n": {"fr": "AG 2e classe", "it": "AG 2a classe", "en": "GA travelcard 2nd class"} }
       ]
     },
     {
@@ -570,7 +570,7 @@
       "searchTerms": ["playstation plus", "ps plus"],
       "plans": [
         { "id": "ps-plus-essential-month", "name": "Essential", "title": "PlayStation Plus Essential", "price": "10.90", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "essential", "priceCheckedOn": null },
-        { "id": "ps-plus-essential-year", "name": "Essential, Jahresabo", "title": "PlayStation Plus Essential", "price": "78.90", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "tier": "essential", "priceCheckedOn": null }
+        { "id": "ps-plus-essential-year", "name": "Essential, Jahresabo", "title": "PlayStation Plus Essential", "price": "78.90", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "tier": "essential", "priceCheckedOn": null, "nameI18n": {"fr": "Essential, annuel", "it": "Essential, annuale", "en": "Essential, yearly"} }
       ]
     },
     {
@@ -596,9 +596,9 @@
       "url": "https://www.nintendo.com/de-ch/Nintendo-Switch-Online/",
       "searchTerms": ["nintendo switch online", "switch online"],
       "plans": [
-        { "id": "nso-individual-month", "name": "Einzelmitgliedschaft, 1 Monat", "title": "Nintendo Switch Online", "price": "4.90", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "individual", "priceCheckedOn": null },
-        { "id": "nso-individual-year", "name": "Einzelmitgliedschaft, 12 Monate", "title": "Nintendo Switch Online", "price": "21.90", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "tier": "individual", "priceCheckedOn": null },
-        { "id": "nso-family-year", "name": "Familienmitgliedschaft, 12 Monate", "title": "Nintendo Switch Online Familie", "price": "39.90", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "tier": "family", "maxPersons": 8, "priceCheckedOn": null }
+        { "id": "nso-individual-month", "name": "Einzelmitgliedschaft, 1 Monat", "title": "Nintendo Switch Online", "price": "4.90", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "individual", "priceCheckedOn": null, "nameI18n": {"fr": "Abonnement individuel, 1 mois", "it": "Abbonamento individuale, 1 mese", "en": "Individual membership, 1 month"} },
+        { "id": "nso-individual-year", "name": "Einzelmitgliedschaft, 12 Monate", "title": "Nintendo Switch Online", "price": "21.90", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "tier": "individual", "priceCheckedOn": null, "nameI18n": {"fr": "Abonnement individuel, 12 mois", "it": "Abbonamento individuale, 12 mesi", "en": "Individual membership, 12 months"} },
+        { "id": "nso-family-year", "name": "Familienmitgliedschaft, 12 Monate", "title": "Nintendo Switch Online Familie", "price": "39.90", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "tier": "family", "maxPersons": 8, "priceCheckedOn": null, "nameI18n": {"fr": "Abonnement famille, 12 mois", "it": "Abbonamento famiglia, 12 mesi", "en": "Family membership, 12 months"}, "titleI18n": {"fr": "Nintendo Switch Online Famille", "it": "Nintendo Switch Online Famiglia", "en": "Nintendo Switch Online Family"} }
       ]
     }
   ]
