@@ -5,8 +5,10 @@ Aufruf (auf einem Mac, braucht das Programm sips): python3 -I tools/build_logos.
 
 Ablauf:
 1. Für jeden Eintrag in logos/sources.json die Datei aus logos/src in PNG umwandeln, bei Bedarf mit weissem
-   Rand quadratisch machen und auf höchstens 180 x 180 Pixel verkleinern.
-2. Alle Logos als ein Paket schreiben: logos/v1.json mit {"schemaVersion": 1, "logos": {"<anbieter-id>": "<PNG als Base64>"}}.
+   Rand quadratisch machen und auf höchstens 144 x 144 Pixel verkleinern.
+2. Alle Logos als ein Paket schreiben: logos/v1.json mit {"schemaVersion": 1, "logos": [{"id", "name", "terms", "png"}]}.
+   Die ID ist bei Katalog-Anbietern die Anbieter-ID, sonst die ID aus logos/brands.json. terms sind die Suchbegriffe
+   (klein, ganze Wörter), mit denen die App ein Abo dem Logo zuordnet, auch ohne Katalogeintrag.
    Die App lädt immer das ganze Paket. So erfährt niemand, welche Abos jemand hat.
 3. Im Katalog den Block "logos" mit Version (Prüfsumme des Pakets) und Pfad nachführen. Hat sich das Paket
    geändert, wird updatedAt auf heute gesetzt, damit die App den Katalog neu übernimmt.
@@ -27,10 +29,11 @@ import tempfile
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
 SOURCES = os.path.join(ROOT, "logos", "sources.json")
 SOURCE_DIR = os.path.join(ROOT, "logos", "src")
+BRANDS = os.path.join(ROOT, "logos", "brands.json")
 PACKAGE = os.path.join(ROOT, "logos", "v1.json")
 PACKAGE_PATH = "logos/v1.json"
 CATALOG = os.path.join(ROOT, "catalog", "v1.json")
-MAX_PIXELS = 180
+MAX_PIXELS = 144
 MAX_BYTES = 80_000
 
 
@@ -87,17 +90,32 @@ def update_catalog(version):
     return True
 
 
+def normalized_terms(terms):
+    """Klein, ohne doppelte Einträge, Reihenfolge bleibt."""
+    result = []
+    for term in terms:
+        term = term.strip().lower()
+        if term and term not in result:
+            result.append(term)
+    return result
+
+
 def main():
     with open(SOURCES, encoding="utf-8") as file:
         sources = {key: value for key, value in json.load(file).items() if not key.startswith("_")}
     with open(CATALOG, encoding="utf-8") as file:
-        provider_ids = {provider["id"] for provider in json.load(file)["providers"]}
+        providers = {provider["id"]: provider for provider in json.load(file)["providers"]}
+    with open(BRANDS, encoding="utf-8") as file:
+        brands = {brand["id"]: brand for brand in json.load(file)["brands"]}
 
-    unknown = sorted(set(sources) - provider_ids)
+    duplicates = sorted(set(providers) & set(brands))
+    if duplicates:
+        sys.exit(f"In logos/brands.json und im Katalog zugleich: {', '.join(duplicates)}")
+    unknown = sorted(set(sources) - set(providers) - set(brands))
     if unknown:
-        sys.exit(f"Unbekannte Anbieter in logos/sources.json: {', '.join(unknown)}")
+        sys.exit(f"Unbekannte IDs in logos/sources.json: {', '.join(unknown)}")
 
-    logos = {}
+    entries = []
     with tempfile.TemporaryDirectory() as work_dir:
         for identifier in sorted(sources):
             entry = sources[identifier]
@@ -105,22 +123,29 @@ def main():
             if not os.path.isfile(source):
                 sys.exit(f"{identifier}: Datei fehlt: logos/src/{entry['file']}")
             data = prepare(source, float(entry.get("padding", 0)), work_dir, identifier)
-            logos[identifier] = base64.b64encode(data).decode("ascii")
-            print(f"{identifier}: {len(data)} Bytes")
+            if identifier in providers:
+                provider = providers[identifier]
+                name, terms = provider["name"], normalized_terms(provider["searchTerms"] + [provider["name"]])
+            else:
+                brand = brands[identifier]
+                # Nur die Begriffe aus brands.json: Namen wie "Max" oder "Calm" wären als Suchbegriff zu allgemein.
+                name, terms = brand["name"], normalized_terms(brand["terms"])
+            entries.append({"id": identifier, "name": name, "terms": terms,
+                            "png": base64.b64encode(data).decode("ascii")})
 
     # Eine Zeile pro Logo, damit Änderungen im Git-Verlauf lesbar bleiben.
-    lines = [f'    "{identifier}": "{logos[identifier]}"' for identifier in sorted(logos)]
-    package = '{\n  "schemaVersion": 1,\n  "logos": {\n' + ",\n".join(lines) + "\n  }\n}\n"
+    lines = ["    " + json.dumps(entry, ensure_ascii=False, separators=(", ", ": ")) for entry in entries]
+    package = '{\n  "schemaVersion": 1,\n  "logos": [\n' + ",\n".join(lines) + "\n  ]\n}\n"
     json.loads(package)
     with open(PACKAGE, "w", encoding="utf-8") as file:
         file.write(package)
 
     version = hashlib.sha256(package.encode("utf-8")).hexdigest()[:12]
     changed = update_catalog(version)
-    missing = sorted(provider_ids - set(logos))
-    print(f"\n{len(logos)} Logos, {len(package) // 1024} KB, Version {version}"
+    missing = sorted(set(providers) - set(sources))
+    print(f"\n{len(entries)} Logos, {len(package) // 1024} KB, Version {version}"
           + (" (Katalog nachgeführt)" if changed else " (unverändert)"))
-    print(f"Ohne Logo (Monogramm): {', '.join(missing)}")
+    print(f"Katalog-Anbieter ohne Logo (Monogramm): {', '.join(missing)}")
 
 
 if __name__ == "__main__":

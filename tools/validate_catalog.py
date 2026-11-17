@@ -130,11 +130,26 @@ def validate_logos(catalog, ids):
     package = json.loads(text)
     if package.get("schemaVersion") != 1:
         issues.append("Logo-Paket: schemaVersion muss 1 sein")
-    for identifier, data in package.get("logos", {}).items():
-        if identifier not in ids:
+    brands_file = os.path.join(SITE_ROOT, "logos", "brands.json")
+    brand_ids = set()
+    if os.path.isfile(brands_file):
+        with open(brands_file, encoding="utf-8") as file:
+            brand_ids = {brand["id"] for brand in json.load(file)["brands"]}
+    seen_logos = set()
+    for entry in package.get("logos", []):
+        identifier = entry.get("id", "?")
+        if identifier in seen_logos:
+            issues.append(f"Logo doppelt: {identifier}")
+        seen_logos.add(identifier)
+        if identifier not in ids and identifier not in brand_ids:
             issues.append(f"Logo für unbekannten Anbieter: {identifier}")
+        if not re.match(r"^[a-z0-9-]{1,64}$", identifier):
+            issues.append(f"Logo-ID ungültig: {identifier}")
+        terms = entry.get("terms", [])
+        if not terms or any(term != term.lower() for term in terms):
+            issues.append(f"Logo {identifier}: Suchbegriffe fehlen oder sind nicht klein geschrieben")
         try:
-            png = base64.b64decode(data, validate=True)
+            png = base64.b64decode(entry.get("png", ""), validate=True)
         except ValueError:
             issues.append(f"Logo {identifier}: kein gültiges Base64")
             continue

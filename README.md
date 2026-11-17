@@ -30,21 +30,29 @@ unter *Actions → Wechselkurse aktualisieren → Run workflow*. Springt ein Kur
 
 ## Logos
 
-Die App zeigt für Anbieter aus dem Katalog das Logo statt des Monogramms. Alle Logos stecken in einem Paket
-(`logos/v1.json`, PNG als Base64, höchstens 180 x 180 Pixel). Die App lädt immer das ganze Paket, so erfährt
-niemand, welche Abos jemand hat. Im Katalog steht unter `logos` die Version (Prüfsumme) und der Pfad. Ändert
-sich die Version, lädt die App das Paket neu. Logos lassen sich in der App abschalten.
+Die App zeigt bei bekannten Anbietern das Logo statt des Monogramms, auch für Abos, die nicht im Katalog stehen
+(zum Beispiel eine Krankenkasse aus dem Kontoauszug-Import). Alle Logos stecken in einem Paket (`logos/v1.json`,
+PNG als Base64, höchstens 144 x 144 Pixel, je mit Suchbegriffen). Die App lädt immer das ganze Paket, so erfährt
+niemand, welche Abos jemand hat. Im Katalog steht unter `logos` die Version (Prüfsumme) und der Pfad. Ändert sich
+die Version, lädt die App das Paket neu. Logos lassen sich in der App abschalten.
 
-* Quellen: `logos/src/` (Originaldateien) und `logos/sources.json` (welche Datei zu welchem Anbieter, woher sie stammt,
-  optional `padding` für Logos ohne eigenen Rand).
-* Neue Logos suchen: `python3 -I tools/fetch_logos.py <Ordner>` lädt das App-Symbol von den Websites der Anbieter.
-  Passende Datei nach `logos/src/` kopieren und in `logos/sources.json` eintragen.
+Zuordnung in der App: zuerst über die ID des Katalog-Anbieters, sonst über die Suchbegriffe als ganze Wörter im Namen
+und Anbieter des Abos. Der längste Begriff gewinnt ("coop mobile" vor "coop").
+
+* `logos/brands.json`: Marken ausserhalb des Katalogs mit ID, Name, Domain und Suchbegriffen. Suchbegriffe klein und
+  eindeutig wählen (nicht "max" oder "uber", sondern "hbo max", "uber eats"). Bei Katalog-Anbietern kommen die
+  Suchbegriffe aus `catalog/v1.json`.
+* `logos/src/` (Originaldateien) und `logos/sources.json` (welche Datei zu welcher ID, woher sie stammt, optional
+  `padding` für Logos ohne eigenen Rand).
+* Neue Logos suchen: Marke in `logos/brands.json` eintragen, dann `python3 -I tools/fetch_logos.py <Ordner> <id>`.
+  Das Skript holt das App-Symbol von der Website (oder über den Favicon-Dienst von Google) und wählt das grösste
+  Bild ab 96 Pixel. `contact.html` im Ordner zeigt die Auswahl. Passt sie, mit `--apply` übernehmen.
+  Findet das Skript nichts, eignen sich Logos von Wikimedia Commons (Quelle in `sources.json` angeben).
 * Paket bauen (auf einem Mac): `python3 -I tools/build_logos.py`. Das Skript trägt die neue Version im Katalog ein
   und setzt `updatedAt` auf heute.
 * Logo entfernen (zum Beispiel auf Wunsch eines Anbieters): Eintrag aus `logos/sources.json` löschen, Paket bauen,
   committen. Ein App-Update ist nicht nötig.
 * Bewusst ohne Logo: Apple TV, Apple Music und iCloud+ (Apple erlaubt Dritten das Apple-Logo nicht).
-  Ohne gutes Logo bisher: Sunrise, Init7, Basefit (heisst inzwischen PureGym).
 * Die Logos sind Marken der jeweiligen Anbieter. Sie zeigen nur, um welchen Dienst es geht.
 
 ## Felder
