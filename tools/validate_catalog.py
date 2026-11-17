@@ -68,7 +68,10 @@ def validate(catalog):
             issues.append(f"{pid}: unbekannte Kategorie {provider.get('category')}")
         if provider.get("group") is not None and provider["group"] not in group_ids:
             issues.append(f"{pid}: unbekannte Gruppe {provider['group']}")
-        for key in ("url", "priceSource"):
+        summary = provider.get("summary")
+        if summary is not None and (not isinstance(summary, str) or not 0 < len(summary) <= 60):
+            issues.append(f"{pid}: summary muss Text mit höchstens 60 Zeichen sein")
+        for key in ("url", "priceSource", "partnerURL"):
             value = provider.get(key)
             if value is not None and urlparse(value).scheme != "https":
                 issues.append(f"{pid}: {key} muss mit https beginnen")

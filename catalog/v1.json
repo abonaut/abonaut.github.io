@@ -28,6 +28,7 @@
     {
       "id": "netflix",
       "name": "Netflix",
+      "summary": "Filme, Serien und Dokus",
       "category": "streaming",
       "group": "video",
       "url": "https://www.netflix.com/ch-de/",
@@ -43,6 +44,7 @@
     {
       "id": "disney-plus",
       "name": "Disney+",
+      "summary": "Disney, Pixar, Marvel, Star Wars",
       "category": "streaming",
       "group": "video",
       "url": "https://www.disneyplus.com/de-ch",
@@ -59,6 +61,7 @@
     {
       "id": "apple-tv",
       "name": "Apple TV",
+      "summary": "Apple Originals: Serien und Filme",
       "category": "streaming",
       "group": "video",
       "url": "https://www.apple.com/chde/apple-tv/",
@@ -72,6 +75,7 @@
     {
       "id": "paramount-plus",
       "name": "Paramount+",
+      "summary": "Serien, Filme und Paramount-Originals",
       "category": "streaming",
       "group": "video",
       "url": "https://www.paramountplus.com/ch/",
@@ -89,6 +93,7 @@
     {
       "id": "spotify",
       "name": "Spotify",
+      "summary": "Musik und Podcasts",
       "category": "music",
       "group": "music",
       "url": "https://www.spotify.com/ch-de/premium/",
@@ -105,6 +110,7 @@
     {
       "id": "apple-music",
       "name": "Apple Music",
+      "summary": "Musik, Hörspiele und Radio",
       "category": "music",
       "group": "music",
       "url": "https://www.apple.com/chde/apple-music/",
@@ -120,6 +126,7 @@
     {
       "id": "youtube-premium",
       "name": "YouTube Premium",
+      "summary": "YouTube ohne Werbung, mit YouTube Music",
       "category": "music",
       "group": "music",
       "url": "https://www.youtube.com/premium",
@@ -132,6 +139,7 @@
     {
       "id": "deezer",
       "name": "Deezer",
+      "summary": "Musik in hoher Qualität",
       "category": "music",
       "group": "music",
       "url": "https://www.deezer.com/ch/offers",
@@ -145,6 +153,7 @@
     {
       "id": "swisscom-mobile",
       "name": "Swisscom",
+      "summary": "Handy-Abos im grössten Netz der Schweiz",
       "category": "mobileInternet",
       "group": "mobile",
       "url": "https://www.swisscom.ch/de/privatkunden/mobile-handy-abo.html",
@@ -160,6 +169,7 @@
     {
       "id": "sunrise-mobile",
       "name": "Sunrise",
+      "summary": "Handy-Abos von Sunrise",
       "category": "mobileInternet",
       "group": "mobile",
       "url": "https://www.sunrise.ch/de/mobile",
@@ -174,6 +184,7 @@
     {
       "id": "salt-mobile",
       "name": "Salt",
+      "summary": "Handy-Abos von Salt",
       "category": "mobileInternet",
       "group": "mobile",
       "url": "https://www.salt.ch/de/mobile",
@@ -188,6 +199,7 @@
     {
       "id": "wingo",
       "name": "Wingo",
+      "summary": "Günstiges Handy-Abo im Swisscom-Netz",
       "category": "mobileInternet",
       "group": "mobile",
       "url": "https://www.wingo.ch/de/mobile",
@@ -199,6 +211,7 @@
     {
       "id": "yallo",
       "name": "Yallo",
+      "summary": "Handy-Abo im Sunrise-Netz",
       "category": "mobileInternet",
       "group": "mobile",
       "url": "https://www.yallo.ch/de/mobile",
@@ -210,6 +223,7 @@
     {
       "id": "m-budget-mobile",
       "name": "M-Budget Mobile",
+      "summary": "Günstiges Handy-Abo der Migros",
       "category": "mobileInternet",
       "group": "mobile",
       "url": "https://www.m-budget-mobile.ch",
@@ -221,6 +235,7 @@
     {
       "id": "swisscom-internet",
       "name": "Swisscom Internet",
+      "summary": "Internet und TV für zu Hause",
       "category": "mobileInternet",
       "group": "internet",
       "url": "https://www.swisscom.ch/de/privatkunden/internet.html",
@@ -233,6 +248,7 @@
     {
       "id": "sunrise-internet",
       "name": "Sunrise Internet",
+      "summary": "Internet und TV für zu Hause",
       "category": "mobileInternet",
       "group": "internet",
       "url": "https://www.sunrise.ch/de/internet",
@@ -246,6 +262,7 @@
     {
       "id": "salt-home",
       "name": "Salt Home",
+      "summary": "Glasfaser-Internet für zu Hause",
       "category": "mobileInternet",
       "group": "internet",
       "url": "https://www.salt.ch/de/home",
@@ -257,6 +274,7 @@
     {
       "id": "wingo-internet",
       "name": "Wingo Internet",
+      "summary": "Günstiges Internet für zu Hause",
       "category": "mobileInternet",
       "group": "internet",
       "url": "https://www.wingo.ch/de/internet",
@@ -268,6 +286,7 @@
     {
       "id": "init7",
       "name": "Init7",
+      "summary": "Glasfaser-Internet bis 25 Gbit/s",
       "category": "mobileInternet",
       "group": "internet",
       "url": "https://www.init7.net/de/internet/fiber7/",
@@ -279,6 +298,7 @@
     {
       "id": "icloud",
       "name": "iCloud+",
+      "summary": "Speicher für Fotos, Backups und Dateien",
       "category": "cloud",
       "group": "cloud",
       "url": "https://www.apple.com/chde/icloud/",
@@ -294,6 +314,7 @@
     {
       "id": "google-one",
       "name": "Google One",
+      "summary": "Speicher für Google Drive, Fotos und Gmail",
       "category": "cloud",
       "group": "cloud",
       "url": "https://one.google.com/about/plans",
@@ -308,6 +329,7 @@
     {
       "id": "proton",
       "name": "Proton",
+      "summary": "Verschlüsselte E-Mail, Cloud und VPN aus der Schweiz",
       "category": "cloud",
       "group": "cloud",
       "url": "https://proton.me/de/pricing",
@@ -320,6 +342,7 @@
     {
       "id": "dropbox",
       "name": "Dropbox",
+      "summary": "Dateien speichern und teilen",
       "category": "cloud",
       "group": "cloud",
       "url": "https://www.dropbox.com/plans",
@@ -332,6 +355,7 @@
     {
       "id": "microsoft-365",
       "name": "Microsoft 365",
+      "summary": "Word, Excel, Outlook und 1 TB OneDrive",
       "category": "software",
       "url": "https://www.microsoft.com/de-ch/microsoft-365",
       "priceSource": "https://www.microsoft.com/de-ch/microsoft-365/buy/compare-all-microsoft-365-products",
@@ -347,6 +371,7 @@
     {
       "id": "adobe-creative-cloud",
       "name": "Adobe Creative Cloud",
+      "summary": "Photoshop, Lightroom und weitere Apps",
       "category": "software",
       "url": "https://www.adobe.com/ch_de/creativecloud/plans.html",
       "searchTerms": ["adobe", "creative cloud", "lightroom", "photoshop"],
@@ -358,6 +383,7 @@
     {
       "id": "1password",
       "name": "1Password",
+      "summary": "Passwort-Manager",
       "category": "software",
       "url": "https://1password.com/de/pricing",
       "priceSource": "https://1password.com/pricing/password-manager",
@@ -370,6 +396,7 @@
     {
       "id": "chatgpt",
       "name": "ChatGPT",
+      "summary": "KI-Assistent von OpenAI",
       "category": "software",
       "group": "ai",
       "url": "https://chatgpt.com/pricing",
@@ -381,6 +408,7 @@
     {
       "id": "claude",
       "name": "Claude",
+      "summary": "KI-Assistent von Anthropic",
       "category": "software",
       "group": "ai",
       "url": "https://claude.com/pricing",
@@ -394,6 +422,7 @@
     {
       "id": "activ-fitness",
       "name": "Activ Fitness",
+      "summary": "Fitnesscenter in der ganzen Schweiz",
       "category": "fitness",
       "group": "fitness",
       "url": "https://www.activfitness.ch",
@@ -405,6 +434,7 @@
     {
       "id": "basefit",
       "name": "Basefit",
+      "summary": "Günstige Fitnesscenter",
       "category": "fitness",
       "group": "fitness",
       "url": "https://www.basefit.ch",
@@ -417,6 +447,7 @@
     {
       "id": "update-fitness",
       "name": "Update Fitness",
+      "summary": "Fitnesscenter in der ganzen Schweiz",
       "category": "fitness",
       "group": "fitness",
       "url": "https://www.update-fitness.ch",
@@ -428,6 +459,7 @@
     {
       "id": "fitnesspark",
       "name": "Fitnesspark",
+      "summary": "Fitness, Wellness und Kurse",
       "category": "fitness",
       "group": "fitness",
       "url": "https://www.fitnesspark.ch",
@@ -439,6 +471,7 @@
     {
       "id": "republik",
       "name": "Republik",
+      "summary": "Digitales Magazin ohne Werbung",
       "category": "news",
       "group": "news",
       "url": "https://shop.republik.ch/",
@@ -452,6 +485,7 @@
     {
       "id": "nzz",
       "name": "NZZ",
+      "summary": "Neue Zürcher Zeitung, digital und gedruckt",
       "category": "news",
       "group": "news",
       "url": "https://abo.nzz.ch",
@@ -464,6 +498,7 @@
     {
       "id": "tages-anzeiger",
       "name": "Tages-Anzeiger",
+      "summary": "Zürcher Tageszeitung, digital",
       "category": "news",
       "group": "news",
       "url": "https://abo.tagesanzeiger.ch",
@@ -476,6 +511,7 @@
     {
       "id": "sbb",
       "name": "SBB",
+      "summary": "Halbtax und Generalabonnement",
       "category": "mobility",
       "group": "oev",
       "url": "https://www.sbb.ch/de/billette-angebote/abos.html",
@@ -490,6 +526,7 @@
     {
       "id": "playstation-plus",
       "name": "PlayStation Plus",
+      "summary": "Online-Spiele und Spielekatalog für PlayStation",
       "category": "gaming",
       "group": "gaming",
       "url": "https://www.playstation.com/de-ch/ps-plus/",
@@ -502,6 +539,7 @@
     {
       "id": "xbox-game-pass",
       "name": "Xbox Game Pass",
+      "summary": "Hunderte Spiele für Xbox und PC",
       "category": "gaming",
       "group": "gaming",
       "url": "https://www.xbox.com/de-CH/xbox-game-pass",
@@ -513,6 +551,7 @@
     {
       "id": "nintendo-switch-online",
       "name": "Nintendo Switch Online",
+      "summary": "Online-Spiele und Klassiker für die Switch",
       "category": "gaming",
       "group": "gaming",
       "url": "https://www.nintendo.com/de-ch/Nintendo-Switch-Online/",

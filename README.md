@@ -61,6 +61,8 @@ und Anbieter des Abos. Der längste Begriff gewinnt ("coop mobile" vor "coop").
 |---|---|
 | `groups` | Gruppen vergleichbarer Dienste. `alternatives`: Anbieter sind austauschbar (Vorschlag "Günstigere Alternative"). `redundantIfMultiple`: mehrere Abos dieser Gruppe sind meistens doppelt. |
 | `providers[].category` | Kategorie in der App: `streaming`, `music`, `mobileInternet`, `software`, `cloud`, `fitness`, `mobility`, `news`, `gaming`, `other` |
+| `providers[].summary` | kurze Beschreibung für den Tab «Entdecken», höchstens 60 Zeichen |
+| `providers[].partnerURL` | Partnerlink (Affiliate, https). Ist er gesetzt, öffnet «Entdecken» ihn statt `url` und kennzeichnet ihn als Werbung. Erst eintragen, wenn das Partnerprogramm bestätigt ist. |
 | `providers[].priceSource` | Seite, auf der die geprüften Preise stehen (Pflicht, sobald ein Plan geprüft ist) |
 | `providers[].searchTerms` | Begriffe, an denen die App eigene Abos erkennt, klein geschrieben |
 | `providers[].popular` | erscheint in der Schnellauswahl beim Erfassen |
