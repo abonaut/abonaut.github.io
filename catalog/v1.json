@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "updatedAt": "2026-11-16",
   "exchangeRates": {
-    "date": "2026-11-08",
+    "date": "2026-11-16",
     "ratesToCHF": {
-      "EUR": "0.914",
-      "USD": "0.820"
+      "EUR": "0.9244",
+      "USD": "0.8393"
     }
   },
   "groups": [

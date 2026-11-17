@@ -7,6 +7,7 @@
   hat eine mitgelieferte Kopie als Fallback.
 * `index.html`: Startseite. Datenschutzerklärung und Support-Seite kommen dazu.
 * `tools/validate_catalog.py`: prüft den Katalog. Läuft auch automatisch bei jedem Push (GitHub Actions).
+* `tools/update_rates.py`: holt die Wechselkurse der EZB, läuft jeden Samstag automatisch.
 
 ## Preise anpassen
 
@@ -20,7 +21,11 @@
    ist als der, den sie schon hat.
 5. Prüfen: `python3 tools/validate_catalog.py catalog/v1.json`
 
-Wechselkurse stehen unter `exchangeRates` (CHF pro EUR bzw. USD, als Text).
+Wechselkurse stehen unter `exchangeRates` (CHF pro EUR bzw. USD, als Text). Sie werden jeden Samstag
+automatisch mit den Referenzkursen der Europäischen Zentralbank aktualisiert (GitHub Action
+`.github/workflows/rates.yml`, Skript `tools/update_rates.py`). Von Hand auslösen: auf github.com
+unter *Actions → Wechselkurse aktualisieren → Run workflow*. Springt ein Kurs um mehr als 25 %,
+übernimmt das Skript ihn nicht und die Action schlägt fehl (GitHub schickt dann eine E-Mail).
 
 ## Felder
 

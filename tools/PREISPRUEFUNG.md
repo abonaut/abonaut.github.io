@@ -31,8 +31,8 @@ Ungeprüfte oder veraltete Preise schaden also nicht, sie fehlen nur bei den Vor
    (`JJJJ-MM-TT`) setzen und beim Anbieter `priceSource` auf die verwendete Seite setzen.
 6. **Pläne, die es nicht mehr gibt:** entfernen. Neue, wichtige Pläne dürfen dazukommen,
    mit eindeutiger `id`. Bestehende `id`s nie umbenennen, die App verknüpft Abos darüber.
-7. **Wechselkurse:** `exchangeRates.ratesToCHF` für EUR und USD aktualisieren (Mittelkurs,
-   3 Nachkommastellen genügen), `exchangeRates.date` auf das Datum der Kurse.
+7. **Wechselkurse:** nicht anfassen. Die GitHub Action "Wechselkurse aktualisieren" setzt sie jeden
+   Samstag automatisch auf die Referenzkurse der EZB.
 8. **Zum Schluss:** `updatedAt` auf das heutige Datum setzen und
    `python3 tools/validate_catalog.py catalog/v1.json --list-unchecked` ausführen.
    Es darf kein Fehler kommen.
