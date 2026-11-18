@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Prüft den Anbieterkatalog für Subsy.
+"""Prüft den Anbieterkatalog für Abonaut.
 
 Aufruf: python3 tools/validate_catalog.py catalog/v1.json
 

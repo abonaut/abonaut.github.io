@@ -1,9 +1,9 @@
 # subsy-web
 
-Öffentliche Webseite für die iPhone App **Subsy**, gehostet mit GitHub Pages.
+Öffentliche Webseite für die iPhone App **Abonaut**, gehostet mit GitHub Pages.
 
 * `catalog/v1.json`: Anbieterkatalog mit Preisen und Wechselkursen. Die App lädt ihn von
-  `https://subsy-app.github.io/catalog/v1.json` (höchstens alle 12 Stunden) und
+  `https://abonaut.github.io/catalog/v1.json` (höchstens alle 12 Stunden) und
   hat eine mitgelieferte Kopie als Fallback.
 * `index.html`, `datenschutz.html`, `support.html`: Startseite, Datenschutz und Hilfe auf Deutsch. Übersetzungen in
   `fr/`, `it/` und `en/` (gleiche Dateinamen). Bei Änderungen alle vier Sprachen nachführen.
