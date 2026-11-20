@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-17",
+  "updatedAt": "2026-11-20",
   "exchangeRates": {
     "date": "2026-11-16",
     "ratesToCHF": {
@@ -9,7 +9,7 @@
     }
   },
   "logos": {
-    "version": "64eda9da2c48",
+    "version": "9aa0a0944d3e",
     "path": "logos/v1.json"
   },
   "groups": [
@@ -22,7 +22,10 @@
     { "id": "fitness", "name": "Fitnessstudio", "alternatives": true, "redundantIfMultiple": true, "nameI18n": {"fr": "Salle de fitness", "it": "Palestra", "en": "Gym"} },
     { "id": "news", "name": "Zeitung", "alternatives": false, "redundantIfMultiple": false, "nameI18n": {"fr": "Journal", "it": "Giornale", "en": "Newspaper"} },
     { "id": "oev", "name": "ÖV-Abo", "alternatives": false, "redundantIfMultiple": false, "nameI18n": {"fr": "Abonnement de transports publics", "it": "Abbonamento trasporti pubblici", "en": "Public transport pass"} },
-    { "id": "gaming", "name": "Gaming", "alternatives": false, "redundantIfMultiple": false, "nameI18n": {"fr": "Jeux vidéo", "it": "Videogiochi", "en": "Gaming"} }
+    { "id": "gaming", "name": "Gaming", "alternatives": false, "redundantIfMultiple": false, "nameI18n": {"fr": "Jeux vidéo", "it": "Videogiochi", "en": "Gaming"} },
+    { "id": "krankenkasse-grund", "name": "Krankenkasse Grundversicherung", "alternatives": false, "redundantIfMultiple": false, "nameI18n": {"fr": "Caisse-maladie, assurance de base", "it": "Cassa malati, assicurazione di base", "en": "Health insurance, basic cover"}, "cancellation": {"notice": {"count": 1, "unit": "month", "to": "yearEnd", "receiptCounts": true}, "note": "Die Kündigung muss am letzten Arbeitstag im November bei der Kasse sein. Im Standardmodell mit Franchise 300 auch auf Ende Juni (Eingang bis 31. März). Zusatzversicherungen haben eigene Fristen.", "noteI18n": {"fr": "La résiliation doit parvenir à la caisse le dernier jour ouvrable de novembre. Avec le modèle standard et la franchise de 300 francs, aussi pour fin juin (réception jusqu'au 31 mars). Les complémentaires ont leurs propres délais.", "it": "La disdetta deve arrivare alla cassa entro l'ultimo giorno lavorativo di novembre. Con il modello standard e la franchigia di 300 franchi, anche per fine giugno (ricezione entro il 31 marzo). Le complementari hanno termini propri.", "en": "Your notice must reach the insurer by the last working day of November. With the standard model and the CHF 300 deductible, also for the end of June (received by 31 March). Supplementary insurance has its own deadlines."}, "source": "https://www.priminfo.admin.ch/de/faq", "checkedOn": "2026-11-20"} },
+    { "id": "krankenkasse-zusatz", "name": "Krankenkasse Zusatzversicherung", "alternatives": false, "redundantIfMultiple": false, "nameI18n": {"fr": "Caisse-maladie, assurance complémentaire", "it": "Cassa malati, assicurazione complementare", "en": "Health insurance, supplementary cover"} },
+    { "id": "versicherung", "name": "Versicherungen (Auto, Hausrat, Haftpflicht)", "alternatives": false, "redundantIfMultiple": false, "nameI18n": {"fr": "Assurances (auto, ménage, responsabilité civile)", "it": "Assicurazioni (auto, mobilia domestica, responsabilità civile)", "en": "Insurance (car, household contents, liability)"} }
   ],
   "providers": [
     {
@@ -36,6 +39,7 @@
       "priceSource": "https://www.comparis.ch/telecom/tv-streaming/information/netflix-schweiz",
       "searchTerms": ["netflix"],
       "popular": true,
+      "cancellation": {"methods": ["online"], "url": "https://help.netflix.com/de/node/407", "notice": {"count": 0, "unit": "day"}, "source": "https://help.netflix.com/de/node/407", "checkedOn": "2026-11-20"},
       "plans": [
         { "id": "netflix-basic", "name": "Basis", "price": "14.90", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "basic", "priceCheckedOn": "2026-11-16", "nameI18n": {"fr": "Basique", "it": "Base", "en": "Basic"} },
         { "id": "netflix-standard", "name": "Standard", "price": "22.90", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "standard", "priceCheckedOn": "2026-11-16" },
@@ -52,6 +56,7 @@
       "url": "https://www.disneyplus.com/de-ch",
       "searchTerms": ["disney+", "disney plus", "disneyplus"],
       "popular": true,
+      "cancellation": {"methods": ["online"], "url": "https://help.disneyplus.com/de/article/disneyplus-de-ch-cancel", "notice": {"count": 0, "unit": "day", "to": "periodEnd"}, "note": "Mit Mindestlaufzeit endet das Abo erst an deren Ende.", "noteI18n": {"fr": "Avec une durée minimale, l'abonnement ne prend fin qu'à son terme.", "it": "Con una durata minima, l'abbonamento termina solo alla sua scadenza.", "en": "With a minimum term, the subscription only ends when that term is over."}, "source": "https://help.disneyplus.com/de/article/disneyplus-de-ch-cancel", "checkedOn": "2026-11-20"},
       "plans": [
         { "id": "disney-ads-month", "name": "Standard mit Werbung", "price": "9.90", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "ads", "priceCheckedOn": null, "nameI18n": {"fr": "Standard avec pub", "it": "Standard con pubblicità", "en": "Standard with ads"} },
         { "id": "disney-standard-month", "name": "Standard", "price": "16.90", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "standard", "priceCheckedOn": null },
@@ -71,6 +76,7 @@
       "priceSource": "https://www.apple.com/chde/apple-tv/",
       "searchTerms": ["apple tv"],
       "popular": true,
+      "cancellation": {"methods": ["online"], "url": "https://support.apple.com/de-ch/118398", "source": "https://support.apple.com/de-ch/118398", "checkedOn": "2026-11-20"},
       "plans": [
         { "id": "apple-tv-month", "name": "Monatsabo", "title": "Apple TV", "price": "10.90", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "priceCheckedOn": "2026-11-16", "nameI18n": {"fr": "Mensuel", "it": "Mensile", "en": "Monthly"} }
       ]
@@ -105,6 +111,7 @@
       "priceSource": "https://www.spotify.com/ch-de/premium/",
       "searchTerms": ["spotify"],
       "popular": true,
+      "cancellation": {"methods": ["online"], "url": "https://support.spotify.com/ch-de/article/cancel-premium/", "notice": {"count": 0, "unit": "day", "to": "periodEnd"}, "source": "https://support.spotify.com/ch-de/article/cancel-premium/", "checkedOn": "2026-11-20"},
       "plans": [
         { "id": "spotify-individual", "name": "Premium Individual", "price": "15.95", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "individual", "priceCheckedOn": "2026-11-16" },
         { "id": "spotify-duo", "name": "Premium Duo", "price": "21.95", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "duo", "maxPersons": 2, "priceCheckedOn": "2026-11-16" },
@@ -123,6 +130,7 @@
       "priceSource": "https://www.apple.com/chde/apple-music/",
       "searchTerms": ["apple music"],
       "popular": true,
+      "cancellation": {"methods": ["online"], "url": "https://support.apple.com/de-ch/118399", "source": "https://support.apple.com/de-ch/118399", "checkedOn": "2026-11-20"},
       "plans": [
         { "id": "apple-music-individual", "name": "Einzelperson", "price": "14.90", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "individual", "priceCheckedOn": "2026-11-16", "nameI18n": {"fr": "Individuel", "it": "Individuale", "en": "Individual"} },
         { "id": "apple-music-family", "name": "Familie", "price": "24.90", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "family", "maxPersons": 6, "priceCheckedOn": "2026-11-16", "nameI18n": {"fr": "Famille", "it": "Famiglia", "en": "Family"} },
@@ -138,6 +146,7 @@
       "group": "music",
       "url": "https://www.youtube.com/premium",
       "searchTerms": ["youtube premium", "youtube music"],
+      "cancellation": {"methods": ["online"], "url": "https://support.google.com/youtube/answer/6308278?hl=de", "notice": {"count": 0, "unit": "day"}, "source": "https://support.google.com/youtube/answer/6308278?hl=de", "checkedOn": "2026-11-20"},
       "plans": [
         { "id": "youtube-music-premium", "name": "Music Premium", "title": "YouTube Music Premium", "price": "13.90", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "individual", "priceCheckedOn": null },
         { "id": "youtube-premium-individual", "name": "Premium", "title": "YouTube Premium", "price": "17.90", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "video-individual", "priceCheckedOn": null }
@@ -153,6 +162,7 @@
       "url": "https://www.deezer.com/ch/offers",
       "priceSource": "https://www.comparis.ch/telecom/zuhause/streaming/spotify-alternativen",
       "searchTerms": ["deezer"],
+      "cancellation": {"methods": ["online", "app"], "url": "https://support.deezer.com/hc/de/articles/214349245-Dein-Deezer-Angebot-k%C3%BCndigen", "notice": {"count": 0, "unit": "day", "to": "periodEnd"}, "source": "https://support.deezer.com/hc/de/articles/214349245-Dein-Deezer-Angebot-k%C3%BCndigen", "checkedOn": "2026-11-20"},
       "plans": [
         { "id": "deezer-premium", "name": "Premium", "price": "14.95", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "individual", "priceCheckedOn": "2026-11-16" },
         { "id": "deezer-family", "name": "Familie", "price": "22.95", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "family", "maxPersons": 6, "priceCheckedOn": "2026-11-16", "nameI18n": {"fr": "Famille", "it": "Famiglia", "en": "Family"} }
@@ -169,6 +179,7 @@
       "priceSource": "https://www.swisscom.ch/de/privatkunden/mobile-handy-abo.html",
       "searchTerms": ["swisscom", "blue mobile"],
       "popular": true,
+      "cancellation": {"methods": ["phone"], "url": "https://www.swisscom.ch/en/residential/help/bill-and-contract/cancelling-on-hold.html", "notice": {"count": 60, "unit": "day", "to": "anyDay", "receiptCounts": true}, "note": "Swisscom ruft dich für die Kündigung an: Den Termin buchst du auf der Seite. Die Frist gilt für die meisten Abos.", "noteI18n": {"fr": "Swisscom t'appelle pour la résiliation : tu réserves le rendez-vous sur la page. Le délai vaut pour la plupart des abonnements.", "it": "Swisscom ti chiama per la disdetta: prenoti l'appuntamento sulla pagina. Il termine vale per la maggior parte degli abbonamenti.", "en": "Swisscom calls you to handle the cancellation: book the appointment on the page. The notice period applies to most subscriptions."}, "source": "https://www.swisscom.ch/en/residential/help/bill-and-contract/cancelling-on-hold.html", "checkedOn": "2026-11-20"},
       "plans": [
         { "id": "swisscom-blue-mobile-s", "name": "blue Mobile S", "price": "71.80", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "priceCheckedOn": "2026-11-16" },
         { "id": "swisscom-blue-mobile-m", "name": "blue Mobile M", "price": "81.80", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "priceCheckedOn": "2026-11-16" },
@@ -186,6 +197,7 @@
       "priceSource": "https://sunrise.ch/neue-preise",
       "searchTerms": ["sunrise", "up mobile", "swiss connect"],
       "popular": true,
+      "cancellation": {"methods": ["phone", "chat"], "url": "https://www.sunrise.ch/en/support/contracts-and-customer-information/cancellation", "note": "Nur per Telefon oder Live-Chat. Kündigungen per Brief, Fax oder E-Mail sind ungültig.", "noteI18n": {"fr": "Uniquement par téléphone ou chat en direct. Les résiliations par lettre, fax ou e-mail ne sont pas valables.", "it": "Solo per telefono o live chat. Le disdette per lettera, fax o e-mail non sono valide.", "en": "By phone or live chat only. Cancellations by letter, fax or email are not valid."}, "source": "https://www.sunrise.ch/en/support/contracts-and-customer-information/cancellation", "checkedOn": "2026-11-20"},
       "plans": [
         { "id": "sunrise-swiss-connect-lite", "name": "Swiss Connect Lite", "title": "Sunrise Swiss Connect Lite", "price": "36.40", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "priceCheckedOn": "2026-11-16" },
         { "id": "sunrise-swiss-connect-neighbors", "name": "Swiss Connect Neighbors", "title": "Sunrise Swiss Connect Neighbors", "price": "71.40", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "priceCheckedOn": "2026-11-16" }
@@ -202,6 +214,7 @@
       "priceSource": "https://www.salt.ch/en/mobile/price-adjustment",
       "searchTerms": ["salt"],
       "popular": true,
+      "cancellation": {"methods": ["phone", "letter"], "address": ["Salt Mobile SA", "Avenue de Malley 2", "1008 Prilly"], "phone": "0800 780 100", "url": "https://www.salt.ch/de/help/mobile/vertragskuendigung", "notice": {"count": 60, "unit": "day", "to": "termEnd"}, "note": "Brief nur eingeschrieben. Die Frist gilt in der Regel, genau steht sie in deinem Vertrag.", "noteI18n": {"fr": "Lettre uniquement en recommandé. Le délai vaut en règle générale, le délai exact figure dans ton contrat.", "it": "Lettera solo raccomandata. Il termine vale di regola, quello esatto è nel tuo contratto.", "en": "Letters by registered post only. The notice period is the usual one, the exact period is in your contract."}, "source": "https://www.salt.ch/de/help/mobile/vertragskuendigung", "checkedOn": "2026-11-20"},
       "plans": [
         { "id": "salt-start-max", "name": "Start Max", "title": "Salt Start Max", "price": "42.95", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "priceCheckedOn": "2026-11-16" },
         { "id": "salt-swiss-max", "name": "Swiss Max", "title": "Salt Swiss Max", "price": "73.95", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "priceCheckedOn": "2026-11-16" }
@@ -216,6 +229,7 @@
       "group": "mobile",
       "url": "https://www.wingo.ch/de/mobile",
       "searchTerms": ["wingo"],
+      "cancellation": {"methods": ["phone", "online", "letter"], "address": ["Wingo", "Contact Center", "3050 Bern"], "phone": "0800 70 71 72", "url": "https://www.wingo.ch/de/hilfe/konto-einstellungen/kuendigen", "notice": {"count": 2, "unit": "month", "to": "monthEnd"}, "note": "Gilt für Handy-Abos ohne Mindestvertragsdauer.", "noteI18n": {"fr": "Vaut pour les abonnements mobiles sans durée minimale.", "it": "Vale per gli abbonamenti mobili senza durata minima.", "en": "Applies to mobile plans without a minimum term."}, "source": "https://www.wingo.ch/de/hilfe/konto-einstellungen/kuendigen", "checkedOn": "2026-11-20"},
       "plans": [
         { "id": "wingo-swiss", "name": "Wingo Swiss", "title": "Wingo Swiss", "price": "29.95", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "priceCheckedOn": null }
       ]
@@ -229,6 +243,7 @@
       "group": "mobile",
       "url": "https://www.yallo.ch/de/mobile",
       "searchTerms": ["yallo"],
+      "cancellation": {"methods": ["phone", "chat"], "phone": "0840 00 33 77", "url": "https://support.yallo.ch/de/ZvanxREAACUAgRYe-wie-lange-betrgt-die-kndigungsfrist", "notice": {"count": 2, "unit": "month", "to": "monthEnd"}, "source": "https://support.yallo.ch/de/ZvanxREAACUAgRYe-wie-lange-betrgt-die-kndigungsfrist", "checkedOn": "2026-11-20"},
       "plans": [
         { "id": "yallo-swiss", "name": "Yallo Swiss", "title": "Yallo Swiss", "price": "21.90", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "priceCheckedOn": null }
       ]
@@ -242,6 +257,7 @@
       "group": "mobile",
       "url": "https://www.m-budget-mobile.ch",
       "searchTerms": ["m-budget", "mbudget", "migros mobile"],
+      "cancellation": {"url": "https://mobile.migros.ch/de/hilfe", "notice": {"count": 2, "unit": "month", "to": "monthEnd"}, "source": "https://mobile.migros.ch/de/hilfe", "checkedOn": "2026-11-20"},
       "plans": [
         { "id": "m-budget-maxi-one", "name": "Maxi One", "title": "M-Budget Mobile Maxi One", "price": "29.80", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "priceCheckedOn": null }
       ]
@@ -256,6 +272,7 @@
       "url": "https://www.swisscom.ch/de/privatkunden/internet.html",
       "priceSource": "https://www.swisscom.ch/de/privatkunden/preisinfo.html",
       "searchTerms": ["swisscom internet", "blue internet", "swisscom home"],
+      "cancellation": {"methods": ["phone"], "url": "https://www.swisscom.ch/en/residential/help/bill-and-contract/cancelling-on-hold.html", "notice": {"count": 60, "unit": "day", "to": "anyDay", "receiptCounts": true}, "note": "Swisscom ruft dich für die Kündigung an: Den Termin buchst du auf der Seite. Die Frist gilt für die meisten Abos.", "noteI18n": {"fr": "Swisscom t'appelle pour la résiliation : tu réserves le rendez-vous sur la page. Le délai vaut pour la plupart des abonnements.", "it": "Swisscom ti chiama per la disdetta: prenoti l'appuntamento sulla pagina. Il termine vale per la maggior parte degli abbonamenti.", "en": "Swisscom calls you to handle the cancellation: book the appointment on the page. The notice period applies to most subscriptions."}, "source": "https://www.swisscom.ch/en/residential/help/bill-and-contract/cancelling-on-hold.html", "checkedOn": "2026-11-20"},
       "plans": [
         { "id": "swisscom-blue-internet-s", "name": "blue Internet S", "title": "Swisscom blue Internet S", "price": "66.80", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "priceCheckedOn": "2026-11-16" }
       ]
@@ -270,6 +287,7 @@
       "url": "https://www.sunrise.ch/de/internet",
       "priceSource": "https://sunrise.ch/neue-preise",
       "searchTerms": ["sunrise internet", "up internet", "up connect", "easy internet", "sunrise home"],
+      "cancellation": {"methods": ["phone", "chat"], "url": "https://www.sunrise.ch/en/support/contracts-and-customer-information/cancellation", "note": "Nur per Telefon oder Live-Chat. Kündigungen per Brief, Fax oder E-Mail sind ungültig.", "noteI18n": {"fr": "Uniquement par téléphone ou chat en direct. Les résiliations par lettre, fax ou e-mail ne sont pas valables.", "it": "Solo per telefono o live chat. Le disdette per lettera, fax o e-mail non sono valide.", "en": "By phone or live chat only. Cancellations by letter, fax or email are not valid."}, "source": "https://www.sunrise.ch/en/support/contracts-and-customer-information/cancellation", "checkedOn": "2026-11-20"},
       "plans": [
         { "id": "sunrise-easy-internet", "name": "Easy Internet", "title": "Sunrise Easy Internet", "price": "51.40", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "priceCheckedOn": "2026-11-16" },
         { "id": "sunrise-up-connect-m", "name": "Up Connect M", "title": "Sunrise Up Connect M", "price": "62.50", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "priceCheckedOn": "2026-11-16" }
@@ -297,6 +315,7 @@
       "group": "internet",
       "url": "https://www.wingo.ch/de/internet",
       "searchTerms": ["wingo internet", "wingo home"],
+      "cancellation": {"methods": ["phone", "online", "letter"], "address": ["Wingo", "Contact Center", "3050 Bern"], "phone": "0800 70 71 72", "url": "https://www.wingo.ch/de/hilfe/konto-einstellungen/kuendigen", "note": "Wingo Internet hat eine Mindestvertragsdauer.", "noteI18n": {"fr": "Wingo Internet a une durée minimale de contrat.", "it": "Wingo Internet ha una durata minima del contratto.", "en": "Wingo Internet has a minimum contract term."}, "source": "https://www.wingo.ch/de/hilfe/konto-einstellungen/kuendigen", "checkedOn": "2026-11-20"},
       "plans": [
         { "id": "wingo-internet-home", "name": "Internet", "title": "Wingo Internet", "price": "39.95", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "priceCheckedOn": null }
       ]
@@ -325,6 +344,7 @@
       "priceSource": "https://support.apple.com/de-ch/108047",
       "searchTerms": ["icloud"],
       "popular": true,
+      "cancellation": {"methods": ["app"], "url": "https://support.apple.com/de-ch/108318", "notice": {"count": 0, "unit": "day", "to": "periodEnd"}, "source": "https://support.apple.com/de-ch/108318", "checkedOn": "2026-11-20"},
       "plans": [
         { "id": "icloud-50gb", "name": "50 GB", "title": "iCloud+ 50 GB", "price": "1.00", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "50gb", "priceCheckedOn": "2026-11-16" },
         { "id": "icloud-200gb", "name": "200 GB", "title": "iCloud+ 200 GB", "price": "3.00", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "200gb", "maxPersons": 6, "priceCheckedOn": "2026-11-16" },
@@ -340,6 +360,7 @@
       "group": "cloud",
       "url": "https://one.google.com/about/plans",
       "searchTerms": ["google one", "google drive"],
+      "cancellation": {"methods": ["online"], "url": "https://support.google.com/googleone/answer/9056360?hl=de", "notice": {"count": 0, "unit": "day", "to": "periodEnd"}, "source": "https://support.google.com/googleone/answer/9056360?hl=de", "checkedOn": "2026-11-20"},
       "plans": [
         { "id": "google-one-100gb-month", "name": "100 GB", "title": "Google One 100 GB", "price": "2.00", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "100gb", "maxPersons": 6, "priceCheckedOn": null },
         { "id": "google-one-100gb-year", "name": "100 GB, Jahresabo", "title": "Google One 100 GB", "price": "24.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "tier": "100gb", "maxPersons": 6, "priceCheckedOn": null, "nameI18n": {"fr": "100 GB, annuel", "it": "100 GB, annuale", "en": "100 GB, yearly"} },
@@ -356,6 +377,7 @@
       "group": "cloud",
       "url": "https://proton.me/de/pricing",
       "searchTerms": ["proton"],
+      "cancellation": {"methods": ["online"], "url": "https://proton.me/support/manage-subscription", "notice": {"count": 0, "unit": "day", "to": "periodEnd"}, "source": "https://proton.me/support/manage-subscription", "checkedOn": "2026-11-20"},
       "plans": [
         { "id": "proton-drive-plus-month", "name": "Drive Plus 200 GB", "title": "Proton Drive Plus", "price": "4.99", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "200gb", "priceCheckedOn": null },
         { "id": "proton-drive-plus-year", "name": "Drive Plus 200 GB, Jahresabo", "title": "Proton Drive Plus", "price": "47.88", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "tier": "200gb", "priceCheckedOn": null, "nameI18n": {"fr": "Drive Plus 200 GB, annuel", "it": "Drive Plus 200 GB, annuale", "en": "Drive Plus 200 GB, yearly"} }
@@ -370,6 +392,7 @@
       "group": "cloud",
       "url": "https://www.dropbox.com/plans",
       "searchTerms": ["dropbox"],
+      "cancellation": {"methods": ["online"], "url": "https://help.dropbox.com/plans/downgrade-dropbox-individual-plans", "notice": {"count": 0, "unit": "day", "to": "periodEnd"}, "source": "https://help.dropbox.com/plans/downgrade-dropbox-individual-plans", "checkedOn": "2026-11-20"},
       "plans": [
         { "id": "dropbox-plus-month", "name": "Plus 2 TB", "title": "Dropbox Plus", "price": "11.99", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "2tb", "priceCheckedOn": null },
         { "id": "dropbox-plus-year", "name": "Plus 2 TB, Jahresabo", "title": "Dropbox Plus", "price": "119.88", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "tier": "2tb", "priceCheckedOn": null, "nameI18n": {"fr": "Plus 2 TB, annuel", "it": "Plus 2 TB, annuale", "en": "Plus 2 TB, yearly"} }
@@ -385,6 +408,7 @@
       "priceSource": "https://www.microsoft.com/de-ch/microsoft-365/buy/compare-all-microsoft-365-products",
       "searchTerms": ["microsoft 365", "office 365", "m365"],
       "popular": true,
+      "cancellation": {"methods": ["online"], "url": "https://support.microsoft.com/de-de/accounts-billing/subscriptions/turn-recurring-billing-on-or-off-for-a-microsoft-subscription", "notice": {"count": 0, "unit": "day", "to": "periodEnd"}, "source": "https://support.microsoft.com/de-de/accounts-billing/subscriptions/turn-recurring-billing-on-or-off-for-a-microsoft-subscription", "checkedOn": "2026-11-20"},
       "plans": [
         { "id": "m365-single-month", "name": "Single", "price": "9.95", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "single", "priceCheckedOn": "2026-11-16" },
         { "id": "m365-single-year", "name": "Single, Jahresabo", "title": "Microsoft 365 Single", "price": "99.95", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "tier": "single", "priceCheckedOn": "2026-11-16", "nameI18n": {"fr": "Single, annuel", "it": "Single, annuale", "en": "Single, yearly"} },
@@ -400,6 +424,7 @@
       "category": "software",
       "url": "https://www.adobe.com/ch_de/creativecloud/plans.html",
       "searchTerms": ["adobe", "creative cloud", "lightroom", "photoshop"],
+      "cancellation": {"methods": ["online"], "url": "https://helpx.adobe.com/ch_de/account/individual/subscriptions-and-plans/renewals-and-cancellations/cancel-adobe-subscription.html", "note": "Eine volle Rückerstattung gibt es bei den meisten Abos nur innert 14 Tagen nach dem ersten Kauf.", "noteI18n": {"fr": "Pour la plupart des abonnements, le remboursement intégral n'est possible que dans les 14 jours suivant le premier achat.", "it": "Per la maggior parte degli abbonamenti il rimborso completo è possibile solo entro 14 giorni dal primo acquisto.", "en": "For most plans a full refund is only available within 14 days of the first purchase."}, "source": "https://helpx.adobe.com/ch_de/account/individual/subscriptions-and-plans/renewals-and-cancellations/cancel-adobe-subscription.html", "checkedOn": "2026-11-20"},
       "plans": [
         { "id": "adobe-photo", "name": "Fotografie", "title": "Adobe Fotografie-Abo", "price": "12.90", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "photo", "priceCheckedOn": null, "nameI18n": {"fr": "Photographie", "it": "Fotografia", "en": "Photography"}, "titleI18n": {"fr": "Adobe Photographie", "it": "Adobe Fotografia", "en": "Adobe Photography plan"} },
         { "id": "adobe-all-apps", "name": "Alle Apps", "title": "Adobe Creative Cloud Alle Apps", "price": "79.90", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "all", "priceCheckedOn": null, "nameI18n": {"fr": "Toutes les apps", "it": "Tutte le app", "en": "All Apps"}, "titleI18n": {"fr": "Adobe Creative Cloud Toutes les apps", "it": "Adobe Creative Cloud Tutte le app", "en": "Adobe Creative Cloud All Apps"} }
@@ -414,6 +439,7 @@
       "url": "https://1password.com/de/pricing",
       "priceSource": "https://1password.com/pricing/password-manager",
       "searchTerms": ["1password"],
+      "cancellation": {"methods": ["online"], "url": "https://support.1password.com/manage-subscription/", "notice": {"count": 0, "unit": "day", "to": "periodEnd"}, "source": "https://support.1password.com/manage-subscription/", "checkedOn": "2026-11-20"},
       "plans": [
         { "id": "1password-individual", "name": "Einzelperson", "title": "1Password", "price": "47.88", "currency": "USD", "interval": { "unit": "year", "count": 1 }, "tier": "individual", "priceCheckedOn": "2026-11-16", "nameI18n": {"fr": "Individuel", "it": "Individuale", "en": "Individual"} },
         { "id": "1password-family", "name": "Familie", "title": "1Password Familie", "price": "71.88", "currency": "USD", "interval": { "unit": "year", "count": 1 }, "tier": "family", "maxPersons": 5, "priceCheckedOn": "2026-11-16", "nameI18n": {"fr": "Famille", "it": "Famiglia", "en": "Family"}, "titleI18n": {"fr": "1Password Famille", "it": "1Password Famiglia", "en": "1Password Family"} }
@@ -428,6 +454,7 @@
       "group": "ai",
       "url": "https://chatgpt.com/pricing",
       "searchTerms": ["chatgpt", "openai"],
+      "cancellation": {"methods": ["online"], "url": "https://help.openai.com/en/articles/7232927-canceling-your-chatgpt-subscription", "notice": {"count": 1, "unit": "day", "to": "periodEnd"}, "source": "https://help.openai.com/en/articles/7232927-canceling-your-chatgpt-subscription", "checkedOn": "2026-11-20"},
       "plans": [
         { "id": "chatgpt-plus", "name": "Plus", "title": "ChatGPT Plus", "price": "20.00", "currency": "USD", "interval": { "unit": "month", "count": 1 }, "tier": "plus", "priceCheckedOn": null }
       ]
@@ -442,6 +469,7 @@
       "url": "https://claude.com/pricing",
       "priceSource": "https://claude.com/pricing",
       "searchTerms": ["claude", "anthropic"],
+      "cancellation": {"methods": ["online"], "url": "https://support.claude.com/en/articles/8325617-cancel-your-pro-max-or-ultra-subscription", "notice": {"count": 1, "unit": "day", "to": "periodEnd"}, "source": "https://support.claude.com/en/articles/8325617-cancel-your-pro-max-or-ultra-subscription", "checkedOn": "2026-11-20"},
       "plans": [
         { "id": "claude-pro-month", "name": "Pro", "title": "Claude Pro", "price": "20.00", "currency": "USD", "interval": { "unit": "month", "count": 1 }, "tier": "pro", "priceCheckedOn": "2026-11-16" },
         { "id": "claude-pro-year", "name": "Pro, Jahresabo", "title": "Claude Pro", "price": "200.00", "currency": "USD", "interval": { "unit": "year", "count": 1 }, "tier": "pro", "priceCheckedOn": "2026-11-16", "nameI18n": {"fr": "Pro, annuel", "it": "Pro, annuale", "en": "Pro, yearly"} }
@@ -456,6 +484,7 @@
       "group": "fitness",
       "url": "https://www.activfitness.ch",
       "searchTerms": ["activ fitness"],
+      "cancellation": {"methods": ["email"], "email": "debi@activfitness.ch", "url": "https://www.activfitness.ch/faq/faq-ordentliche-kuendigung/", "notice": {"count": 2, "unit": "month", "to": "termEnd"}, "note": "Gilt bei monatlicher Zahlung, mit Vertragsnummer kündigen. Mit Vorauszahlung läuft das Abo von selbst aus.", "noteI18n": {"fr": "Vaut pour le paiement mensuel, indique ton numéro de contrat. Avec paiement d'avance, l'abonnement prend fin de lui-même.", "it": "Vale con pagamento mensile, indica il numero di contratto. Con pagamento anticipato l'abbonamento termina da solo.", "en": "Applies to monthly payment, quote your contract number. If you paid in advance, the membership simply runs out."}, "source": "https://www.activfitness.ch/faq/faq-ordentliche-kuendigung/", "checkedOn": "2026-11-20"},
       "plans": [
         { "id": "activ-fitness-year", "name": "Jahresabo", "title": "Activ Fitness", "price": "790.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "priceCheckedOn": null, "nameI18n": {"fr": "Annuel", "it": "Annuale", "en": "Yearly"} }
       ]
@@ -469,6 +498,7 @@
       "group": "fitness",
       "url": "https://www.basefit.ch",
       "searchTerms": ["basefit"],
+      "cancellation": {"url": "https://www.puregym.swiss/faqs/", "notice": {"count": 10, "unit": "day", "to": "termEnd"}, "note": "Gilt für Monatsabos. Jahresabo Unlimited: bis 1 Tag vor Ende der Laufzeit.", "noteI18n": {"fr": "Vaut pour les abonnements mensuels. Abonnement annuel Unlimited : jusqu'à 1 jour avant la fin de la durée.", "it": "Vale per gli abbonamenti mensili. Abbonamento annuale Unlimited: fino a 1 giorno prima della scadenza.", "en": "Applies to monthly memberships. Unlimited yearly membership: up to 1 day before the end of the term."}, "source": "https://www.puregym.swiss/faqs/", "checkedOn": "2026-11-20"},
       "plans": [
         { "id": "basefit-month", "name": "Monatsabo", "title": "Basefit", "price": "59.90", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "priceCheckedOn": null, "nameI18n": {"fr": "Mensuel", "it": "Mensile", "en": "Monthly"} },
         { "id": "basefit-year", "name": "Jahresabo", "title": "Basefit", "price": "599.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "priceCheckedOn": null, "nameI18n": {"fr": "Annuel", "it": "Annuale", "en": "Yearly"} }
@@ -483,6 +513,7 @@
       "group": "fitness",
       "url": "https://www.update-fitness.ch",
       "searchTerms": ["update fitness"],
+      "cancellation": {"url": "https://www.update-fitness.ch/vertragsbestimmungen/", "notice": {"count": 4, "unit": "week", "to": "termEnd"}, "minimumTerm": {"count": 12, "unit": "month"}, "note": "Schriftlich kündigen. Sonst verlängert sich das Jahresabo um 12 Monate.", "noteI18n": {"fr": "Résilier par écrit. Sinon l'abonnement annuel se prolonge de 12 mois.", "it": "Disdire per iscritto. Altrimenti l'abbonamento annuale si rinnova di 12 mesi.", "en": "Cancel in writing. Otherwise the yearly membership renews for 12 months."}, "source": "https://www.update-fitness.ch/vertragsbestimmungen/", "checkedOn": "2026-11-20"},
       "plans": [
         { "id": "update-fitness-year", "name": "Jahresabo", "title": "Update Fitness", "price": "590.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "priceCheckedOn": null, "nameI18n": {"fr": "Annuel", "it": "Annuale", "en": "Yearly"} }
       ]
@@ -496,6 +527,7 @@
       "group": "fitness",
       "url": "https://www.fitnesspark.ch",
       "searchTerms": ["fitnesspark"],
+      "cancellation": {"methods": ["letter", "email"], "url": "https://www.fitnesspark.ch/agb/", "notice": {"count": 2, "unit": "month", "to": "termEnd"}, "note": "Gilt bei monatlicher Zahlung.", "noteI18n": {"fr": "Vaut pour le paiement mensuel.", "it": "Vale con pagamento mensile.", "en": "Applies to monthly payment."}, "source": "https://www.fitnesspark.ch/agb/", "checkedOn": "2026-11-20"},
       "plans": [
         { "id": "fitnesspark-year", "name": "Jahresabo", "title": "Fitnesspark", "price": "1090.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "priceCheckedOn": null, "nameI18n": {"fr": "Annuel", "it": "Annuale", "en": "Yearly"} }
       ]
@@ -510,6 +542,7 @@
       "url": "https://shop.republik.ch/",
       "priceSource": "https://shop.republik.ch/",
       "searchTerms": ["republik"],
+      "cancellation": {"methods": ["online"], "url": "https://www.republik.ch/faq", "notice": {"count": 2, "unit": "day", "to": "termEnd"}, "note": "Die Frist gilt für die Jahresmitgliedschaft.", "noteI18n": {"fr": "Le délai vaut pour l'adhésion annuelle.", "it": "Il termine vale per l'adesione annuale.", "en": "The notice period applies to the yearly membership."}, "source": "https://www.republik.ch/faq", "checkedOn": "2026-11-20"},
       "plans": [
         { "id": "republik-month", "name": "Monatsabo", "title": "Republik", "price": "22.00", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "priceCheckedOn": "2026-11-16", "nameI18n": {"fr": "Mensuel", "it": "Mensile", "en": "Monthly"} },
         { "id": "republik-year", "name": "Jahresmitgliedschaft", "title": "Republik", "price": "240.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "priceCheckedOn": "2026-11-16", "nameI18n": {"fr": "Abonnement annuel", "it": "Abbonamento annuale", "en": "Annual membership"} }
@@ -524,6 +557,7 @@
       "group": "news",
       "url": "https://abo.nzz.ch",
       "searchTerms": ["nzz", "neue zürcher zeitung"],
+      "cancellation": {"methods": ["online"], "url": "https://abo.nzz.ch/faq/abo/", "notice": {"count": 5, "unit": "day", "to": "periodEnd", "receiptCounts": true}, "note": "Gilt für Digital-Abos. Print-Abos kündigst du beim Leserservice.", "noteI18n": {"fr": "Vaut pour les abonnements numériques. Les abonnements papier se résilient auprès du service lecteurs.", "it": "Vale per gli abbonamenti digitali. Gli abbonamenti cartacei si disdicono presso il servizio lettori.", "en": "Applies to digital subscriptions. Print subscriptions are cancelled with reader services."}, "source": "https://abo.nzz.ch/faq/abo/", "checkedOn": "2026-11-20"},
       "plans": [
         { "id": "nzz-digital-month", "name": "Digital", "title": "NZZ Digital", "price": "25.00", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "priceCheckedOn": null },
         { "id": "nzz-digital-year", "name": "Digital, Jahresabo", "title": "NZZ Digital", "price": "249.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "priceCheckedOn": null, "nameI18n": {"fr": "Digital, annuel", "it": "Digital, annuale", "en": "Digital, yearly"} }
@@ -538,6 +572,7 @@
       "group": "news",
       "url": "https://abo.tagesanzeiger.ch",
       "searchTerms": ["tages-anzeiger", "tagesanzeiger"],
+      "cancellation": {"methods": ["online"], "url": "https://helpcenter.tagesanzeiger.ch/s/article/Wie-k%C3%BCndige-ich-mein-Tages-Anzeiger-Digital-Abo", "notice": {"count": 1, "unit": "day", "to": "periodEnd"}, "source": "https://helpcenter.tagesanzeiger.ch/s/article/Wie-k%C3%BCndige-ich-mein-Tages-Anzeiger-Digital-Abo", "checkedOn": "2026-11-20"},
       "plans": [
         { "id": "tagi-digital-month", "name": "Digital", "title": "Tages-Anzeiger Digital", "price": "24.00", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "priceCheckedOn": null },
         { "id": "tagi-digital-year", "name": "Digital, Jahresabo", "title": "Tages-Anzeiger Digital", "price": "220.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "priceCheckedOn": null, "nameI18n": {"fr": "Digital, annuel", "it": "Digital, annuale", "en": "Digital, yearly"} }
@@ -551,12 +586,14 @@
       "category": "mobility",
       "group": "oev",
       "url": "https://www.sbb.ch/de/billette-angebote/abos.html",
-      "priceSource": "https://www.srf.ch/news/schweiz/oev-preise-2026-preise-fuers-ga-steigen-weniger-stark-als-geplant",
+      "priceSource": "https://www.sbb.ch/en/offers/ga-travelcard-adults",
       "searchTerms": ["sbb", "halbtax", "generalabo", "ga 2. klasse", "ga 1. klasse"],
       "popular": true,
+      "cancellation": {"methods": ["online"], "url": "https://www.swisspass.ch/", "notice": {"count": 1, "unit": "month", "to": "termEnd"}, "note": "Im Kundenkonto auf swisspass.ch unter «Abos». Ohne Kündigung verlängern sich GA und Halbtax automatisch.", "noteI18n": {"fr": "Dans le compte client sur swisspass.ch, sous «Abonnements». Sans résiliation, l'AG et le demi-tarif se renouvellent automatiquement.", "it": "Nel conto cliente su swisspass.ch, alla voce «Abbonamenti». Senza disdetta, l'AG e il metà-prezzo si rinnovano automaticamente.", "en": "In your customer account at swisspass.ch under “Travelcards”. Without notice, the GA and the Half Fare travelcard renew automatically."}, "source": "https://www.sbb.ch/de/support/meine-abos/ga-kuendigen.html", "checkedOn": "2026-11-20"},
       "plans": [
-        { "id": "sbb-halbtax", "name": "Halbtax", "title": "Halbtax", "price": "190.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "tier": "halbtax", "priceCheckedOn": "2026-11-16", "nameI18n": {"fr": "Demi-tarif", "it": "Metà-prezzo", "en": "Half Fare travelcard"}, "titleI18n": {"fr": "Demi-tarif", "it": "Metà-prezzo", "en": "Half Fare travelcard"} },
-        { "id": "sbb-ga-2", "name": "GA 2. Klasse", "title": "GA 2. Klasse", "price": "3995.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "tier": "ga2", "priceCheckedOn": "2026-11-16", "nameI18n": {"fr": "AG 2e classe", "it": "AG 2a classe", "en": "GA travelcard 2nd class"}, "titleI18n": {"fr": "AG 2e classe", "it": "AG 2a classe", "en": "GA travelcard 2nd class"} }
+        { "id": "sbb-halbtax", "name": "Halbtax", "title": "Halbtax", "price": "190.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "tier": "halbtax", "priceCheckedOn": "2026-11-20", "priceChange": {"price": "195.00", "from": "2026-12-13", "source": "https://www.sbb.ch/en/offers/half-fare-travelcard", "checkedOn": "2026-11-20"}, "nameI18n": {"fr": "Demi-tarif", "it": "Metà-prezzo", "en": "Half Fare travelcard"}, "titleI18n": {"fr": "Demi-tarif", "it": "Metà-prezzo", "en": "Half Fare travelcard"} },
+        { "id": "sbb-ga-2", "name": "GA 2. Klasse", "title": "GA 2. Klasse", "price": "3995.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "tier": "ga2", "priceCheckedOn": "2026-11-20", "priceChange": {"price": "4095.00", "from": "2026-12-13", "source": "https://www.sbb.ch/en/offers/ga-travelcard-adults", "checkedOn": "2026-11-20"}, "nameI18n": {"fr": "AG 2e classe", "it": "AG 2a classe", "en": "GA travelcard 2nd class"}, "titleI18n": {"fr": "AG 2e classe", "it": "AG 2a classe", "en": "GA travelcard 2nd class"} },
+        { "id": "sbb-ga-1", "name": "GA 1. Klasse", "title": "GA 1. Klasse", "price": "6520.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "tier": "ga1", "priceCheckedOn": "2026-11-20", "priceChange": {"price": "6770.00", "from": "2026-12-13", "source": "https://www.sbb.ch/en/offers/ga-travelcard-adults", "checkedOn": "2026-11-20"}, "nameI18n": {"fr": "AG 1re classe", "it": "AG 1a classe", "en": "GA travelcard 1st class"}, "titleI18n": {"fr": "AG 1re classe", "it": "AG 1a classe", "en": "GA travelcard 1st class"} }
       ]
     },
     {
@@ -568,6 +605,7 @@
       "group": "gaming",
       "url": "https://www.playstation.com/de-ch/ps-plus/",
       "searchTerms": ["playstation plus", "ps plus"],
+      "cancellation": {"methods": ["online"], "url": "https://www.playstation.com/de-ch/support/subscriptions/cancel-playstation-plus/", "source": "https://www.playstation.com/de-ch/support/subscriptions/cancel-playstation-plus/", "checkedOn": "2026-11-20"},
       "plans": [
         { "id": "ps-plus-essential-month", "name": "Essential", "title": "PlayStation Plus Essential", "price": "10.90", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "essential", "priceCheckedOn": null },
         { "id": "ps-plus-essential-year", "name": "Essential, Jahresabo", "title": "PlayStation Plus Essential", "price": "78.90", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "tier": "essential", "priceCheckedOn": null, "nameI18n": {"fr": "Essential, annuel", "it": "Essential, annuale", "en": "Essential, yearly"} }
@@ -582,6 +620,7 @@
       "group": "gaming",
       "url": "https://www.xbox.com/de-CH/xbox-game-pass",
       "searchTerms": ["game pass", "xbox"],
+      "cancellation": {"methods": ["online"], "url": "https://support.xbox.com/de-CH/help/subscriptions-billing/manage-subscriptions/cancel-recurring-billing-or-subscription", "notice": {"count": 0, "unit": "day", "to": "periodEnd"}, "source": "https://support.xbox.com/de-CH/help/subscriptions-billing/manage-subscriptions/cancel-recurring-billing-or-subscription", "checkedOn": "2026-11-20"},
       "plans": [
         { "id": "game-pass-ultimate", "name": "Ultimate", "title": "Xbox Game Pass Ultimate", "price": "26.90", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "priceCheckedOn": null }
       ]
@@ -595,11 +634,441 @@
       "group": "gaming",
       "url": "https://www.nintendo.com/de-ch/Nintendo-Switch-Online/",
       "searchTerms": ["nintendo switch online", "switch online"],
+      "cancellation": {"methods": ["online"], "url": "https://www.nintendo.com/de-ch/Support/Fehlersuche/Anpassen-oder-Deaktivieren-der-automatischen-Verlangerung-von-Nintendo-Switch-Online-1434298.html", "notice": {"count": 0, "unit": "day", "to": "periodEnd"}, "source": "https://www.nintendo.com/de-ch/Support/Fehlersuche/Anpassen-oder-Deaktivieren-der-automatischen-Verlangerung-von-Nintendo-Switch-Online-1434298.html", "checkedOn": "2026-11-20"},
       "plans": [
         { "id": "nso-individual-month", "name": "Einzelmitgliedschaft, 1 Monat", "title": "Nintendo Switch Online", "price": "4.90", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "individual", "priceCheckedOn": null, "nameI18n": {"fr": "Abonnement individuel, 1 mois", "it": "Abbonamento individuale, 1 mese", "en": "Individual membership, 1 month"} },
         { "id": "nso-individual-year", "name": "Einzelmitgliedschaft, 12 Monate", "title": "Nintendo Switch Online", "price": "21.90", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "tier": "individual", "priceCheckedOn": null, "nameI18n": {"fr": "Abonnement individuel, 12 mois", "it": "Abbonamento individuale, 12 mesi", "en": "Individual membership, 12 months"} },
         { "id": "nso-family-year", "name": "Familienmitgliedschaft, 12 Monate", "title": "Nintendo Switch Online Familie", "price": "39.90", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "tier": "family", "maxPersons": 8, "priceCheckedOn": null, "nameI18n": {"fr": "Abonnement famille, 12 mois", "it": "Abbonamento famiglia, 12 mesi", "en": "Family membership, 12 months"}, "titleI18n": {"fr": "Nintendo Switch Online Famille", "it": "Nintendo Switch Online Famiglia", "en": "Nintendo Switch Online Family"} }
       ]
+    },
+    {
+      "id": "css-grund",
+      "name": "CSS Grundversicherung",
+      "summary": "Obligatorische Krankenpflegeversicherung",
+      "summaryI18n": {"fr": "Assurance obligatoire des soins", "it": "Assicurazione obbligatoria delle cure", "en": "Compulsory basic health insurance"},
+      "category": "insurance",
+      "group": "krankenkasse-grund",
+      "url": "https://www.css.ch/",
+      "searchTerms": ["css", "css versicherung", "css kranken"],
+      "cancellation": {"methods": ["online", "phone", "letter"], "url": "https://www.css.ch/en/private-customers/properly-insured/good-to-know/insurance-tips/cancel-health-insurance.html", "note": "Per Post zählt der Eingang, nicht der Poststempel. CSS empfiehlt Einschreiben.", "noteI18n": {"fr": "Par courrier, c'est la date de réception qui compte, pas le cachet de la poste. CSS recommande l'envoi recommandé.", "it": "Per posta conta la data di ricezione, non il timbro postale. CSS consiglia la raccomandata.", "en": "By post, the date of receipt counts, not the postmark. CSS recommends registered post."}, "source": "https://www.css.ch/en/private-customers/properly-insured/good-to-know/insurance-tips/cancel-health-insurance.html", "checkedOn": "2026-11-20"},
+      "plans": []
+    },
+    {
+      "id": "css-zusatz",
+      "name": "CSS Zusatzversicherung",
+      "summary": "Freiwillige Zusatzversicherungen",
+      "summaryI18n": {"fr": "Assurances complémentaires facultatives", "it": "Assicurazioni complementari facoltative", "en": "Optional supplementary insurance"},
+      "category": "insurance",
+      "group": "krankenkasse-zusatz",
+      "url": "https://www.css.ch/",
+      "searchTerms": ["css zusatz", "css vvg", "css complementaire", "css complementare"],
+      "plans": []
+    },
+    {
+      "id": "helsana-grund",
+      "name": "Helsana Grundversicherung",
+      "summary": "Obligatorische Krankenpflegeversicherung",
+      "summaryI18n": {"fr": "Assurance obligatoire des soins", "it": "Assicurazione obbligatoria delle cure", "en": "Compulsory basic health insurance"},
+      "category": "insurance",
+      "group": "krankenkasse-grund",
+      "url": "https://www.helsana.ch/",
+      "searchTerms": ["helsana"],
+      "cancellation": {"methods": ["letter", "email", "online"], "address": ["Helsana Versicherungen AG", "IDPH Kündigungen D-CH", "Postfach", "8081 Zürich"], "email": "cancellation@helsana.ch", "url": "https://www.helsana.ch/en/individuals/services/insurance/cancel.html", "source": "https://www.helsana.ch/en/individuals/services/insurance/cancel.html", "checkedOn": "2026-11-20"},
+      "plans": []
+    },
+    {
+      "id": "helsana-zusatz",
+      "name": "Helsana Zusatzversicherung",
+      "summary": "Freiwillige Zusatzversicherungen",
+      "summaryI18n": {"fr": "Assurances complémentaires facultatives", "it": "Assicurazioni complementari facoltative", "en": "Optional supplementary insurance"},
+      "category": "insurance",
+      "group": "krankenkasse-zusatz",
+      "url": "https://www.helsana.ch/",
+      "searchTerms": ["helsana zusatz", "helsana vvg", "helsana complementaire", "helsana complementare"],
+      "cancellation": {"methods": ["letter", "email", "online"], "address": ["Helsana Versicherungen AG", "IDPH Kündigungen D-CH", "Postfach", "8081 Zürich"], "email": "cancellation@helsana.ch", "url": "https://www.helsana.ch/en/individuals/services/insurance/cancel.html", "notice": {"count": 3, "unit": "month", "to": "yearEnd", "receiptCounts": true}, "source": "https://www.helsana.ch/en/individuals/services/insurance/cancel.html", "checkedOn": "2026-11-20"},
+      "plans": []
+    },
+    {
+      "id": "swica-grund",
+      "name": "SWICA Grundversicherung",
+      "summary": "Obligatorische Krankenpflegeversicherung",
+      "summaryI18n": {"fr": "Assurance obligatoire des soins", "it": "Assicurazione obbligatoria delle cure", "en": "Compulsory basic health insurance"},
+      "category": "insurance",
+      "group": "krankenkasse-grund",
+      "url": "https://www.swica.ch/",
+      "searchTerms": ["swica"],
+      "cancellation": {"methods": ["letter", "email", "online"], "url": "https://www.swica.ch/de/private/services/faq", "source": "https://www.swica.ch/de/private/services/faq", "checkedOn": "2026-11-20"},
+      "plans": []
+    },
+    {
+      "id": "swica-zusatz",
+      "name": "SWICA Zusatzversicherung",
+      "summary": "Freiwillige Zusatzversicherungen",
+      "summaryI18n": {"fr": "Assurances complémentaires facultatives", "it": "Assicurazioni complementari facoltative", "en": "Optional supplementary insurance"},
+      "category": "insurance",
+      "group": "krankenkasse-zusatz",
+      "url": "https://www.swica.ch/",
+      "searchTerms": ["swica zusatz", "swica vvg", "swica complementaire", "swica complementare"],
+      "cancellation": {"methods": ["letter", "email", "online"], "url": "https://www.swica.ch/en/private/insurance/optimise-save/cancellation", "note": "Ohne Prämienänderung muss die Kündigung bis 17 Uhr am letzten Arbeitstag im September bei SWICA sein.", "noteI18n": {"fr": "Sans changement de prime, la résiliation doit parvenir à SWICA avant 17 h le dernier jour ouvrable de septembre.", "it": "Senza modifica del premio, la disdetta deve arrivare a SWICA entro le 17 dell'ultimo giorno lavorativo di settembre.", "en": "If the premium is unchanged, your notice must reach SWICA by 5 pm on the last working day of September."}, "source": "https://www.swica.ch/en/private/insurance/optimise-save/cancellation", "checkedOn": "2026-11-20"},
+      "plans": []
+    },
+    {
+      "id": "groupe-mutuel-grund",
+      "name": "Groupe Mutuel Grundversicherung",
+      "summary": "Obligatorische Krankenpflegeversicherung",
+      "summaryI18n": {"fr": "Assurance obligatoire des soins", "it": "Assicurazione obbligatoria delle cure", "en": "Compulsory basic health insurance"},
+      "category": "insurance",
+      "group": "krankenkasse-grund",
+      "url": "https://www.groupemutuel.ch/",
+      "searchTerms": ["groupe mutuel"],
+      "cancellation": {"url": "https://www.groupemutuel.ch/de/Privatkunden/Kundendienst/Antworten-auf-haufige-Fragen/Kuendigung.html", "source": "https://www.groupemutuel.ch/de/Privatkunden/Kundendienst/Antworten-auf-haufige-Fragen/Kuendigung.html", "checkedOn": "2026-11-20"},
+      "plans": []
+    },
+    {
+      "id": "groupe-mutuel-zusatz",
+      "name": "Groupe Mutuel Zusatzversicherung",
+      "summary": "Freiwillige Zusatzversicherungen",
+      "summaryI18n": {"fr": "Assurances complémentaires facultatives", "it": "Assicurazioni complementari facoltative", "en": "Optional supplementary insurance"},
+      "category": "insurance",
+      "group": "krankenkasse-zusatz",
+      "url": "https://www.groupemutuel.ch/",
+      "searchTerms": ["groupe mutuel zusatz", "groupe mutuel vvg", "groupe mutuel complementaire", "groupe mutuel complementare"],
+      "plans": []
+    },
+    {
+      "id": "visana-grund",
+      "name": "Visana Grundversicherung",
+      "summary": "Obligatorische Krankenpflegeversicherung",
+      "summaryI18n": {"fr": "Assurance obligatoire des soins", "it": "Assicurazione obbligatoria delle cure", "en": "Compulsory basic health insurance"},
+      "category": "insurance",
+      "group": "krankenkasse-grund",
+      "url": "https://www.visana.ch/",
+      "searchTerms": ["visana"],
+      "cancellation": {"url": "https://www.visana.ch/privatpersonen/kampagnen/wichtige-versicherungsdaten", "source": "https://www.visana.ch/privatpersonen/kampagnen/wichtige-versicherungsdaten", "checkedOn": "2026-11-20"},
+      "plans": []
+    },
+    {
+      "id": "visana-zusatz",
+      "name": "Visana Zusatzversicherung",
+      "summary": "Freiwillige Zusatzversicherungen",
+      "summaryI18n": {"fr": "Assurances complémentaires facultatives", "it": "Assicurazioni complementari facoltative", "en": "Optional supplementary insurance"},
+      "category": "insurance",
+      "group": "krankenkasse-zusatz",
+      "url": "https://www.visana.ch/",
+      "searchTerms": ["visana zusatz", "visana vvg", "visana complementaire", "visana complementare"],
+      "cancellation": {"url": "https://www.visana.ch/privatpersonen/kampagnen/wichtige-versicherungsdaten", "notice": {"count": 3, "unit": "month", "to": "yearEnd"}, "note": "Gilt ohne Prämienanpassung. Laufende Mehrjahresverträge sind vorbehalten.", "noteI18n": {"fr": "Valable sans adaptation de prime. Sous réserve des contrats pluriannuels en cours.", "it": "Vale senza adeguamento del premio. Restano riservati i contratti pluriennali in corso.", "en": "Applies if the premium is not adjusted. Current multi-year contracts are excepted."}, "source": "https://www.visana.ch/privatpersonen/kampagnen/wichtige-versicherungsdaten", "checkedOn": "2026-11-20"},
+      "plans": []
+    },
+    {
+      "id": "sanitas-grund",
+      "name": "Sanitas Grundversicherung",
+      "summary": "Obligatorische Krankenpflegeversicherung",
+      "summaryI18n": {"fr": "Assurance obligatoire des soins", "it": "Assicurazione obbligatoria delle cure", "en": "Compulsory basic health insurance"},
+      "category": "insurance",
+      "group": "krankenkasse-grund",
+      "url": "https://www.sanitas.com/",
+      "searchTerms": ["sanitas"],
+      "cancellation": {"methods": ["letter", "email", "online"], "email": "info@sanitas.com", "url": "https://www.sanitas.com/de/privatkunden/services/schnell-erledigt/kuendigen.html", "source": "https://www.sanitas.com/de/privatkunden/services/schnell-erledigt/kuendigen.html", "checkedOn": "2026-11-20"},
+      "plans": []
+    },
+    {
+      "id": "sanitas-zusatz",
+      "name": "Sanitas Zusatzversicherung",
+      "summary": "Freiwillige Zusatzversicherungen",
+      "summaryI18n": {"fr": "Assurances complémentaires facultatives", "it": "Assicurazioni complementari facoltative", "en": "Optional supplementary insurance"},
+      "category": "insurance",
+      "group": "krankenkasse-zusatz",
+      "url": "https://www.sanitas.com/",
+      "searchTerms": ["sanitas zusatz", "sanitas vvg", "sanitas complementaire", "sanitas complementare"],
+      "cancellation": {"methods": ["letter", "email", "online"], "email": "info@sanitas.com", "url": "https://www.sanitas.com/de/privatkunden/services/schnell-erledigt/kuendigen.html", "notice": {"count": 3, "unit": "month", "to": "yearEnd", "receiptCounts": true}, "source": "https://www.sanitas.com/de/privatkunden/services/schnell-erledigt/kuendigen.html", "checkedOn": "2026-11-20"},
+      "plans": []
+    },
+    {
+      "id": "concordia-grund",
+      "name": "Concordia Grundversicherung",
+      "summary": "Obligatorische Krankenpflegeversicherung",
+      "summaryI18n": {"fr": "Assurance obligatoire des soins", "it": "Assicurazione obbligatoria delle cure", "en": "Compulsory basic health insurance"},
+      "category": "insurance",
+      "group": "krankenkasse-grund",
+      "url": "https://www.concordia.ch/",
+      "searchTerms": ["concordia"],
+      "cancellation": {"url": "https://www.concordia.ch/de/versicherungen/grundversicherung.html", "note": "Nur schriftlich gültig.", "noteI18n": {"fr": "Valable uniquement par écrit.", "it": "Valida solo per iscritto.", "en": "Valid in writing only."}, "source": "https://www.concordia.ch/de/versicherungen/grundversicherung.html", "checkedOn": "2026-11-20"},
+      "plans": []
+    },
+    {
+      "id": "concordia-zusatz",
+      "name": "Concordia Zusatzversicherung",
+      "summary": "Freiwillige Zusatzversicherungen",
+      "summaryI18n": {"fr": "Assurances complémentaires facultatives", "it": "Assicurazioni complementari facoltative", "en": "Optional supplementary insurance"},
+      "category": "insurance",
+      "group": "krankenkasse-zusatz",
+      "url": "https://www.concordia.ch/",
+      "searchTerms": ["concordia zusatz", "concordia vvg", "concordia complementaire", "concordia complementare"],
+      "cancellation": {"url": "https://www.concordia.ch/de/versicherungen/zusatzversicherungen.html", "notice": {"count": 3, "unit": "month", "to": "yearEnd"}, "note": "Bei Mehrjahresverträgen auf Ende der Vertragsdauer.", "noteI18n": {"fr": "Pour les contrats pluriannuels, pour la fin de la durée du contrat.", "it": "Per i contratti pluriennali, per la fine della durata contrattuale.", "en": "For multi-year contracts, at the end of the contract term."}, "source": "https://www.concordia.ch/de/versicherungen/zusatzversicherungen.html", "checkedOn": "2026-11-20"},
+      "plans": []
+    },
+    {
+      "id": "assura-grund",
+      "name": "Assura Grundversicherung",
+      "summary": "Obligatorische Krankenpflegeversicherung",
+      "summaryI18n": {"fr": "Assurance obligatoire des soins", "it": "Assicurazione obbligatoria delle cure", "en": "Compulsory basic health insurance"},
+      "category": "insurance",
+      "group": "krankenkasse-grund",
+      "url": "https://www.assura.ch/",
+      "searchTerms": ["assura"],
+      "plans": []
+    },
+    {
+      "id": "assura-zusatz",
+      "name": "Assura Zusatzversicherung",
+      "summary": "Freiwillige Zusatzversicherungen",
+      "summaryI18n": {"fr": "Assurances complémentaires facultatives", "it": "Assicurazioni complementari facoltative", "en": "Optional supplementary insurance"},
+      "category": "insurance",
+      "group": "krankenkasse-zusatz",
+      "url": "https://www.assura.ch/",
+      "searchTerms": ["assura zusatz", "assura vvg", "assura complementaire", "assura complementare"],
+      "cancellation": {"methods": ["online", "email"], "email": "kuendigung-widerruf.zusatzversicherungen@assura.ch", "url": "https://www.assura.ch/de/kontakt-beendigung", "source": "https://www.assura.ch/de/kontakt-beendigung", "checkedOn": "2026-11-20"},
+      "plans": []
+    },
+    {
+      "id": "kpt-grund",
+      "name": "KPT Grundversicherung",
+      "summary": "Obligatorische Krankenpflegeversicherung",
+      "summaryI18n": {"fr": "Assurance obligatoire des soins", "it": "Assicurazione obbligatoria delle cure", "en": "Compulsory basic health insurance"},
+      "category": "insurance",
+      "group": "krankenkasse-grund",
+      "url": "https://www.kpt.ch/",
+      "searchTerms": ["kpt"],
+      "plans": []
+    },
+    {
+      "id": "kpt-zusatz",
+      "name": "KPT Zusatzversicherung",
+      "summary": "Freiwillige Zusatzversicherungen",
+      "summaryI18n": {"fr": "Assurances complémentaires facultatives", "it": "Assicurazioni complementari facoltative", "en": "Optional supplementary insurance"},
+      "category": "insurance",
+      "group": "krankenkasse-zusatz",
+      "url": "https://www.kpt.ch/",
+      "searchTerms": ["kpt zusatz", "kpt vvg", "kpt complementaire", "kpt complementare"],
+      "plans": []
+    },
+    {
+      "id": "sympany-grund",
+      "name": "Sympany Grundversicherung",
+      "summary": "Obligatorische Krankenpflegeversicherung",
+      "summaryI18n": {"fr": "Assurance obligatoire des soins", "it": "Assicurazione obbligatoria delle cure", "en": "Compulsory basic health insurance"},
+      "category": "insurance",
+      "group": "krankenkasse-grund",
+      "url": "https://www.sympany.ch/",
+      "searchTerms": ["sympany"],
+      "cancellation": {"methods": ["letter", "email"], "address": ["Sympany", "Peter Merian-Weg 4", "4002 Basel"], "url": "https://www.sympany.ch/en/individuals/worth-to-know/basics/cancel-health-insurance.html", "source": "https://www.sympany.ch/en/individuals/worth-to-know/basics/cancel-health-insurance.html", "checkedOn": "2026-11-20"},
+      "plans": []
+    },
+    {
+      "id": "sympany-zusatz",
+      "name": "Sympany Zusatzversicherung",
+      "summary": "Freiwillige Zusatzversicherungen",
+      "summaryI18n": {"fr": "Assurances complémentaires facultatives", "it": "Assicurazioni complementari facoltative", "en": "Optional supplementary insurance"},
+      "category": "insurance",
+      "group": "krankenkasse-zusatz",
+      "url": "https://www.sympany.ch/",
+      "searchTerms": ["sympany zusatz", "sympany vvg", "sympany complementaire", "sympany complementare"],
+      "cancellation": {"methods": ["letter", "email"], "address": ["Sympany", "Peter Merian-Weg 4", "4002 Basel"], "url": "https://www.sympany.ch/en/individuals/worth-to-know/basics/cancel-health-insurance.html", "notice": {"count": 3, "unit": "month", "to": "yearEnd", "receiptCounts": true}, "note": "In der Regel drei Monate. Mehrjahresverträge sind ausgenommen.", "noteI18n": {"fr": "En règle générale trois mois. Les contrats pluriannuels font exception.", "it": "Di regola tre mesi. Fanno eccezione i contratti pluriennali.", "en": "Usually three months. Multi-year policies are excepted."}, "source": "https://www.sympany.ch/en/individuals/worth-to-know/basics/cancel-health-insurance.html", "checkedOn": "2026-11-20"},
+      "plans": []
+    },
+    {
+      "id": "atupri-grund",
+      "name": "Atupri Grundversicherung",
+      "summary": "Obligatorische Krankenpflegeversicherung",
+      "summaryI18n": {"fr": "Assurance obligatoire des soins", "it": "Assicurazione obbligatoria delle cure", "en": "Compulsory basic health insurance"},
+      "category": "insurance",
+      "group": "krankenkasse-grund",
+      "url": "https://atupri.ch/",
+      "searchTerms": ["atupri"],
+      "cancellation": {"methods": ["letter", "email", "online"], "url": "https://atupri.ch/de/service-support/online-dienste/versicherung-kuendigen", "source": "https://atupri.ch/de/service-support/online-dienste/versicherung-kuendigen", "checkedOn": "2026-11-20"},
+      "plans": []
+    },
+    {
+      "id": "atupri-zusatz",
+      "name": "Atupri Zusatzversicherung",
+      "summary": "Freiwillige Zusatzversicherungen",
+      "summaryI18n": {"fr": "Assurances complémentaires facultatives", "it": "Assicurazioni complementari facoltative", "en": "Optional supplementary insurance"},
+      "category": "insurance",
+      "group": "krankenkasse-zusatz",
+      "url": "https://atupri.ch/",
+      "searchTerms": ["atupri zusatz", "atupri vvg", "atupri complementaire", "atupri complementare"],
+      "cancellation": {"methods": ["letter", "email", "online"], "url": "https://atupri.ch/de/service-support/online-dienste/versicherung-kuendigen", "notice": {"count": 3, "unit": "month", "to": "yearEnd", "receiptCounts": true}, "note": "Gilt nicht für alle Produkte, siehe Seite von Atupri.", "noteI18n": {"fr": "Ne vaut pas pour tous les produits, voir la page d'Atupri.", "it": "Non vale per tutti i prodotti, vedi la pagina di Atupri.", "en": "Does not apply to every product, see Atupri's page."}, "source": "https://atupri.ch/de/service-support/online-dienste/versicherung-kuendigen", "checkedOn": "2026-11-20"},
+      "plans": []
+    },
+    {
+      "id": "oekk-grund",
+      "name": "ÖKK Grundversicherung",
+      "summary": "Obligatorische Krankenpflegeversicherung",
+      "summaryI18n": {"fr": "Assurance obligatoire des soins", "it": "Assicurazione obbligatoria delle cure", "en": "Compulsory basic health insurance"},
+      "category": "insurance",
+      "group": "krankenkasse-grund",
+      "url": "https://www.oekk.ch/",
+      "searchTerms": ["okk", "oekk"],
+      "cancellation": {"methods": ["email"], "email": "info@oekk.ch", "url": "https://www.oekk.ch/de/themen-wissen/grundversicherung-wechseln", "note": "Kündigung über die zuständige Agentur oder mit dem Formular per E-Mail.", "noteI18n": {"fr": "Résiliation auprès de l'agence compétente ou avec le formulaire par e-mail.", "it": "Disdetta presso l'agenzia competente o con il modulo per e-mail.", "en": "Cancel through your agency or send the form by email."}, "source": "https://www.oekk.ch/de/themen-wissen/grundversicherung-wechseln", "checkedOn": "2026-11-20"},
+      "plans": []
+    },
+    {
+      "id": "oekk-zusatz",
+      "name": "ÖKK Zusatzversicherung",
+      "summary": "Freiwillige Zusatzversicherungen",
+      "summaryI18n": {"fr": "Assurances complémentaires facultatives", "it": "Assicurazioni complementari facoltative", "en": "Optional supplementary insurance"},
+      "category": "insurance",
+      "group": "krankenkasse-zusatz",
+      "url": "https://www.oekk.ch/",
+      "searchTerms": ["okk zusatz", "okk vvg", "okk complementaire", "okk complementare", "oekk zusatz", "oekk vvg", "oekk complementaire", "oekk complementare"],
+      "cancellation": {"methods": ["letter", "email"], "url": "https://www.oekk.ch/de/themen-wissen/krankenkasse-kuendigen", "notice": {"count": 3, "unit": "month", "to": "yearEnd", "receiptCounts": true}, "source": "https://www.oekk.ch/de/themen-wissen/krankenkasse-kuendigen", "checkedOn": "2026-11-20"},
+      "plans": []
+    },
+    {
+      "id": "egk-grund",
+      "name": "EGK Grundversicherung",
+      "summary": "Obligatorische Krankenpflegeversicherung",
+      "summaryI18n": {"fr": "Assurance obligatoire des soins", "it": "Assicurazione obbligatoria delle cure", "en": "Compulsory basic health insurance"},
+      "category": "insurance",
+      "group": "krankenkasse-grund",
+      "url": "https://www.egk.ch/",
+      "searchTerms": ["egk"],
+      "plans": []
+    },
+    {
+      "id": "egk-zusatz",
+      "name": "EGK Zusatzversicherung",
+      "summary": "Freiwillige Zusatzversicherungen",
+      "summaryI18n": {"fr": "Assurances complémentaires facultatives", "it": "Assicurazioni complementari facoltative", "en": "Optional supplementary insurance"},
+      "category": "insurance",
+      "group": "krankenkasse-zusatz",
+      "url": "https://www.egk.ch/",
+      "searchTerms": ["egk zusatz", "egk vvg", "egk complementaire", "egk complementare"],
+      "plans": []
+    },
+    {
+      "id": "axa",
+      "name": "AXA",
+      "summary": "Auto-, Hausrat- und Haftpflichtversicherung",
+      "summaryI18n": {"fr": "Assurance auto, ménage et responsabilité civile", "it": "Assicurazione auto, mobilia domestica e RC", "en": "Car, household and liability insurance"},
+      "category": "insurance",
+      "group": "versicherung",
+      "url": "https://www.axa.ch/",
+      "searchTerms": ["axa"],
+      "cancellation": {"methods": ["online"], "url": "https://www.axa.ch/de/privatkunden/kontakt-services/services/vertrag-kuendigen.html", "notice": {"count": 3, "unit": "month", "to": "termEnd"}, "note": "Ohne Kündigung verlängert sich der Vertrag um ein Jahr.", "noteI18n": {"fr": "Sans résiliation, le contrat se prolonge d'un an.", "it": "Senza disdetta il contratto si rinnova di un anno.", "en": "Without notice the contract renews for one year."}, "source": "https://www.axa.ch/de/privatkunden/kontakt-services/services/vertrag-kuendigen.html", "checkedOn": "2026-11-20"},
+      "plans": []
+    },
+    {
+      "id": "mobiliar",
+      "name": "Die Mobiliar",
+      "summary": "Auto-, Hausrat- und Haftpflichtversicherung",
+      "summaryI18n": {"fr": "Assurance auto, ménage et responsabilité civile", "it": "Assicurazione auto, mobilia domestica e RC", "en": "Car, household and liability insurance"},
+      "category": "insurance",
+      "group": "versicherung",
+      "url": "https://www.mobiliar.ch/",
+      "searchTerms": ["mobiliar", "die mobiliar"],
+      "cancellation": {"methods": ["letter"], "url": "https://www.mobiliar.ch/privatpersonen/kontakt-und-services/versicherung-kuendigen", "note": "Am besten eingeschrieben. Es zählt, wann die Mobiliar die Kündigung erhält, nicht der Poststempel.", "noteI18n": {"fr": "De préférence en recommandé. C'est la réception par la Mobilière qui compte, pas le cachet de la poste.", "it": "Preferibilmente per raccomandata. Conta quando la Mobiliare riceve la disdetta, non il timbro postale.", "en": "Preferably by registered post. What counts is when Mobiliar receives the notice, not the postmark."}, "source": "https://www.mobiliar.ch/privatpersonen/kontakt-und-services/versicherung-kuendigen", "checkedOn": "2026-11-20"},
+      "plans": []
+    },
+    {
+      "id": "zurich",
+      "name": "Zurich Versicherung",
+      "summary": "Auto-, Hausrat- und Haftpflichtversicherung",
+      "summaryI18n": {"fr": "Assurance auto, ménage et responsabilité civile", "it": "Assicurazione auto, mobilia domestica e RC", "en": "Car, household and liability insurance"},
+      "category": "insurance",
+      "group": "versicherung",
+      "url": "https://www.zurich.ch/",
+      "searchTerms": ["zurich versicherung", "zurich insurance"],
+      "cancellation": {"methods": ["online", "email", "letter"], "url": "https://www.zurich.ch/de/services/kuendigung", "notice": {"count": 3, "unit": "month", "to": "termEnd", "receiptCounts": true}, "source": "https://www.zurich.ch/de/services/kuendigung", "checkedOn": "2026-11-20"},
+      "plans": []
+    },
+    {
+      "id": "allianz",
+      "name": "Allianz",
+      "summary": "Auto-, Hausrat- und Haftpflichtversicherung",
+      "summaryI18n": {"fr": "Assurance auto, ménage et responsabilité civile", "it": "Assicurazione auto, mobilia domestica e RC", "en": "Car, household and liability insurance"},
+      "category": "insurance",
+      "group": "versicherung",
+      "url": "https://www.allianz.ch/",
+      "searchTerms": ["allianz"],
+      "plans": []
+    },
+    {
+      "id": "helvetia",
+      "name": "Helvetia",
+      "summary": "Auto-, Hausrat- und Haftpflichtversicherung",
+      "summaryI18n": {"fr": "Assurance auto, ménage et responsabilité civile", "it": "Assicurazione auto, mobilia domestica e RC", "en": "Car, household and liability insurance"},
+      "category": "insurance",
+      "group": "versicherung",
+      "url": "https://www.helvetia.com/",
+      "searchTerms": ["helvetia"],
+      "cancellation": {"url": "https://www.helvetia.com/ch/web/de/privatkunden/kontakt/services/kuendigung.html", "note": "Die Frist steht in deiner Police oder den Versicherungsbedingungen. Die Kündigung muss am letzten Tag der Frist eintreffen.", "noteI18n": {"fr": "Le délai figure dans ta police ou dans les conditions d'assurance. La résiliation doit arriver au plus tard le dernier jour du délai.", "it": "Il termine è indicato nella polizza o nelle condizioni d'assicurazione. La disdetta deve arrivare entro l'ultimo giorno del termine.", "en": "The notice period is in your policy or the insurance conditions. Your notice must arrive by the last day of that period."}, "source": "https://www.helvetia.com/ch/web/de/privatkunden/kontakt/services/kuendigung.html", "checkedOn": "2026-11-20"},
+      "plans": []
+    },
+    {
+      "id": "baloise",
+      "name": "Baloise",
+      "summary": "Auto-, Hausrat- und Haftpflichtversicherung",
+      "summaryI18n": {"fr": "Assurance auto, ménage et responsabilité civile", "it": "Assicurazione auto, mobilia domestica e RC", "en": "Car, household and liability insurance"},
+      "category": "insurance",
+      "group": "versicherung",
+      "url": "https://www.baloise.ch/",
+      "searchTerms": ["baloise"],
+      "plans": []
+    },
+    {
+      "id": "generali",
+      "name": "Generali",
+      "summary": "Auto-, Hausrat- und Haftpflichtversicherung",
+      "summaryI18n": {"fr": "Assurance auto, ménage et responsabilité civile", "it": "Assicurazione auto, mobilia domestica e RC", "en": "Car, household and liability insurance"},
+      "category": "insurance",
+      "group": "versicherung",
+      "url": "https://www.generali.ch/",
+      "searchTerms": ["generali"],
+      "cancellation": {"methods": ["online"], "url": "https://www.generali.ch/de/privatpersonen/services/versicherung-kuendigen/sachversicherung-kuendigen", "notice": {"count": 3, "unit": "month", "to": "termEnd", "receiptCounts": true}, "note": "Nur schriftlich, mündliche Kündigungen gelten nicht.", "noteI18n": {"fr": "Uniquement par écrit, les résiliations orales ne sont pas acceptées.", "it": "Solo per iscritto, le disdette orali non sono accettate.", "en": "In writing only, verbal cancellations are not accepted."}, "source": "https://www.generali.ch/de/privatpersonen/services/versicherung-kuendigen/sachversicherung-kuendigen", "checkedOn": "2026-11-20"},
+      "plans": []
+    },
+    {
+      "id": "vaudoise",
+      "name": "Vaudoise",
+      "summary": "Auto-, Hausrat- und Haftpflichtversicherung",
+      "summaryI18n": {"fr": "Assurance auto, ménage et responsabilité civile", "it": "Assicurazione auto, mobilia domestica e RC", "en": "Car, household and liability insurance"},
+      "category": "insurance",
+      "group": "versicherung",
+      "url": "https://www.vaudoise.ch/",
+      "searchTerms": ["vaudoise"],
+      "plans": []
+    },
+    {
+      "id": "smile",
+      "name": "smile.direct",
+      "summary": "Auto-, Hausrat- und Haftpflichtversicherung",
+      "summaryI18n": {"fr": "Assurance auto, ménage et responsabilité civile", "it": "Assicurazione auto, mobilia domestica e RC", "en": "Car, household and liability insurance"},
+      "category": "insurance",
+      "group": "versicherung",
+      "url": "https://www.smile-direct.ch/",
+      "searchTerms": ["smile direct", "smile versicherung"],
+      "plans": []
+    },
+    {
+      "id": "serafe",
+      "name": "Serafe",
+      "summary": "Radio- und Fernsehabgabe für Haushalte",
+      "summaryI18n": {"fr": "Redevance radio-télévision des ménages", "it": "Canone radiotelevisivo per le economie domestiche", "en": "Radio and TV licence fee for households"},
+      "category": "other",
+      "url": "https://www.serafe.ch/",
+      "priceSource": "https://www.serafe.ch/",
+      "searchTerms": ["serafe"],
+      "cancellation": {"possible": false, "note": "Jeder Haushalt schuldet die Abgabe, auch ohne Radio oder Fernseher. Befreit werden kann ein Haushalt, in dem jemand Ergänzungsleistungen zur AHV oder IV bezieht.", "noteI18n": {"fr": "Chaque ménage doit la redevance, même sans radio ni télévision. Peut être exonéré un ménage dans lequel une personne touche des prestations complémentaires à l'AVS ou à l'AI.", "it": "Ogni economia domestica deve il canone, anche senza radio o televisore. Può essere esentata un'economia domestica in cui una persona riceve prestazioni complementari all'AVS o all'AI.", "en": "Every household owes the fee, even without a radio or TV. A household can be exempted if someone in it receives supplementary benefits to AHV or IV."}, "source": "https://www.bakom.admin.ch/de/fragen-und-antworten-faqs", "checkedOn": "2026-11-20"},
+      "plans": [
+        { "id": "serafe-haushalt", "name": "Privathaushalt", "price": "335.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "priceCheckedOn": "2026-11-20", "priceChange": {"price": "312.00", "from": "2027-01-01", "source": "https://www.serafe.ch/", "checkedOn": "2026-11-20"}, "nameI18n": {"fr": "Ménage privé", "it": "Economia domestica privata", "en": "Private household"} }
+      ]
     }
+  ],
+  "events": [
+    { "id": "kvg-kuendigung-2026", "date": "2026-11-30", "kind": "deadline", "groups": ["krankenkasse-grund"], "title": "Grundversicherung kündigen", "titleI18n": {"fr": "Résilier l'assurance de base", "it": "Disdire l'assicurazione di base", "en": "Cancel basic health insurance"}, "text": "Letzter Tag: Die Kündigung auf Ende Jahr muss heute bei der Kasse eintreffen. Der Poststempel zählt nicht.", "textI18n": {"fr": "Dernier jour : la résiliation pour la fin de l'année doit parvenir aujourd'hui à la caisse. Le cachet de la poste ne compte pas.", "it": "Ultimo giorno: la disdetta per fine anno deve arrivare oggi alla cassa. Il timbro postale non conta.", "en": "Last day: your notice for the end of the year must reach the insurer today. The postmark does not count."}, "source": "https://www.priminfo.admin.ch/de/faq" },
+    { "id": "kvg-kuendigung-juni-2027", "date": "2027-03-31", "kind": "deadline", "groups": ["krankenkasse-grund"], "title": "Grundversicherung auf Ende Juni kündigen", "titleI18n": {"fr": "Résilier l'assurance de base pour fin juin", "it": "Disdire l'assicurazione di base per fine giugno", "en": "Cancel basic health insurance for the end of June"}, "text": "Nur im Standardmodell mit Franchise 300: Die Kündigung muss heute bei der Kasse eintreffen.", "textI18n": {"fr": "Seulement avec le modèle standard et la franchise de 300 francs : la résiliation doit parvenir aujourd'hui à la caisse.", "it": "Solo con il modello standard e la franchigia di 300 franchi: la disdetta deve arrivare oggi alla cassa.", "en": "Only with the standard model and the CHF 300 deductible: your notice must reach the insurer today."}, "source": "https://www.priminfo.admin.ch/de/faq" },
+    { "id": "kvg-praemien-2027", "date": "2027-10-31", "kind": "info", "groups": ["krankenkasse-grund"], "title": "Neue Krankenkassenprämie", "titleI18n": {"fr": "Nouvelle prime d'assurance-maladie", "it": "Nuovo premio della cassa malati", "en": "New health insurance premium"}, "text": "Bis heute muss dir deine Kasse die Prämie für das nächste Jahr mitgeteilt haben. Kündigen kannst du bis Ende November.", "textI18n": {"fr": "Ta caisse doit t'avoir communiqué jusqu'à aujourd'hui la prime de l'année prochaine. Tu peux résilier jusqu'à fin novembre.", "it": "Entro oggi la tua cassa deve averti comunicato il premio per l'anno prossimo. Puoi disdire fino a fine novembre.", "en": "By today your insurer must have told you next year's premium. You can cancel until the end of November."}, "source": "https://www.priminfo.admin.ch/de/faq" },
+    { "id": "kvg-kuendigung-2027", "date": "2027-11-30", "kind": "deadline", "groups": ["krankenkasse-grund"], "title": "Grundversicherung kündigen", "titleI18n": {"fr": "Résilier l'assurance de base", "it": "Disdire l'assicurazione di base", "en": "Cancel basic health insurance"}, "text": "Letzter Tag: Die Kündigung auf Ende Jahr muss heute bei der Kasse eintreffen. Der Poststempel zählt nicht.", "textI18n": {"fr": "Dernier jour : la résiliation pour la fin de l'année doit parvenir aujourd'hui à la caisse. Le cachet de la poste ne compte pas.", "it": "Ultimo giorno: la disdetta per fine anno deve arrivare oggi alla cassa. Il timbro postale non conta.", "en": "Last day: your notice for the end of the year must reach the insurer today. The postmark does not count."}, "source": "https://www.priminfo.admin.ch/de/faq" }
   ]
 }

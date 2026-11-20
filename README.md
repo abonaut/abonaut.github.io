@@ -61,7 +61,11 @@ und Anbieter des Abos. Der längste Begriff gewinnt ("coop mobile" vor "coop").
 | Feld | Bedeutung |
 |---|---|
 | `groups` | Gruppen vergleichbarer Dienste. `alternatives`: Anbieter sind austauschbar (Vorschlag "Günstigere Alternative"). `redundantIfMultiple`: mehrere Abos dieser Gruppe sind meistens doppelt. |
-| `providers[].category` | Kategorie in der App: `streaming`, `music`, `mobileInternet`, `software`, `cloud`, `fitness`, `mobility`, `news`, `gaming`, `other` |
+| `providers[].category` | Kategorie in der App: `streaming`, `music`, `mobileInternet`, `software`, `cloud`, `fitness`, `mobility`, `news`, `gaming`, `insurance`, `other`. `insurance` gibt es ab Version 1.1 der App, Version 1.0 zeigt solche Anbieter unter «Sonstiges». |
+| `providers[].plans` | Pläne mit Preis. **Immer vorhanden.** Hängt der Preis vom Vertrag ab (Krankenkassen, Versicherungen), steht `"plans": []`. Nie weglassen: Fehlt das Feld bei einem einzigen Anbieter, verwirft Version 1.0 der App den ganzen Katalog. |
+| `providers[].cancellation`, `groups[].cancellation` | Wie man kündigt, siehe «Kündigung» unten. Bei der Gruppe steht eine Regel, die für alle ihre Anbieter gilt (zum Beispiel die gesetzliche Frist der Grundversicherung). |
+| `plans[].priceChange` | Angekündigter Preis: `price`, `from` (erster Tag, `JJJJ-MM-TT`), `source` (https), `checkedOn`. Ab `from` nimmt die App den neuen Preis von selbst. |
+| `events` | Termine mit festem Datum, siehe «Termine» unten. |
 | `providers[].summaryI18n`, `groups[].nameI18n` | Übersetzungen für `fr`, `it`, `en` (fehlt eine, zeigt die App Deutsch) |
 | `providers[].summary` | kurze Beschreibung für den Tab «Entdecken», höchstens 60 Zeichen |
 | `providers[].partnerURL` | Partnerlink (Affiliate, https). Ist er gesetzt, öffnet «Entdecken» ihn statt `url` und kennzeichnet ihn als Werbung. Erst eintragen, wenn das Partnerprogramm bestätigt ist. |
@@ -71,3 +75,47 @@ und Anbieter des Abos. Der längste Begriff gewinnt ("coop mobile" vor "coop").
 | `plans[].tier` | Pläne mit gleicher Stufe bieten das Gleiche (z. B. `2tb`, `family`). Verglichen wird nur innerhalb derselben Stufe. |
 | `plans[].maxPersons` | wie viele Personen den Plan teilen können (fehlt = 1) |
 | `plans[].title` | optionaler Name für das Abo, sonst "Anbieter Plan" |
+
+## Was Version 1.0 der App verlangt
+
+Version 1.0 liest denselben Katalog. Sie überspringt Felder, die sie nicht kennt, und zeigt eine unbekannte Kategorie als
+«Sonstiges». Sie verwirft aber den **ganzen** Katalog, wenn ein Feld fehlt oder einen anderen Typ hat, das sie verlangt:
+
+* Katalog: `schemaVersion` (bleibt 1), `updatedAt`, `groups`, `providers`
+* Gruppe: `id`, `name`, `alternatives`, `redundantIfMultiple`
+* Anbieter: `id`, `name`, `category`, `searchTerms`, `plans`
+* Plan: `id`, `name`, `price`, `currency`, `interval` mit `unit` und `count`
+
+Deshalb: Neues nur als zusätzliches, optionales Feld. Nichts umbenennen, nichts entfernen, keinen Typ ändern.
+`tools/validate_catalog.py` prüft das (`legacy_issues`), und in der App liest ein Test den Katalog mit einer eingefrorenen
+Kopie des Lesers von 1.0. Einen Anbieter ohne Pläne lässt Version 1.0 einfach weg.
+
+## Kündigung
+
+Block `cancellation` beim Anbieter oder bei der Gruppe. Alles ist freiwillig, aber **nichts ohne Quelle**: Eingetragen wird
+nur, was auf der offiziellen Seite des Anbieters (oder einer Stelle des Bundes) steht und dort selbst gelesen wurde.
+Ohne `source` und `checkedOn` zeigt die App den Block nicht. Was sich nicht belegen lässt, bleibt weg.
+
+| Feld | Bedeutung |
+|---|---|
+| `possible` | `false`, wenn sich der Vertrag nicht kündigen lässt (Serafe). Sonst weglassen. |
+| `methods` | Wege, die der Anbieter für die Kündigung nennt, der empfohlene zuerst: `online`, `app`, `phone`, `chat`, `email`, `letter`, `counter` |
+| `address` | Postadresse für den Brief, eine Zeile pro Eintrag (2 bis 6). Nur wenn der Anbieter sie ausdrücklich für Kündigungen nennt, nicht die allgemeine Firmenadresse. |
+| `email`, `phone` | Nur wenn der Anbieter Kündigungen auf diesem Weg annimmt |
+| `url` | Seite, auf der man kündigt oder auf der die Kündigung erklärt ist (https) |
+| `notice` | Frist: `count` und `unit` (`day`, `week`, `month`, `year`), dazu `to`: `periodEnd` (Ende der bezahlten Periode), `monthEnd`, `yearEnd` (Ende Kalenderjahr), `termEnd` (Ende der Vertragsdauer), `anyDay`. `count` 0 = jederzeit. `receiptCounts: true`, wenn ausdrücklich der Eingang zählt. |
+| `minimumTerm` | Mindestvertragsdauer, `count` und `unit` |
+| `note`, `noteI18n` | Kurzer Hinweis für das, was nicht in die Felder passt, höchstens 260 Zeichen. Mit `note` sind alle drei Übersetzungen Pflicht. |
+| `source`, `checkedOn` | Seite, die die Angaben belegt (https), und Datum der Prüfung. Pflicht. |
+
+Krankenkassen stehen zweimal im Katalog: `<kasse>-grund` (Gruppe `krankenkasse-grund`) und `<kasse>-zusatz` (Gruppe
+`krankenkasse-zusatz`). Der blosse Name der Kasse ist Suchbegriff der Grundversicherung. Die gesetzliche Frist der
+Grundversicherung steht einmal bei der Gruppe.
+
+## Termine
+
+`events` ist eine Liste von Terminen mit festem Datum, die Abos einer Gruppe oder einzelner Anbieter betreffen:
+`id`, `date` (`JJJJ-MM-TT`), `kind` (`deadline` = bis dann muss etwas erledigt sein, `info` = Hinweis), `groups` und/oder
+`providers`, `title` und `text` mit `titleI18n` und `textI18n` (alle drei Sprachen sind Pflicht), `source` (https).
+Jedes Jahr die Termine des nächsten Jahres nachtragen, sobald eine Quelle sie belegt. Vergangene Termine dürfen bleiben,
+die App zeigt nur künftige.
