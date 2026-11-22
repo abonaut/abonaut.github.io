@@ -67,6 +67,7 @@ und Anbieter des Abos. Der längste Begriff gewinnt ("coop mobile" vor "coop").
 | `plans[].priceChange` | Angekündigter Preis: `price`, `from` (erster Tag, `JJJJ-MM-TT`), `source` (https), `checkedOn`. Ab `from` nimmt die App den neuen Preis von selbst. |
 | `events` | Termine mit festem Datum, siehe «Termine» unten. |
 | `providers[].summaryI18n`, `groups[].nameI18n` | Übersetzungen für `fr`, `it`, `en` (fehlt eine, zeigt die App Deutsch) |
+| `providers[].nameI18n` | Übersetzter Anbietername, nur wo der Name mehr als eine Marke ist («CSS Grundversicherung» → «CSS assurance de base»). Ab Version 1.1 der App, Version 1.0 überspringt das Feld. Die Zuordnung eigener Abos läuft weiter über `searchTerms` und den deutschen `name`. |
 | `providers[].summary` | kurze Beschreibung für den Tab «Entdecken», höchstens 60 Zeichen |
 | `providers[].partnerURL` | Partnerlink (Affiliate, https). Ist er gesetzt, öffnet «Entdecken» ihn statt `url` und kennzeichnet ihn als Werbung. Erst eintragen, wenn das Partnerprogramm bestätigt ist. |
 | `providers[].priceSource` | Seite, auf der die geprüften Preise stehen (Pflicht, sobald ein Plan geprüft ist) |

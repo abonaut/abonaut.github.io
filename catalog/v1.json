@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-20",
+  "updatedAt": "2026-11-22",
   "exchangeRates": {
     "date": "2026-11-20",
     "ratesToCHF": {
@@ -644,6 +644,7 @@
     {
       "id": "css-grund",
       "name": "CSS Grundversicherung",
+      "nameI18n": {"fr": "CSS assurance de base", "it": "CSS assicurazione di base", "en": "CSS basic insurance"},
       "summary": "Obligatorische Krankenpflegeversicherung",
       "summaryI18n": {"fr": "Assurance obligatoire des soins", "it": "Assicurazione obbligatoria delle cure", "en": "Compulsory basic health insurance"},
       "category": "insurance",
@@ -656,6 +657,7 @@
     {
       "id": "css-zusatz",
       "name": "CSS Zusatzversicherung",
+      "nameI18n": {"fr": "CSS assurances complémentaires", "it": "CSS assicurazioni complementari", "en": "CSS supplementary insurance"},
       "summary": "Freiwillige Zusatzversicherungen",
       "summaryI18n": {"fr": "Assurances complémentaires facultatives", "it": "Assicurazioni complementari facoltative", "en": "Optional supplementary insurance"},
       "category": "insurance",
@@ -667,6 +669,7 @@
     {
       "id": "helsana-grund",
       "name": "Helsana Grundversicherung",
+      "nameI18n": {"fr": "Helsana assurance de base", "it": "Helsana assicurazione di base", "en": "Helsana basic insurance"},
       "summary": "Obligatorische Krankenpflegeversicherung",
       "summaryI18n": {"fr": "Assurance obligatoire des soins", "it": "Assicurazione obbligatoria delle cure", "en": "Compulsory basic health insurance"},
       "category": "insurance",
@@ -679,6 +682,7 @@
     {
       "id": "helsana-zusatz",
       "name": "Helsana Zusatzversicherung",
+      "nameI18n": {"fr": "Helsana assurances complémentaires", "it": "Helsana assicurazioni complementari", "en": "Helsana supplementary insurance"},
       "summary": "Freiwillige Zusatzversicherungen",
       "summaryI18n": {"fr": "Assurances complémentaires facultatives", "it": "Assicurazioni complementari facoltative", "en": "Optional supplementary insurance"},
       "category": "insurance",
@@ -691,6 +695,7 @@
     {
       "id": "swica-grund",
       "name": "SWICA Grundversicherung",
+      "nameI18n": {"fr": "SWICA assurance de base", "it": "SWICA assicurazione di base", "en": "SWICA basic insurance"},
       "summary": "Obligatorische Krankenpflegeversicherung",
       "summaryI18n": {"fr": "Assurance obligatoire des soins", "it": "Assicurazione obbligatoria delle cure", "en": "Compulsory basic health insurance"},
       "category": "insurance",
@@ -703,6 +708,7 @@
     {
       "id": "swica-zusatz",
       "name": "SWICA Zusatzversicherung",
+      "nameI18n": {"fr": "SWICA assurances complémentaires", "it": "SWICA assicurazioni complementari", "en": "SWICA supplementary insurance"},
       "summary": "Freiwillige Zusatzversicherungen",
       "summaryI18n": {"fr": "Assurances complémentaires facultatives", "it": "Assicurazioni complementari facoltative", "en": "Optional supplementary insurance"},
       "category": "insurance",
@@ -715,6 +721,7 @@
     {
       "id": "groupe-mutuel-grund",
       "name": "Groupe Mutuel Grundversicherung",
+      "nameI18n": {"fr": "Groupe Mutuel assurance de base", "it": "Groupe Mutuel assicurazione di base", "en": "Groupe Mutuel basic insurance"},
       "summary": "Obligatorische Krankenpflegeversicherung",
       "summaryI18n": {"fr": "Assurance obligatoire des soins", "it": "Assicurazione obbligatoria delle cure", "en": "Compulsory basic health insurance"},
       "category": "insurance",
@@ -727,6 +734,7 @@
     {
       "id": "groupe-mutuel-zusatz",
       "name": "Groupe Mutuel Zusatzversicherung",
+      "nameI18n": {"fr": "Groupe Mutuel assurances complémentaires", "it": "Groupe Mutuel assicurazioni complementari", "en": "Groupe Mutuel supplementary insurance"},
       "summary": "Freiwillige Zusatzversicherungen",
       "summaryI18n": {"fr": "Assurances complémentaires facultatives", "it": "Assicurazioni complementari facoltative", "en": "Optional supplementary insurance"},
       "category": "insurance",
@@ -738,6 +746,7 @@
     {
       "id": "visana-grund",
       "name": "Visana Grundversicherung",
+      "nameI18n": {"fr": "Visana assurance de base", "it": "Visana assicurazione di base", "en": "Visana basic insurance"},
       "summary": "Obligatorische Krankenpflegeversicherung",
       "summaryI18n": {"fr": "Assurance obligatoire des soins", "it": "Assicurazione obbligatoria delle cure", "en": "Compulsory basic health insurance"},
       "category": "insurance",
@@ -750,6 +759,7 @@
     {
       "id": "visana-zusatz",
       "name": "Visana Zusatzversicherung",
+      "nameI18n": {"fr": "Visana assurances complémentaires", "it": "Visana assicurazioni complementari", "en": "Visana supplementary insurance"},
       "summary": "Freiwillige Zusatzversicherungen",
       "summaryI18n": {"fr": "Assurances complémentaires facultatives", "it": "Assicurazioni complementari facoltative", "en": "Optional supplementary insurance"},
       "category": "insurance",
@@ -762,6 +772,7 @@
     {
       "id": "sanitas-grund",
       "name": "Sanitas Grundversicherung",
+      "nameI18n": {"fr": "Sanitas assurance de base", "it": "Sanitas assicurazione di base", "en": "Sanitas basic insurance"},
       "summary": "Obligatorische Krankenpflegeversicherung",
       "summaryI18n": {"fr": "Assurance obligatoire des soins", "it": "Assicurazione obbligatoria delle cure", "en": "Compulsory basic health insurance"},
       "category": "insurance",
@@ -774,6 +785,7 @@
     {
       "id": "sanitas-zusatz",
       "name": "Sanitas Zusatzversicherung",
+      "nameI18n": {"fr": "Sanitas assurances complémentaires", "it": "Sanitas assicurazioni complementari", "en": "Sanitas supplementary insurance"},
       "summary": "Freiwillige Zusatzversicherungen",
       "summaryI18n": {"fr": "Assurances complémentaires facultatives", "it": "Assicurazioni complementari facoltative", "en": "Optional supplementary insurance"},
       "category": "insurance",
@@ -786,6 +798,7 @@
     {
       "id": "concordia-grund",
       "name": "Concordia Grundversicherung",
+      "nameI18n": {"fr": "Concordia assurance de base", "it": "Concordia assicurazione di base", "en": "Concordia basic insurance"},
       "summary": "Obligatorische Krankenpflegeversicherung",
       "summaryI18n": {"fr": "Assurance obligatoire des soins", "it": "Assicurazione obbligatoria delle cure", "en": "Compulsory basic health insurance"},
       "category": "insurance",
@@ -798,6 +811,7 @@
     {
       "id": "concordia-zusatz",
       "name": "Concordia Zusatzversicherung",
+      "nameI18n": {"fr": "Concordia assurances complémentaires", "it": "Concordia assicurazioni complementari", "en": "Concordia supplementary insurance"},
       "summary": "Freiwillige Zusatzversicherungen",
       "summaryI18n": {"fr": "Assurances complémentaires facultatives", "it": "Assicurazioni complementari facoltative", "en": "Optional supplementary insurance"},
       "category": "insurance",
@@ -810,6 +824,7 @@
     {
       "id": "assura-grund",
       "name": "Assura Grundversicherung",
+      "nameI18n": {"fr": "Assura assurance de base", "it": "Assura assicurazione di base", "en": "Assura basic insurance"},
       "summary": "Obligatorische Krankenpflegeversicherung",
       "summaryI18n": {"fr": "Assurance obligatoire des soins", "it": "Assicurazione obbligatoria delle cure", "en": "Compulsory basic health insurance"},
       "category": "insurance",
@@ -821,6 +836,7 @@
     {
       "id": "assura-zusatz",
       "name": "Assura Zusatzversicherung",
+      "nameI18n": {"fr": "Assura assurances complémentaires", "it": "Assura assicurazioni complementari", "en": "Assura supplementary insurance"},
       "summary": "Freiwillige Zusatzversicherungen",
       "summaryI18n": {"fr": "Assurances complémentaires facultatives", "it": "Assicurazioni complementari facoltative", "en": "Optional supplementary insurance"},
       "category": "insurance",
@@ -833,6 +849,7 @@
     {
       "id": "kpt-grund",
       "name": "KPT Grundversicherung",
+      "nameI18n": {"fr": "KPT assurance de base", "it": "KPT assicurazione di base", "en": "KPT basic insurance"},
       "summary": "Obligatorische Krankenpflegeversicherung",
       "summaryI18n": {"fr": "Assurance obligatoire des soins", "it": "Assicurazione obbligatoria delle cure", "en": "Compulsory basic health insurance"},
       "category": "insurance",
@@ -844,6 +861,7 @@
     {
       "id": "kpt-zusatz",
       "name": "KPT Zusatzversicherung",
+      "nameI18n": {"fr": "KPT assurances complémentaires", "it": "KPT assicurazioni complementari", "en": "KPT supplementary insurance"},
       "summary": "Freiwillige Zusatzversicherungen",
       "summaryI18n": {"fr": "Assurances complémentaires facultatives", "it": "Assicurazioni complementari facoltative", "en": "Optional supplementary insurance"},
       "category": "insurance",
@@ -855,6 +873,7 @@
     {
       "id": "sympany-grund",
       "name": "Sympany Grundversicherung",
+      "nameI18n": {"fr": "Sympany assurance de base", "it": "Sympany assicurazione di base", "en": "Sympany basic insurance"},
       "summary": "Obligatorische Krankenpflegeversicherung",
       "summaryI18n": {"fr": "Assurance obligatoire des soins", "it": "Assicurazione obbligatoria delle cure", "en": "Compulsory basic health insurance"},
       "category": "insurance",
@@ -867,6 +886,7 @@
     {
       "id": "sympany-zusatz",
       "name": "Sympany Zusatzversicherung",
+      "nameI18n": {"fr": "Sympany assurances complémentaires", "it": "Sympany assicurazioni complementari", "en": "Sympany supplementary insurance"},
       "summary": "Freiwillige Zusatzversicherungen",
       "summaryI18n": {"fr": "Assurances complémentaires facultatives", "it": "Assicurazioni complementari facoltative", "en": "Optional supplementary insurance"},
       "category": "insurance",
@@ -879,6 +899,7 @@
     {
       "id": "atupri-grund",
       "name": "Atupri Grundversicherung",
+      "nameI18n": {"fr": "Atupri assurance de base", "it": "Atupri assicurazione di base", "en": "Atupri basic insurance"},
       "summary": "Obligatorische Krankenpflegeversicherung",
       "summaryI18n": {"fr": "Assurance obligatoire des soins", "it": "Assicurazione obbligatoria delle cure", "en": "Compulsory basic health insurance"},
       "category": "insurance",
@@ -891,6 +912,7 @@
     {
       "id": "atupri-zusatz",
       "name": "Atupri Zusatzversicherung",
+      "nameI18n": {"fr": "Atupri assurances complémentaires", "it": "Atupri assicurazioni complementari", "en": "Atupri supplementary insurance"},
       "summary": "Freiwillige Zusatzversicherungen",
       "summaryI18n": {"fr": "Assurances complémentaires facultatives", "it": "Assicurazioni complementari facoltative", "en": "Optional supplementary insurance"},
       "category": "insurance",
@@ -903,6 +925,7 @@
     {
       "id": "oekk-grund",
       "name": "ÖKK Grundversicherung",
+      "nameI18n": {"fr": "ÖKK assurance de base", "it": "ÖKK assicurazione di base", "en": "ÖKK basic insurance"},
       "summary": "Obligatorische Krankenpflegeversicherung",
       "summaryI18n": {"fr": "Assurance obligatoire des soins", "it": "Assicurazione obbligatoria delle cure", "en": "Compulsory basic health insurance"},
       "category": "insurance",
@@ -915,6 +938,7 @@
     {
       "id": "oekk-zusatz",
       "name": "ÖKK Zusatzversicherung",
+      "nameI18n": {"fr": "ÖKK assurances complémentaires", "it": "ÖKK assicurazioni complementari", "en": "ÖKK supplementary insurance"},
       "summary": "Freiwillige Zusatzversicherungen",
       "summaryI18n": {"fr": "Assurances complémentaires facultatives", "it": "Assicurazioni complementari facoltative", "en": "Optional supplementary insurance"},
       "category": "insurance",
@@ -927,6 +951,7 @@
     {
       "id": "egk-grund",
       "name": "EGK Grundversicherung",
+      "nameI18n": {"fr": "EGK assurance de base", "it": "EGK assicurazione di base", "en": "EGK basic insurance"},
       "summary": "Obligatorische Krankenpflegeversicherung",
       "summaryI18n": {"fr": "Assurance obligatoire des soins", "it": "Assicurazione obbligatoria delle cure", "en": "Compulsory basic health insurance"},
       "category": "insurance",
@@ -938,6 +963,7 @@
     {
       "id": "egk-zusatz",
       "name": "EGK Zusatzversicherung",
+      "nameI18n": {"fr": "EGK assurances complémentaires", "it": "EGK assicurazioni complementari", "en": "EGK supplementary insurance"},
       "summary": "Freiwillige Zusatzversicherungen",
       "summaryI18n": {"fr": "Assurances complémentaires facultatives", "it": "Assicurazioni complementari facoltative", "en": "Optional supplementary insurance"},
       "category": "insurance",
@@ -961,6 +987,7 @@
     {
       "id": "mobiliar",
       "name": "Die Mobiliar",
+      "nameI18n": {"fr": "La Mobilière", "it": "La Mobiliare"},
       "summary": "Auto-, Hausrat- und Haftpflichtversicherung",
       "summaryI18n": {"fr": "Assurance auto, ménage et responsabilité civile", "it": "Assicurazione auto, mobilia domestica e RC", "en": "Car, household and liability insurance"},
       "category": "insurance",
@@ -973,6 +1000,7 @@
     {
       "id": "zurich",
       "name": "Zurich Versicherung",
+      "nameI18n": {"fr": "Zurich", "it": "Zurich", "en": "Zurich"},
       "summary": "Auto-, Hausrat- und Haftpflichtversicherung",
       "summaryI18n": {"fr": "Assurance auto, ménage et responsabilité civile", "it": "Assicurazione auto, mobilia domestica e RC", "en": "Car, household and liability insurance"},
       "category": "insurance",

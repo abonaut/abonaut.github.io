@@ -124,6 +124,7 @@ def legacy_issues(catalog):
             need(owner, provider, key, str, optional=True)
         need(owner, provider, "popular", bool, optional=True)
         string_map(owner, provider, "summaryI18n")
+        string_map(owner, provider, "nameI18n")
         if isinstance(provider.get("searchTerms"), list) and not all(isinstance(t, str) for t in provider["searchTerms"]):
             issues.append(f"{owner}: searchTerms muss Texte enthalten (Version 1.0 verwirft sonst den ganzen Katalog)")
         for plan in provider.get("plans") if isinstance(provider.get("plans"), list) else []:
@@ -327,7 +328,7 @@ def validate(catalog):
             issues.append(f"{pid}: unbekannte Kategorie {provider.get('category')}")
         if provider.get("group") is not None and provider["group"] not in group_ids:
             issues.append(f"{pid}: unbekannte Gruppe {provider['group']}")
-        for key in ("summaryI18n",):
+        for key in ("summaryI18n", "nameI18n"):
             translations = provider.get(key)
             if translations is not None and not translations_ok(translations, limit=70):
                 issues.append(f"{pid}: {key} braucht Texte für fr, it oder en (höchstens 70 Zeichen)")
