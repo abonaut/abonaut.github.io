@@ -75,6 +75,8 @@ und Anbieter des Abos. Der längste Begriff gewinnt ("coop mobile" vor "coop").
 | `providers[].popular` | erscheint in der Schnellauswahl beim Erfassen |
 | `plans[].tier` | Pläne mit gleicher Stufe bieten das Gleiche (z. B. `2tb`, `family`). Verglichen wird nur innerhalb derselben Stufe. |
 | `plans[].maxPersons` | wie viele Personen den Plan teilen können (fehlt = 1) |
+| `plans[].restricted` | `true`, wenn der Plan nur unter einer Bedingung gilt (Alter, Verlängerung, zum Beispiel «Halbtax Jugend» oder «Halbtax zum Treuepreis»). Die App schlägt ihn dann nie als Sparidee vor. Braucht eine eigene Stufe (`tier`), die kein anderer Plan des Anbieters hat: Version 1.0 kennt das Feld nicht und vergleicht nur innerhalb derselben Stufe. |
+| Anbieter ohne Pläne | Wo der Preis von Vertrag, Zonen oder Alter abhängt (Krankenkassen, Versicherungen, Tarifverbünde), steht `"plans": []`. Den Preis trägt die Nutzerin beim Erfassen selbst ein. |
 | `plans[].title` | optionaler Name für das Abo, sonst "Anbieter Plan" |
 
 ## Was Version 1.0 der App verlangt

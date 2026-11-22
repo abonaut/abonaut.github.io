@@ -143,6 +143,7 @@ def legacy_issues(catalog):
             for key in ("title", "tier"):
                 need(plan_owner, plan, key, str, optional=True)
             need(plan_owner, plan, "maxPersons", int, optional=True)
+            need(plan_owner, plan, "restricted", bool, optional=True)
             need(plan_owner, plan, "priceCheckedOn", str, optional=True)
             string_map(plan_owner, plan, "nameI18n")
             string_map(plan_owner, plan, "titleI18n")
@@ -378,6 +379,15 @@ def validate(catalog):
             persons = plan.get("maxPersons")
             if persons is not None and (not isinstance(persons, int) or persons < 1):
                 issues.append(f"{plid}: maxPersons muss eine ganze Zahl ab 1 sein")
+            if "restricted" in plan:
+                # Nur unter einer Bedingung (Alter, Verlängerung): nie als Sparidee. Braucht eine eigene Stufe, sonst
+                # schlägt Version 1.0 ihn als «günstigeren Plan» derselben Stufe vor.
+                if plan["restricted"] is not True:
+                    issues.append(f"{plid}: restricted nur als true, sonst weglassen")
+                if not plan.get("tier"):
+                    issues.append(f"{plid}: restricted braucht eine eigene Stufe (tier)")
+                elif sum(1 for other in plans if other.get("tier") == plan["tier"]) > 1:
+                    issues.append(f"{plid}: restricted braucht eine Stufe, die kein anderer Plan hat")
             if "priceChange" in plan:
                 issues += validate_price_change(plan["priceChange"], plid)
     issues += validate_events(catalog, group_ids, provider_ids)

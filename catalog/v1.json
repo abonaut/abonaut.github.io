@@ -579,6 +579,40 @@
       ]
     },
     {
+      "id": "berner-zeitung",
+      "name": "Berner Zeitung",
+      "summary": "Tageszeitung für den Kanton Bern (BZ)",
+      "summaryI18n": {"fr": "Quotidien du canton de Berne (BZ)", "it": "Quotidiano del Cantone di Berna (BZ)", "en": "Daily newspaper for the Canton of Bern (BZ)"},
+      "category": "news",
+      "group": "news",
+      "url": "https://www.bernerzeitung.ch/",
+      "priceSource": "https://abo-digital.bernerzeitung.ch/checkout/classic",
+      "searchTerms": ["berner zeitung", "bernerzeitung"],
+      "plans": [
+        { "id": "berner-zeitung-basic-4w", "name": "Basic", "title": "Berner Zeitung Basic", "price": "17.90", "currency": "CHF", "interval": { "unit": "week", "count": 4 }, "tier": "basic", "priceCheckedOn": "2026-11-22" },
+        { "id": "berner-zeitung-basic-year", "name": "Basic, Jahresabo", "title": "Berner Zeitung Basic", "price": "179.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "tier": "basic", "priceCheckedOn": "2026-11-22", "nameI18n": {"fr": "Basic, annuel", "it": "Basic, annuale", "en": "Basic, yearly"} },
+        { "id": "berner-zeitung-regular-4w", "name": "Regular", "title": "Berner Zeitung Regular", "price": "26.90", "currency": "CHF", "interval": { "unit": "week", "count": 4 }, "tier": "regular", "priceCheckedOn": "2026-11-22" },
+        { "id": "berner-zeitung-regular-year", "name": "Regular, Jahresabo", "title": "Berner Zeitung Regular", "price": "269.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "tier": "regular", "priceCheckedOn": "2026-11-22", "nameI18n": {"fr": "Regular, annuel", "it": "Regular, annuale", "en": "Regular, yearly"} },
+        { "id": "berner-zeitung-premium-4w", "name": "Premium", "title": "Berner Zeitung Premium", "price": "39.90", "currency": "CHF", "interval": { "unit": "week", "count": 4 }, "tier": "premium", "maxPersons": 2, "priceCheckedOn": "2026-11-22" },
+        { "id": "berner-zeitung-premium-year", "name": "Premium, Jahresabo", "title": "Berner Zeitung Premium", "price": "349.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "tier": "premium", "maxPersons": 2, "priceCheckedOn": "2026-11-22", "nameI18n": {"fr": "Premium, annuel", "it": "Premium, annuale", "en": "Premium, yearly"} }
+      ]
+    },
+    {
+      "id": "bz-basel",
+      "name": "bz Basel",
+      "summary": "Zeitung für die Region Basel, von CH Media",
+      "summaryI18n": {"fr": "Journal de la région de Bâle, de CH Media", "it": "Giornale della regione di Basilea, di CH Media", "en": "Newspaper for the Basel region, by CH Media"},
+      "category": "news",
+      "group": "news",
+      "url": "https://www.bzbasel.ch/",
+      "priceSource": "https://abo.bzbasel.ch/BZ",
+      "searchTerms": ["bz basel", "bzbasel"],
+      "cancellation": {"methods": ["phone"], "phone": "058 200 55 55", "notice": {"count": 0, "unit": "day", "to": "periodEnd"}, "note": "Beim Aboservice von CH Media, jederzeit auf das Ende der laufenden Laufzeit.", "noteI18n": {"fr": "Auprès du service des abonnements de CH Media, à tout moment pour la fin de la période en cours.", "it": "Presso il servizio abbonamenti di CH Media, in qualsiasi momento per la fine del periodo in corso.", "en": "With the CH Media subscription service, at any time for the end of the current term."}, "source": "https://abo.bzbasel.ch/BZ", "checkedOn": "2026-11-22"},
+      "plans": [
+        { "id": "bz-basel-digital-month", "name": "Digital", "title": "bz Basel Digital", "price": "29.90", "currency": "CHF", "interval": { "unit": "month", "count": 1 }, "tier": "digital", "priceCheckedOn": "2026-11-22" }
+      ]
+    },
+    {
       "id": "sbb",
       "name": "SBB",
       "summary": "Halbtax und Generalabonnement",
@@ -591,10 +625,180 @@
       "popular": true,
       "cancellation": {"methods": ["online"], "url": "https://www.swisspass.ch/", "notice": {"count": 1, "unit": "month", "to": "termEnd"}, "note": "Im Kundenkonto auf swisspass.ch unter «Abos». Ohne Kündigung verlängern sich GA und Halbtax automatisch.", "noteI18n": {"fr": "Dans le compte client sur swisspass.ch, sous «Abonnements». Sans résiliation, l'AG et le demi-tarif se renouvellent automatiquement.", "it": "Nel conto cliente su swisspass.ch, alla voce «Abbonamenti». Senza disdetta, l'AG e il metà-prezzo si rinnovano automaticamente.", "en": "In your customer account at swisspass.ch under “Travelcards”. Without notice, the GA and the Half Fare travelcard renew automatically."}, "source": "https://www.sbb.ch/de/support/meine-abos/ga-kuendigen.html", "checkedOn": "2026-11-20"},
       "plans": [
-        { "id": "sbb-halbtax", "name": "Halbtax", "title": "Halbtax", "price": "190.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "tier": "halbtax", "priceCheckedOn": "2026-11-20", "priceChange": {"price": "195.00", "from": "2026-12-13", "source": "https://www.sbb.ch/en/offers/half-fare-travelcard", "checkedOn": "2026-11-20"}, "nameI18n": {"fr": "Demi-tarif", "it": "Metà-prezzo", "en": "Half Fare travelcard"}, "titleI18n": {"fr": "Demi-tarif", "it": "Metà-prezzo", "en": "Half Fare travelcard"} },
+        { "id": "sbb-halbtax", "name": "Halbtax", "title": "Halbtax", "price": "190.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "tier": "halbtax", "priceCheckedOn": "2026-11-22", "priceChange": {"price": "195.00", "from": "2026-12-13", "source": "https://www.sbb.ch/de/angebote/halbtax", "checkedOn": "2026-11-22"}, "nameI18n": {"fr": "Demi-tarif", "it": "Metà-prezzo", "en": "Half Fare travelcard"}, "titleI18n": {"fr": "Demi-tarif", "it": "Metà-prezzo", "en": "Half Fare travelcard"} },
+        { "id": "sbb-halbtax-treue", "name": "Halbtax zum Treuepreis", "title": "Halbtax", "price": "170.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "tier": "halbtax-treue", "restricted": true, "priceCheckedOn": "2026-11-22", "priceChange": {"price": "175.00", "from": "2026-12-13", "source": "https://www.sbb.ch/de/angebote/halbtax", "checkedOn": "2026-11-22"}, "nameI18n": {"fr": "Demi-tarif au tarif fidélité", "it": "Metà-prezzo con sconto fedeltà", "en": "Half Fare travelcard at the loyalty price"}, "titleI18n": {"fr": "Demi-tarif", "it": "Metà-prezzo", "en": "Half Fare travelcard"} },
+        { "id": "sbb-halbtax-jugend", "name": "Halbtax Jugend", "title": "Halbtax", "price": "120.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "tier": "halbtax-jugend", "restricted": true, "priceCheckedOn": "2026-11-22", "nameI18n": {"fr": "Demi-tarif pour les jeunes", "it": "Metà-prezzo per giovani", "en": "Half Fare travelcard for young people"}, "titleI18n": {"fr": "Demi-tarif", "it": "Metà-prezzo", "en": "Half Fare travelcard"} },
+        { "id": "sbb-halbtax-jugend-treue", "name": "Halbtax Jugend zum Treuepreis", "title": "Halbtax", "price": "100.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "tier": "halbtax-jugend-treue", "restricted": true, "priceCheckedOn": "2026-11-22", "nameI18n": {"fr": "Demi-tarif pour les jeunes au tarif fidélité", "it": "Metà-prezzo per giovani con sconto fedeltà", "en": "Half Fare travelcard for young people at the loyalty price"}, "titleI18n": {"fr": "Demi-tarif", "it": "Metà-prezzo", "en": "Half Fare travelcard"} },
         { "id": "sbb-ga-2", "name": "GA 2. Klasse", "title": "GA 2. Klasse", "price": "3995.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "tier": "ga2", "priceCheckedOn": "2026-11-20", "priceChange": {"price": "4095.00", "from": "2026-12-13", "source": "https://www.sbb.ch/en/offers/ga-travelcard-adults", "checkedOn": "2026-11-20"}, "nameI18n": {"fr": "AG 2e classe", "it": "AG 2a classe", "en": "GA travelcard 2nd class"}, "titleI18n": {"fr": "AG 2e classe", "it": "AG 2a classe", "en": "GA travelcard 2nd class"} },
         { "id": "sbb-ga-1", "name": "GA 1. Klasse", "title": "GA 1. Klasse", "price": "6520.00", "currency": "CHF", "interval": { "unit": "year", "count": 1 }, "tier": "ga1", "priceCheckedOn": "2026-11-20", "priceChange": {"price": "6770.00", "from": "2026-12-13", "source": "https://www.sbb.ch/en/offers/ga-travelcard-adults", "checkedOn": "2026-11-20"}, "nameI18n": {"fr": "AG 1re classe", "it": "AG 1a classe", "en": "GA travelcard 1st class"}, "titleI18n": {"fr": "AG 1re classe", "it": "AG 1a classe", "en": "GA travelcard 1st class"} }
       ]
+    },
+    {
+      "id": "zvv",
+      "name": "ZVV",
+      "summary": "Verbund-Abos im Kanton Zürich",
+      "summaryI18n": {"fr": "Abonnements de la communauté tarifaire, canton de Zurich", "it": "Abbonamenti della comunità tariffale, Cantone di Zurigo", "en": "Fare network passes, Canton of Zurich"},
+      "category": "mobility",
+      "group": "oev",
+      "url": "https://www.sbb.ch/de/angebote/zuercher-verkehrsverbund",
+      "searchTerms": ["zvv", "zürcher verkehrsverbund"],
+      "plans": []
+    },
+    {
+      "id": "z-pass",
+      "name": "Z-Pass",
+      "summary": "Verbund-Abos im Grossraum Zürich, über den ZVV hinaus",
+      "summaryI18n": {"fr": "Abonnements pour le Grand Zurich, au-delà du ZVV", "it": "Abbonamenti per la Grande Zurigo, oltre lo ZVV", "en": "Passes for Greater Zurich, beyond the ZVV"},
+      "category": "mobility",
+      "group": "oev",
+      "url": "https://www.sbb.ch/de/angebote/tarifverbund-z-pass",
+      "searchTerms": ["z-pass"],
+      "plans": []
+    },
+    {
+      "id": "ostwind",
+      "name": "Ostwind",
+      "summary": "Verbund-Abos in der Ostschweiz und in Liechtenstein",
+      "summaryI18n": {"fr": "Communauté tarifaire, Suisse orientale et Liechtenstein", "it": "Comunità tariffale, Svizzera orientale e Liechtenstein", "en": "Fare network passes, Eastern Switzerland and Liechtenstein"},
+      "category": "mobility",
+      "group": "oev",
+      "url": "https://www.sbb.ch/de/angebote/tarifverbund-ostwind",
+      "searchTerms": ["ostwind"],
+      "plans": []
+    },
+    {
+      "id": "a-welle",
+      "name": "A-Welle",
+      "summary": "Verbund-Abos im Aargau und in der Region Olten",
+      "summaryI18n": {"fr": "Abonnements de la communauté tarifaire, Argovie et région d'Olten", "it": "Abbonamenti della comunità tariffale, Argovia e regione di Olten", "en": "Fare network passes, Aargau and the Olten region"},
+      "category": "mobility",
+      "group": "oev",
+      "url": "https://www.sbb.ch/de/angebote/tarifverbund-a-welle",
+      "searchTerms": ["a-welle"],
+      "plans": []
+    },
+    {
+      "id": "libero",
+      "name": "Libero",
+      "summary": "Verbund-Abos in den Kantonen Bern und Solothurn",
+      "summaryI18n": {"fr": "Abonnements de la communauté tarifaire, cantons de Berne et Soleure", "it": "Abbonamenti della comunità tariffale, Cantoni di Berna e Soletta", "en": "Fare network passes, Cantons of Bern and Solothurn"},
+      "category": "mobility",
+      "group": "oev",
+      "url": "https://www.sbb.ch/de/angebote/tarifverbund-libero",
+      "searchTerms": ["libero"],
+      "plans": []
+    },
+    {
+      "id": "passepartout",
+      "name": "Passepartout",
+      "summary": "Verbund-Abos in Luzern, Obwalden und Nidwalden",
+      "summaryI18n": {"fr": "Abonnements de la communauté tarifaire, Lucerne, Obwald et Nidwald", "it": "Abbonamenti della comunità tariffale, Lucerna, Obvaldo e Nidvaldo", "en": "Fare network passes, Lucerne, Obwalden and Nidwalden"},
+      "category": "mobility",
+      "group": "oev",
+      "url": "https://www.sbb.ch/de/angebote/tarifverbund-passepartout",
+      "searchTerms": ["passepartout"],
+      "plans": []
+    },
+    {
+      "id": "tnw",
+      "name": "TNW",
+      "summary": "Verbund-Abos (U-Abo) in der Region Basel",
+      "summaryI18n": {"fr": "Abonnements de la communauté (U-Abo), région de Bâle", "it": "Abbonamenti della comunità (U-Abo), regione di Basilea", "en": "Fare network passes (U-Abo), Basel region"},
+      "category": "mobility",
+      "group": "oev",
+      "url": "https://www.sbb.ch/de/angebote/tarifverbund-nordwestschweiz",
+      "searchTerms": ["tnw", "u-abo"],
+      "plans": []
+    },
+    {
+      "id": "tv-zug",
+      "name": "Tarifverbund Zug",
+      "nameI18n": {"fr": "Communauté tarifaire de Zoug", "it": "Comunità tariffale di Zugo", "en": "Zug fare network"},
+      "summary": "Verbund-Abos im Kanton Zug",
+      "summaryI18n": {"fr": "Abonnements de la communauté tarifaire, canton de Zoug", "it": "Abbonamenti della comunità tariffale, Cantone di Zugo", "en": "Fare network passes, Canton of Zug"},
+      "category": "mobility",
+      "group": "oev",
+      "url": "https://www.sbb.ch/de/angebote/tarifverbund-zug",
+      "searchTerms": ["tarifverbund zug"],
+      "plans": []
+    },
+    {
+      "id": "tv-schwyz",
+      "name": "Tarifverbund Schwyz",
+      "nameI18n": {"fr": "Communauté tarifaire de Schwyz", "it": "Comunità tariffale di Svitto", "en": "Schwyz fare network"},
+      "summary": "Verbund-Abos im Kanton Schwyz",
+      "summaryI18n": {"fr": "Abonnements de la communauté tarifaire, canton de Schwyz", "it": "Abbonamenti della comunità tariffale, Cantone di Svitto", "en": "Fare network passes, Canton of Schwyz"},
+      "category": "mobility",
+      "group": "oev",
+      "url": "https://www.sbb.ch/de/angebote/tarifverbund-schwyz",
+      "searchTerms": ["tarifverbund schwyz"],
+      "plans": []
+    },
+    {
+      "id": "mobilis",
+      "name": "Mobilis",
+      "summary": "Verbund-Abos im Kanton Waadt",
+      "summaryI18n": {"fr": "Abonnements de la communauté tarifaire, canton de Vaud", "it": "Abbonamenti della comunità tariffale, Cantone di Vaud", "en": "Fare network passes, Canton of Vaud"},
+      "category": "mobility",
+      "group": "oev",
+      "url": "https://www.sbb.ch/de/angebote/tarifverbund-mobilis",
+      "searchTerms": ["mobilis"],
+      "plans": []
+    },
+    {
+      "id": "unireso",
+      "name": "Unireso",
+      "summary": "Verbund-Abos im Kanton Genf",
+      "summaryI18n": {"fr": "Abonnements de la communauté tarifaire, canton de Genève", "it": "Abbonamenti della comunità tariffale, Cantone di Ginevra", "en": "Fare network passes, Canton of Geneva"},
+      "category": "mobility",
+      "group": "oev",
+      "url": "https://www.sbb.ch/de/angebote/tarifverbund-unireso",
+      "searchTerms": ["unireso"],
+      "plans": []
+    },
+    {
+      "id": "frimobil",
+      "name": "Frimobil",
+      "summary": "Verbund-Abos im Kanton Freiburg",
+      "summaryI18n": {"fr": "Abonnements de la communauté tarifaire, canton de Fribourg", "it": "Abbonamenti della comunità tariffale, Cantone di Friburgo", "en": "Fare network passes, Canton of Fribourg"},
+      "category": "mobility",
+      "group": "oev",
+      "url": "https://www.sbb.ch/de/angebote/tarifverbund-frimobil",
+      "searchTerms": ["frimobil"],
+      "plans": []
+    },
+    {
+      "id": "onde-verte",
+      "name": "Onde verte",
+      "summary": "Verbund-Abos im Kanton Neuenburg",
+      "summaryI18n": {"fr": "Abonnements de la communauté tarifaire, canton de Neuchâtel", "it": "Abbonamenti della comunità tariffale, Cantone di Neuchâtel", "en": "Fare network passes, Canton of Neuchâtel"},
+      "category": "mobility",
+      "group": "oev",
+      "url": "https://www.sbb.ch/de/angebote/tarifverbund-onde-verte",
+      "searchTerms": ["onde verte"],
+      "plans": []
+    },
+    {
+      "id": "vagabond",
+      "name": "Vagabond",
+      "summary": "Verbund-Abos im Kanton Jura",
+      "summaryI18n": {"fr": "Abonnements de la communauté tarifaire, canton du Jura", "it": "Abbonamenti della comunità tariffale, Cantone del Giura", "en": "Fare network passes, Canton of Jura"},
+      "category": "mobility",
+      "group": "oev",
+      "url": "https://www.sbb.ch/de/angebote/tarifverbund-vagabond",
+      "searchTerms": ["vagabond"],
+      "plans": []
+    },
+    {
+      "id": "arcobaleno",
+      "name": "Arcobaleno",
+      "summary": "Verbund-Abos im Tessin und im Moesano",
+      "summaryI18n": {"fr": "Abonnements de la communauté tarifaire, Tessin et Mesolcina", "it": "Abbonamenti della comunità tariffale, Ticino e Moesano", "en": "Fare network passes, Ticino and Moesano"},
+      "category": "mobility",
+      "group": "oev",
+      "url": "https://www.sbb.ch/de/angebote/tarifverbund-arcobaleno",
+      "searchTerms": ["arcobaleno"],
+      "plans": []
     },
     {
       "id": "playstation-plus",
